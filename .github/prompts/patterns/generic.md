@@ -29,8 +29,9 @@ Output:
   "is_secret": [true/false],
   "source_file": "...",
   "line_number": ...
-}
-DevOps / Build Artifacts
+  	}
+  ```
+  ## DevOps / Build Artifacts
 
 Detect automation or build scripts:
 
@@ -51,7 +52,7 @@ Resource definitions (pods, buckets, queues).
 Mark findings as:
 category: devops
 subtype: {build, deploy, container, infra}
-Documentation / Knowledge Files
+## Documentation / Knowledge Files
 
 Recognize doc anchors:
 
@@ -65,7 +66,7 @@ Output type:
 category: documentation
 title: Heading
 links: [array of targets]
-Security and Compliance Smells
+## Security and Compliance Smells
 
 Flag issues across all generic files:
 
@@ -77,7 +78,7 @@ Unrestricted CORS / access in deployment descriptors.
 
 Missing environment segregation (same config for dev/prod).
 
-Integration Points
+## Integration Points
 
 Identify cross-language glue code:
 
@@ -91,7 +92,7 @@ Store as:
 integration_type: {api, db, message_queue, external_service}
 confidence: {HIGH|MEDIUM|LOW}
 source_file: ...
-Summary Behavior
+## Summary Behavior
 
 Use pattern-matching and key heuristics only (no AST).
 
@@ -101,11 +102,12 @@ If overlapping with another handler, defer to higher-priority language.
 
 Never discard partial results — tag them "handler": "generic_fallback".
 
-Confidence Heuristics
-Evidence Type	Confidence
-Explicit file (e.g., .env, Dockerfile)	HIGH
-Structured key-value (e.g., YAML, JSON)	MEDIUM
-Inferred pattern (e.g., plain text matches “password=”)	LOW
+## Confidence Heuristics
+| Evidence Type                              | Confidence |
+| ------------------------------------------ | ---------- |
+| Explicit file (e.g., .env, Dockerfile)     | HIGH       |
+| Structured key-value (e.g., YAML, JSON)    | MEDIUM     |
+| Inferred pattern (e.g., plain text matches “password=”) | LOW |
 
 
 ---

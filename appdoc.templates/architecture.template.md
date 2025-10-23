@@ -57,6 +57,7 @@ $VERSION_CHANGES_SUMMARY
 | Data Access | $LAYER_DATA_PURPOSE | $LAYER_DATA_MODULES | $LAYER_DATA_DEPENDENCIES | HIGH |
 | Integration | $LAYER_INTEGRATION_PURPOSE | $LAYER_INTEGRATION_MODULES | $LAYER_INTEGRATION_DEPENDENCIES | MEDIUM |
 
+**Note:** These layers represent a common model but can be merged, split, or extended in real implementations. For example, simple apps may merge Presentation and Business Logic, while complex systems may add Security or Platform layers. Adapt as needed for your project. -->
 </details>
 
 <details>

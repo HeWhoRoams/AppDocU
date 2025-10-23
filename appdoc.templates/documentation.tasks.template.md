@@ -15,15 +15,25 @@ generated_at: "$DATE_GENERATED"
 
 Follow this exact task structure for every task created by the agent:
 
-- **PRIORITY:** [P0 / P1 / P2 / P3]  
-- **TASK:** [Action-oriented verb phrase. Max 10 words.]  
-- **FILE/PLACEHOLDER:** [document.md / $PLACEHOLDER_TEXT]  
-- **STATUS:** [To Do / Blocked / Auto-Resolved]  
-- **SOURCE/LINE:** [file:line or N/A]  
-- **SEARCH/ACTION:** [Specific action required or value discovered]  
-- **JUSTIFICATION (If Blocked):** [If Blocked, brief reason]  
-
 ---
+**Example Task Entry:**
+	- **PRIORITY:** P0
+	- **TASK:** Update SAP credential placeholder
+	- **FILE or PLACEHOLDER:** [web.config | $CONFIG_STRING_SAP_CREDENTIAL]
+	- **STATUS:** Blocked
+	- **SOURCE/LINE:** [web.config:42]
+	- **SEARCH/ACTION:** Locate and inject valid SAP credential
+	- **JUSTIFICATION:** Required for production deployment; awaiting credential from security team.
+---
+
+
+- **PRIORITY:** [P0 / P1 / P2 / P3]
+- **TASK:** [Action-oriented verb phrase. Max 10 words.]
+- **FILE or PLACEHOLDER:** [document.md / $PLACEHOLDER_TEXT]
+- **STATUS:** [Blocked / To Do / Auto-Resolved]
+- **SOURCE/LINE:** [file:line or evidence source]
+- **SEARCH/ACTION:** [Describe search or remediation action]
+- **JUSTIFICATION:** [Required when STATUS is 'Blocked'; provide a brief reason. Otherwise omit.]
 
 ## Task Generation Rules (Agent MUST follow)
 

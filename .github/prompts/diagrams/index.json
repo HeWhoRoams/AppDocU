@@ -1,0 +1,7 @@
+[
+  {
+    "prompt_file": "generate.dependency.graph.prompt.md",
+    "description": "Generates a dependency graph in Mermaid format. Closing code fence corrected as of 2025-10-23.",
+    "last_updated": "2025-10-23T00:00:00Z"
+  }
+]

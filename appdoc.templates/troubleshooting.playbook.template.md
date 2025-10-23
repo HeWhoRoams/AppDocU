@@ -71,10 +71,11 @@ Each detected potential issue is supported by static evidence — file paths, li
 
 | File | Line | Signature / Pattern | Inferred Issue | Confidence |
 |------|------|---------------------|----------------|-------------|
-| `services/payment.cs` | 142 | `try { … } catch { }` (no rethrow/log) | Silent failure | HIGH |
-| `controllers/user.js` | 83 | `axios.get` (no timeout param) | External dependency risk | MEDIUM |
-| `db/seed.sql` | 21 | No rollback transaction | Data integrity risk | HIGH |
-| `config/appsettings.json` | 12 | Missing default port key | Config drift | MEDIUM |
+<!-- Example evidence rows below; replace with actual findings during generation -->
+| $EVIDENCE_ROW_1_FILE | $EVIDENCE_ROW_1_LINE | $EVIDENCE_ROW_1_PATTERN | $EVIDENCE_ROW_1_ISSUE | $EVIDENCE_ROW_1_CONFIDENCE |
+| $EVIDENCE_ROW_2_FILE | $EVIDENCE_ROW_2_LINE | $EVIDENCE_ROW_2_PATTERN | $EVIDENCE_ROW_2_ISSUE | $EVIDENCE_ROW_2_CONFIDENCE |
+| $EVIDENCE_ROW_3_FILE | $EVIDENCE_ROW_3_LINE | $EVIDENCE_ROW_3_PATTERN | $EVIDENCE_ROW_3_ISSUE | $EVIDENCE_ROW_3_CONFIDENCE |
+| $EVIDENCE_ROW_4_FILE | $EVIDENCE_ROW_4_LINE | $EVIDENCE_ROW_4_PATTERN | $EVIDENCE_ROW_4_ISSUE | $EVIDENCE_ROW_4_CONFIDENCE |
 
 Confidence levels:
 - **HIGH:** Explicit exception or missing mitigation logic detected  

@@ -30,3 +30,12 @@
 ## Build / Config
 - `vite.config.js`, `webpack.config.js`, `next.config.js`.
 - Environment variables: `NEXT_PUBLIC_*`, `REACT_APP_*`.
+
+## Secret Management Guidance:
+- `.env.local` is allowed only for local development and must be listed in `.gitignore` (never committed).
+- Store production secrets in CI/CD or secret managers (e.g., GitHub Actions/Secrets, AWS Secrets Manager/Parameter Store, HashiCorp Vault).
+- Inject secrets via CI/CD or the deployment platform at runtime; never commit production secrets to `.env` files (including `.env.production`). `.env.production` is only appropriate for local build configuration, not for storing real secrets.
+- Next.js note: `NEXT_PUBLIC_*` is for build-time/public values; true runtime secrets must be injected from the environment at runtime and never stored in `.env` files.
+- Rotate secrets regularly and restrict their scope.
+- Never log secrets in application code.
+- Use tools like `dotenv-safe` or environment variable validation to fail fast when required variables are missing.

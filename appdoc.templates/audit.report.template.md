@@ -13,15 +13,16 @@ sources_scanned: $SOURCES_SCANNED
 ---
 
 ## 1 — Executive Summary & Metrics
-- **Documents Generated:** $DOCUMENTS_GENERATED
-- **Total Placeholders Found:** $TOTAL_PLACEHOLDERS
-- **Placeholders Populated:** $POPULATED_PLACEHOLDERS
-- **Auto-Resolved Tasks (P2/P3):** $AUTO_RESOLVED_TASKS
-- **Tasks Created (P0/P1/P2/P3):** $TASK_COUNTS_BY_PRIORITY
-- **P0 Security Findings:** $P0_COUNT
-- **Validation Summary:** V: $VALIDATED_COUNT, P: $PARTIAL_COUNT, N: $NOT_VALIDATED_COUNT
-- **Documentation Completeness Score:** $COMPLETENESS_SCORE/100
-- **Confidence Rating:** $CONFIDENCE_RATING
+
+**Documents Generated:** $DOCUMENTS_GENERATED [CONFIDENCE:$DOCUMENTS_GENERATED_CONFIDENCE]
+**Total Placeholders Found:** $TOTAL_PLACEHOLDERS [CONFIDENCE:$TOTAL_PLACEHOLDERS_CONFIDENCE]
+**Placeholders Populated:** $POPULATED_PLACEHOLDERS [CONFIDENCE:$POPULATED_PLACEHOLDERS_CONFIDENCE]
+**Auto-Resolved Tasks (P2/P3):** $AUTO_RESOLVED_TASKS [CONFIDENCE:$AUTO_RESOLVED_TASKS_CONFIDENCE]
+**Tasks Created (P0/P1/P2/P3):** $TASK_COUNTS_BY_PRIORITY [CONFIDENCE:$TASK_COUNTS_CONFIDENCE]
+**P0 Security Findings:** $P0_COUNT [CONFIDENCE:$P0_COUNT_CONFIDENCE]
+**Validation Summary:** V: $VALIDATED_COUNT, P: $PARTIAL_COUNT, N: $NOT_VALIDATED_COUNT [CONFIDENCE:$VALIDATION_SUMMARY_CONFIDENCE]
+**Documentation Completeness Score:** $COMPLETENESS_SCORE/100 [CONFIDENCE:$COMPLETENESS_CONFIDENCE]
+**Confidence Rating:** $CONFIDENCE_RATING [CONFIDENCE:$CONFIDENCE_RATING_CONFIDENCE]
 
 ---
 
@@ -66,8 +67,16 @@ For each significant finding include:
 ---
 
 ## 6 — Conclusion
-- **Overall Completeness:** $COMPLETENESS_SCORE/100
-- **Confidence:** $CONFIDENCE_RATING
+**Overall Completeness:** $COMPLETENESS_SCORE/100 [CONFIDENCE:$COMPLETENESS_CONFIDENCE]
+**Confidence:** $CONFIDENCE_RATING [CONFIDENCE:$CONFIDENCE_RATING_CONFIDENCE]
 - **Next Suggested Action:** $NEXT_SUGGESTED_ACTION
+
+
+---
+**Confidence Metadata Legend:**
+All metrics and findings include a confidence suffix in the format `[CONFIDENCE:VALUE]`.
+Possible values: HIGH (corroborated by ≥2 sources), MEDIUM (one authoritative source), LOW (heuristic inference only).
+Numeric ratings may also appear (e.g., 0.0–1.0) to indicate mean confidence across evidence.
+Interpret these fields as indicators of evidence strength and reliability for each reported item.
 
 *(end of audit report)*

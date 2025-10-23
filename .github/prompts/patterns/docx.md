@@ -32,8 +32,10 @@ Produce metadata entries for each `.docx` containing:
   "inferred_component": "AuthService",
   "confidence": "MEDIUM",
   "tags": ["design", "security", "auth"]
-}
-If diagrams or tables are present:
+  }
+  ```
+
+### If diagrams or tables are present:
 
 Extract their captions (<w:caption> or paragraph before image).
 

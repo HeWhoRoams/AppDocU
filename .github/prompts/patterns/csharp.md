@@ -33,3 +33,10 @@ Use these heuristics when mapping C# services:
 - Hardcoded secrets (`new SymmetricSecurityKey("...")`, `RSAParameters` inline).
 - Insecure HTTP clients: `HttpClientHandler { ServerCertificateCustomValidationCallback = ... }`
 - Missing auth attributes on public endpoints.
+- SQL injection risk: `context.Database.ExecuteSqlRaw($"SELECT ...")`, manual string concatenation/interpolation for SQL (e.g., `$"...{value}..."`).
+	- Note: `FromSqlInterpolated` is safe because it parameterizes values automatically.
+	- Remediation: Always use `FromSqlInterpolated` or parameterized queries; avoid `ExecuteSqlRaw` and any manual string concatenation/interpolation that injects values directly into SQL.
+- CORS misconfiguration: `AllowAnyOrigin().AllowAnyMethod().AllowCredentials()`
+	- Remediation: Use restrictive CORS policies and explicit origin lists.
+- XML processing issues: Unprotected `XmlReader`/`XmlDocument` usage (e.g., loading untrusted XML, DTD/entity expansion).
+	- Remediation: Disable DTDs, use secure XML parser settings, or safe parsing libraries.

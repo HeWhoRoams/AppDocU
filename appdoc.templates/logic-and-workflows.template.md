@@ -33,17 +33,18 @@ $LOGIC_EXECUTIVE_SUMMARY[CONFIDENCE:HIGH]
 
 **Flow Diagram:**
 ```mermaid
+%% TEMPLATE INSTRUCTION: Replace/adapt this diagram to reflect your application's specific workflows as described in Section 2. Show service components, key interactions, and any conditional branches relevant to your app.
 sequenceDiagram
-    participant User
-    participant API
-    participant Service
-    participant DB
-    User->>API: Request
-    API->>Service: Process
-    Service->>DB: Query
-    DB-->>Service: Result
-    Service-->>API: Response
-    API-->>User: Result
+  participant User
+  participant API
+  participant Service
+  participant DB
+  User->>API: Request
+  API->>Service: Process
+  Service->>DB: Query
+  DB-->>Service: Result
+  Service-->>API: Response
+  API-->>User: Result
 ```
 
 </details>
@@ -100,9 +101,11 @@ Repeat the block below for every core workflow detected:
 | $API_ENDPOINT | $API_METHOD | $API_DESCRIPTION | $API_AUTH | $API_LOGIC_PATH | $API_TEST_COVERAGE | HIGH/MED/LOW |
 
 **Authentication & Authorization:**
-- Method: $AUTH_METHOD[CONFIDENCE:MEDIUM]
-- Token type: $TOKEN_TYPE[CONFIDENCE:MEDIUM]
-- Validation logic: $AUTH_VALIDATION_LOCATION[CONFIDENCE:HIGH]
+
+Example method/token values: JWT, API Key, OAuth2, SAML, Session Cookie. Use [CONFIDENCE:HIGH|MEDIUM|LOW] annotation for each value.
+Method: $AUTH_METHOD[CONFIDENCE:MEDIUM]
+Token type: $TOKEN_TYPE[CONFIDENCE:MEDIUM]
+Validation logic: $AUTH_VALIDATION_LOCATION[CONFIDENCE:HIGH]
 
 </details>
 
