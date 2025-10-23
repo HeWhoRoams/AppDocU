@@ -199,11 +199,12 @@ Invoke:
 .github/prompts/diagrams/generate.all.diagrams.prompt.md
 ```
 
+
 Expected outputs:
 
-* `.meta/diagrams/*.mmd` and `.puml`
-* `.meta/diagrams/diagrams.index.json`
-* `.meta/diagrams/diagrams.summary.md`
+* `<appname> Documentation/Diagrams/*.mmd` and `.puml`
+* `<appname> Documentation/Diagrams/diagrams.index.json`
+* `<appname> Documentation/Diagrams/diagrams.summary.md`
 
 * Appendix to `audit-report.md`
 
