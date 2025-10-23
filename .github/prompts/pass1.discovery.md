@@ -197,7 +197,10 @@ Construct a dependency model of the system.
 
 ---
 
+
 ## 8. VISUALIZATION INDEX
+
+Generate all required .meta/* diagram input files (e.g., component-map.json, dependency-graph.json, system-integrations.json) in this phase, even if some data is incomplete or inferred. Each file must include a documented confidence score (numeric, 0.0–1.0) reflecting the reliability of its contents. If a file is missing required data, generate it with a low confidence score and log a warning. Downstream phases must check the confidence score and skip or warn if below threshold.
 
 Write `.meta/visualization.index.json` to control Pass 3 diagram generation eligibility and confidence threshold.
 
@@ -213,7 +216,7 @@ Write `.meta/visualization.index.json` to control Pass 3 diagram generation elig
 - `confidence_threshold` is global by default (e.g., 0.75), but may be overridden per-file in the `files` array.
 
 
-### 9. DISCOVERY REPORT
+## 9. DISCOVERY REPORT
 
 Write `discovery-report.md` only on partial or failed runs (i.e., when any required output file is missing, handler timeouts occur, unsupported file types are encountered, or handler errors are detected). Optionally, allow a verbose flag to always produce the report.
 
@@ -286,7 +289,7 @@ graph TD
 
 ---
 
-## 8. SECURITY FINDINGS
+## 10. SECURITY FINDINGS
 
 Scan all file types (source, config, documentation) for:
 
@@ -299,7 +302,7 @@ Output → `.meta/security-findings.json`
 
 ---
 
-## 9. VISUALIZATION SEEDS (NEW)
+## 11. VISUALIZATION SEEDS
 
 Mark all discovery outputs that are **eligible for visualization** in Pass 3.
 
@@ -323,7 +326,7 @@ This file signals to later passes that diagram generation can proceed safely.
 
 ---
 
-## 10. OUTPUT VALIDATION
+## 12. OUTPUT VALIDATION
 
 Verify that all essential metadata files were successfully written:
 
@@ -340,7 +343,7 @@ Verify that all essential metadata files were successfully written:
 If any are missing, rerun the appropriate handler with expanded context.
 If still incomplete, note partial success in `discovery-report.md`.---
 
-## 11. COMPLETION BLOCK
+## 13. COMPLETION BLOCK
 
 At the end of discovery, emit a structured summary:
 

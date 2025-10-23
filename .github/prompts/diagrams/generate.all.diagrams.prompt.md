@@ -46,9 +46,8 @@ Example state (actual results vary): the table below shows a sample result — y
 | `.meta/deployment-descriptors.json` | Deployment Topology       | ✅      | ✅                 | ✅        |
 
 
-Only execute prompts whose data dependencies exist **and** meet the confidence threshold.
-The confidence value is read from the corresponding `.meta/*.json` file, following the actual file-name pattern (e.g., `.meta/dependency-graph.json`, `.meta/component-map.json`, `.meta/class-map.json`, `.meta/system-integrations.json`, `.meta/deployment-descriptors.json`). Code should JSON-parse that file and compare the numeric `confidence` field against the threshold (≥ 0.75). If the `confidence` field is missing or non-numeric, treat the prompt as not meeting the threshold (skip) and log a warning.
-If a prompt file itself is missing, skip gracefully with a logged warning.
+
+All diagram-related .meta/* files must be generated in Pass 1 and Pass 2, even if some data is incomplete or inferred. Each file must include a documented confidence score (numeric, 0.0–1.0) reflecting the reliability of its contents. If a file is missing required data, generate it with a low confidence score and log a warning. Downstream diagram prompts must check the confidence score and skip or warn if below threshold.
 
 ---
 

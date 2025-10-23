@@ -183,13 +183,16 @@ Write to `/$APPNAME Documentation/`:
 
 ---
 
+
 ## 9. DIAGRAM GENERATION TRIGGER (PASS 3 HANDOFF)
 
 After enrichment:
 
+Ensure all required .meta/* diagram input files (e.g., component-map.json, dependency-graph.json, system-integrations.json) are generated or updated in this phase, with a documented confidence score (numeric, 0.0–1.0) reflecting the reliability of their contents. If a file is missing required data, generate it with a low confidence score and log a warning. Diagram generation must check the confidence score and skip or warn if the score is below CONFIDENCE_THRESHOLD = 0.7. Always log a warning when a generated file uses a low confidence score.
+
 If `.meta/visualization.index.json` exists **and**
 `eligible_for_visualization = true` and
-mean confidence ≥ 0.75:
+mean confidence ≥ 0.80:
 Invoke:
 
 ```
@@ -239,7 +242,7 @@ Confidence:
 	- HIGH: 68%  |  MEDIUM: 22%  |  LOW: 10%  (Total: 100%)
 Conflicts: 3  |  Tasks Generated: 14
 
-Mean Confidence: 0.79  → Eligible for Diagram Generation ✅
+Mean Confidence: 0.82  → Eligible for Diagram Generation ✅
 Scoring Rule:
 	- HIGH = 1.0
 	- MEDIUM = 0.5
@@ -250,12 +253,12 @@ Formula:
 	(percentages expressed as decimals)
 
 Example Calculation:
-	For 68% HIGH, 22% MEDIUM, 10% LOW:
-	Mean = (0.68 × 1.0) + (0.22 × 0.5) + (0.10 × 0.0) = 0.68 + 0.11 + 0.00 = 0.79
-	(Ensure percentages sum to 100% and match the computed mean confidence.)
+For 70% HIGH, 20% MEDIUM, 10% LOW:
+Mean = (0.70 × 1.0) + (0.20 × 0.5) + (0.10 × 0.0) = 0.70 + 0.10 + 0.00 = 0.80
+Confirm the bucket percentages sum to 100% and that the computed mean matches those percentages.
 ```
 
-If mean confidence < 0.8 → Re-invoke recursive enrichment with expanded evidence set.
+If mean confidence < 0.80 → Re-invoke recursive enrichment with expanded evidence set.
 
 ---
 
