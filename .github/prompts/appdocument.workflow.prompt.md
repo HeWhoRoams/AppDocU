@@ -33,11 +33,12 @@ If confidence scores remain below 80% overall, the system re-invokes itself recu
 - **Output root:** `/$APPNAME Documentation/`
 
 Required templates:
-- architecture.template.md
-- audit.report.template.md
-- logic-and-workflows.template.md
-- inference-evidence.template.md
-- change-impact-map.template.md
+architecture.template.md
+audit.report.template.md
+logic-and-workflows.template.md
+inference-evidence.template.md
+change-impact-map.template.md
+troubleshooting.playbook.template.md
 
 ---
 
@@ -87,6 +88,7 @@ If not, retry once with expanded context.
    - change-impact-map.md
    - audit-report.md
    - Documentation Tasks.md
+   - troubleshooting.playbook.md
    - CHANGELOG.md
 6. Perform cross-doc validation (value conflicts, unresolved placeholders).
 7. If LOW confidence > 5 %, re-invoke Pass 2 with expanded evidence.
@@ -116,15 +118,16 @@ At completion, produce this block:
 **Workflow Summary — $APPNAME (v$VERSION)**
 
 Artifacts:
-  - architecture.md
-  - logic-and-workflows.md
-  - inference-evidence.md
-  - change-impact-map.md
-  - Documentation Tasks.md
-  - audit-report.md
-  - CHANGELOG.md
-  - dependency-graph.md
-  - .meta/ (internal data)
+   - architecture.md
+   - logic-and-workflows.md
+   - inference-evidence.md
+   - change-impact-map.md
+   - Documentation Tasks.md
+   - audit-report.md
+   - troubleshooting.playbook.md
+   - CHANGELOG.md
+   - dependency-graph.md
+   - .meta/ (internal data)
 
 Confidence Summary:
   - HIGH [X]  MEDIUM [Y]  LOW [Z]
