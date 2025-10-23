@@ -1,0 +1,62 @@
+{
+  "manifest_version": 1,
+  "description": "AppDocU Pattern Manifest v6.0 — maps detected languages and frameworks to their analysis patterns.",
+  "default_handler": "generic",
+  "languages": [
+    {
+      "name": "csharp",
+      "aliases": [".cs", ".csproj", "aspnet", "dotnet"],
+      "pattern_file": "csharp.md",
+      "handler": "roslyn_ast",
+      "priority": 1
+    },
+    {
+      "name": "python",
+      "aliases": [".py", "flask", "django", "fastapi"],
+      "pattern_file": "python.md",
+      "handler": "python_ast",
+      "priority": 1
+    },
+    {
+      "name": "javascript",
+      "aliases": [".js", ".mjs", ".cjs", ".ts", ".tsx", "node", "express"],
+      "pattern_file": "javascript.md",
+      "handler": "babel_ast",
+      "priority": 1
+    },
+    {
+      "name": "react",
+      "aliases": ["react", "next", "vite", "jsx", "tsx"],
+      "pattern_file": "react.md",
+      "handler": "react_component_parser",
+      "priority": 2
+    },
+    {
+      "name": "sql",
+      "aliases": [".sql", "ddl", "dml", "postgres", "mysql", "mssql"],
+      "pattern_file": "sql.md",
+      "handler": "generic_text",
+      "priority": 3
+    }
+  ],
+  "resolution_strategy": {
+    "priority_order": ["csharp", "python", "javascript", "react", "sql"],
+    "fallback": "generic",
+    "multi_language_mode": "merge",
+    "merge_policy": {
+      "duplicates": "keep_highest_confidence",
+      "conflicts": "flag_for_review"
+    }
+  },
+  "meta": {
+    "maintainer": "HeWhoRoams",
+    "version": "6.0",
+    "updated": "2025-10-22",
+    "license": "MIT",
+    "notes": [
+      "Auto-loads language-specific patterns based on detected file extensions and signatures.",
+      "Enables hybrid analysis for mixed repos (e.g., C# backend + React frontend).",
+      "Supports future language additions via append-only pattern registration."
+    ]
+  }
+}
