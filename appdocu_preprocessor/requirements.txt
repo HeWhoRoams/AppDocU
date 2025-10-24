@@ -1,0 +1,7 @@
+# AppDocU Preprocessor Dependencies
+python-docx>=0.8.11,<2.0
+docx2txt>=0.8,<1.0
+openpyxl>=3.0.10,<4.0
+python-pptx>=0.6.21,<2.0
+pdfminer.six>=20221105,<20260000
+vsdx>=0.5.5,<1.0

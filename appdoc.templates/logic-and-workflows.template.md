@@ -6,9 +6,9 @@
 title: "Logic and Workflows"
 app: "$ARGUMENTS"
 template: "logic-and-workflows.template.md"
-version: "3.0"
+version: "4.0"
 doc_version: "$DOC_VERSION"
-generated_by: "AppDoc Agent v5.0"
+generated_by: "AppDoc Agent v7.0"
 generated_at: "$DATE_GENERATED"
 code_last_modified: "$LAST_CODE_CHANGE_DATE"
 sources_scanned: $SOURCES_SCANNED
@@ -51,18 +51,22 @@ sequenceDiagram
 
 ---
 
-## 2. Key Workflows & Business Processes
+## 2. Key Workflows & Business Processes (S→I→T→O→P Format)
 
-Repeat the block below for every core workflow detected:
+Repeat the block below for every core workflow detected using the Sources → Inputs → Transformations → Outputs → Presentation format:
 
 <details>
 <summary>Workflow: $WORKFLOW_NAME</summary>
 
-### Overview
+### Sources → Inputs → Transformations → Outputs → Presentation
+
+| Source | Inputs | Transformations | Outputs | Presentation |
+|--------|----------------|---------|--------------|
+| $WORKFLOW_SOURCE | $WORKFLOW_INPUTS | $WORKFLOW_TRANSFORMATIONS | $WORKFLOW_OUTPUTS | $WORKFLOW_PRESENTATION |
+
+### Workflow Details
 - **Trigger/Event:** $WORKFLOW_TRIGGER[CONFIDENCE:HIGH]
 - **Purpose / High-level description:** $WORKFLOW_DESCRIPTION[CONFIDENCE:HIGH]
-- **Inputs:** $WORKFLOW_INPUTS[CONFIDENCE:HIGH]
-- **Outputs / Side-effects:** $WORKFLOW_OUTPUTS[CONFIDENCE:HIGH]
 
 ### Execution Steps
 1. $WORKFLOW_STEP_1[CONFIDENCE:HIGH]
@@ -81,9 +85,10 @@ Repeat the block below for every core workflow detected:
 
 ### Evidence & Traceability
 - **Code Location:** $WORKFLOW_TRACE[CONFIDENCE:HIGH] (e.g., file:line)
+- **Behavior Graph Evidence:** $WORKFLOW_BEHAVIOR_EVIDENCE (e.g., `behavior-graph.json#edge123`)
 - **Test Coverage:** $WORKFLOW_TEST_FILES[CONFIDENCE:MEDIUM]
 - **Confidence Level:** HIGH/MEDIUM/LOW
-- **Inference Source:** Code analysis + Test mapping + Config validation
+- **Inference Source:** Code analysis + Test mapping + Behavior graph + Config validation
 
 </details>
 
@@ -117,6 +122,12 @@ For each background job:
 
 <details>
 <summary>Job: $JOB_NAME</summary>
+
+### Sources → Inputs → Transformations → Outputs → Presentation
+
+| Source | Inputs | Transformations | Outputs | Presentation |
+|--------|--------|----------------|---------|--------------|
+| $JOB_SOURCE | $JOB_INPUTS | $JOB_TRANSFORMATIONS | $JOB_OUTPUTS | $JOB_PRESENTATION |
 
 - **Trigger / Schedule:** $JOB_TRIGGER[CONFIDENCE:HIGH]
 - **Module Owner:** $JOB_MODULE[CONFIDENCE:HIGH]
@@ -248,10 +259,14 @@ User Model
 - Documentation Tasks: `Documentation Tasks.md`
 - Inference Evidence: `inference-evidence.md`
 - Change Impact Map: `change-impact-map.md`
+- Cognitive Audit: `cognitive-audit.md` (NEW)
+- Developer Preflight: `developer-preflight.md` (NEW)
 
 ### Source Evidence
 - Test mapping: `.meta/test-coverage-map.json`
 - Component dependencies: `.meta/component-map.json`
+- **NEW**: Behavior graph: `.meta/behavior-graph.json`
+- **NEW**: System integrations: `.meta/system-integrations.json`
 - Behavioral contracts: Extracted from $TEST_FILE_COUNT test files
 
 ### Version Control
@@ -274,5 +289,7 @@ User Model
 2. Review behavioral contracts (section 8) to understand expected behavior
 3. Verify test coverage (section 7) for areas you're modifying
 4. Check `Documentation Tasks.md` for any known issues in that area
+5. **NEW**: Review `cognitive-audit.md` for fragility analysis
+6. **NEW**: Check `developer-preflight.md` for component modification guidelines
 
 *(end of logic-and-workflows document)*

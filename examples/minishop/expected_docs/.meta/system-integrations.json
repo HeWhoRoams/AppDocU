@@ -1,0 +1,97 @@
+{
+  "databases": [
+    {
+      "name": "minishop_db",
+      "type": "sqlite",
+      "evidence": [
+        {
+          "file": "api/app.py",
+          "line": 45,
+          "config_key": "minishop.db"
+        }
+      ],
+      "used_by": [
+        "api.app.get_products",
+        "api.app.create_order", 
+        "api.app.get_db_connection"
+      ]
+    },
+    {
+      "name": "minishop_sqlserver",
+      "type": "sqlserver",
+      "evidence": [
+        {
+          "file": "service/OrderService.cs", 
+          "line": 6,
+          "config_key": "connectionString"
+        }
+      ],
+      "used_by": [
+        "service.OrderService.CreateOrder",
+        "service.OrderService.GetOrdersByUser"
+      ]
+    }
+  ],
+  "external_apis": [
+    {
+      "name": "payment-api.example.com",
+      "type": "rest_api",
+      "evidence": [
+        {
+          "file": "api/app.py",
+          "line": 4,
+          "config_key": "https://payment-api.example.com/charge"
+        },
+        {
+          "file": "service/OrderService.cs",
+          "line": 50, 
+          "config_key": "https://payment-api.example.com/charge"
+        }
+      ],
+      "used_by": [
+        "api.app.call_payment_service",
+        "service.OrderService.ProcessPayment"
+      ]
+    },
+    {
+      "name": "inventory-api.example.com", 
+      "type": "rest_api",
+      "evidence": [
+        {
+          "file": "api/app.py",
+          "line": 8,
+          "config_key": "https://inventory-api.example.com/products"
+        }
+      ],
+      "used_by": [
+        "api.app.call_inventory_service"
+      ]
+    }
+  ],
+  "queues": [],
+  "file_stores": [],
+  "other_integrations": [],
+  "schema_version": "1.0.0",
+  "last_updated": "2025-10-24",
+  "auto_generated": true,
+  "maintenance": {
+    "evidence_exhaustiveness": "Representative samples only; not guaranteed exhaustive.",
+    "used_by_guidance": "Update 'used_by' lists when integration points change. Use CI validation or owner review to ensure accuracy.",
+    "update_procedure": "On integration changes, update this file and increment 'last_updated'. For auto-generated files, rerun the documentation workflow. For manual edits, notify responsible owner and validate via CI or peer review."
+  },
+  "_schema": {
+    "type": "object",
+    "description": "System integrations metadata for minishop. Top-level fields: integrations (array), queues (array), file_stores (array), other_integrations (array), schema_version (string), last_updated (date string), auto_generated (boolean), maintenance (object).",
+    "properties": {
+      "integrations": {"type": "array", "items": {"type": "object", "properties": {"name": {"type": "string"}, "type": {"type": "string"}, "evidence": {"type": "array", "items": {"type": "object", "properties": {"file": {"type": "string"}, "line": {"type": "integer"}, "config_key": {"type": "string"}}}}, "used_by": {"type": "array", "items": {"type": "string"}}}}},
+      "queues": {"type": "array", "items": {"type": "object"}},
+      "file_stores": {"type": "array", "items": {"type": "object"}},
+      "other_integrations": {"type": "array", "items": {"type": "object"}},
+      "schema_version": {"type": "string"},
+      "last_updated": {"type": "string", "format": "date"},
+      "auto_generated": {"type": "boolean"},
+      "maintenance": {"type": "object", "properties": {"evidence_exhaustiveness": {"type": "string"}, "used_by_guidance": {"type": "string"}, "update_procedure": {"type": "string"}}}
+    },
+    "required": ["integrations", "queues", "file_stores", "other_integrations", "schema_version", "last_updated", "auto_generated", "maintenance"]
+  }
+}

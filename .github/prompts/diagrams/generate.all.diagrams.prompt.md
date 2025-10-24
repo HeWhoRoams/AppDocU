@@ -1,229 +1,87 @@
-````markdown
-# [SYSTEM ROLE & GOAL]
-You are **AppDoc Agent — Diagram Orchestrator v1.1**.  
-Your mission is to **intelligently execute all diagram generation prompts** that meet confidence and data availability thresholds, then produce a unified summary of the visual architecture produced.
+# Diagram Orchestrator (All Diagrams)
 
----
+## Objective
+Generate all required system diagrams using the behavioral data from Pass 1 discovery phase. This orchestrator should coordinate the generation of multiple diagram types and ensure consistency across all visualizations using behavioral evidence.
 
-# [INPUTS]
-- Working directory: `.meta/` (contains intermediate data from Pass 1 and Pass 2)
-- Diagram generation prompts (relative to this directory):
-  - `generate.dependency.graph.prompt.md`
-  - `generate.layered.architecture.prompt.md`
-  - `generate.component.flow.prompt.md`
-  - `generate.class.hierarchy.prompt.md`
-  - `generate.system.context.prompt.md`
-  - `generate.deployment.topology.prompt.md`
-  - `generate.dataflow.sequence.prompt.md`
-- Confidence threshold: **0.75 minimum**
-- Output folder: `Documentation/.meta/diagrams/`
-- Output manifest: `Documentation/.meta/diagrams/diagrams.index.json`
-
-Metadata:
-```json
-{
-  "agent_version": "AppDocU 6.1",
-  "orchestrator_version": "1.1",
-  "workflow_reference": ".github/prompts/appdocument.workflow.prompt.md"
-  }
-  ```
-
----
-
-# [OPERATIONAL LOGIC]
-
-## STEP 1 — Scan for Eligible Data
-
-Check the following files and mark readiness:
-
-Example state (actual results vary): the table below shows a sample result — your repository may differ.
-| Data File                           | Required By               | Exists | Confidence ≥ 0.75 | Eligible |
-| ----------------------------------- | ------------------------- | ------ | ----------------- | -------- |
-| `.meta/dependency-graph.json`       | Dependency Graph          | ✅      | ✅                 | ✅        |
-| `.meta/component-map.json`          | Component Flow / Layered  | ✅      | ✅                 | ✅        |
-| `.meta/class-map.json`              | Class Hierarchy           | ✅      | ✅                 | ✅        |
-| `.meta/system-integrations.json`    | System Context / Dataflow | ✅      | ✅                 | ✅        |
-| `.meta/deployment-descriptors.json` | Deployment Topology       | ✅      | ✅                 | ✅        |
+## Data Sources (Preconditions)
+- `.meta/behavior-graph.json` - Behavioral relationships and IO operations (required)
+- `.meta/system-integrations.json` - External dependencies and integrations (required)
+- `.meta/component-map.json` - Component definitions and relationships
+- `.meta/dependency-graph.json` - Structural dependencies
+- `.meta/dependency-graph.md` - Mermaid format dependencies
+- `.meta/config-registry.json` - Configuration context
+- `.meta/tests.map.json` - Test coverage for behavioral validation
 
 
+## Diagram Types to Generate
+1. **Dependency Graph** - Component relationships and behavioral flows from behavior-graph.json
+2. **Layered Architecture** - Controller → Service → Repo → External layering with Mermaid diagrams
+3. **External Integrations** - System integrations and external dependencies
+4. **Dataflow Sequence** - Per major flow using S→I→T→O→P patterns from logic-and-workflows
+5. **Component Flow** - Data flow between components with IO operations
+6. **Deployment Topology** - Physical deployment structure
 
-All diagram-related .meta/* files must be generated in Pass 1 and Pass 2, even if some data is incomplete or inferred. Each file must include a documented confidence score (numeric, 0.0–1.0) reflecting the reliability of its contents. If a file is missing required data, generate it with a low confidence score and log a warning. Downstream diagram prompts must check the confidence score and skip or warn if below threshold.
-
----
-
-## STEP 2 — Execute Each Qualified Diagram Prompt
-
-For each eligible diagram type:
-
-1. **Announce generation**
-   Example:
-   `🧩 Generating dependency graph (confidence 0.94)…`
-
-2. **Invoke** the corresponding `generate.*.prompt.md`, injecting `.meta/*` context.
-
-3. **Log result**
-
-   * ✅ Success → record diagram name, confidence, and path
-   * ⚠️ Partial → generated below coverage threshold
-   * ❌ Skipped → missing data or low confidence
-
-Example log:
-
-```
-🧩 Generating dependency graph (confidence 0.94)… done.  
-🧠 Generating layered architecture (confidence 0.88)… done.  
-❌ Skipped system context — insufficient evidence (confidence 0.62)
-```
-
----
-
-## STEP 3 — Compile Results Manifest
-
-Write `/Documentation/.meta/diagrams/diagrams.index.json`:
-
-```json
-{
-  "generated_at": "$DATE_GENERATED",
-  "confidence_threshold": 0.75,
-  "diagrams": [
-    {
-      "name": "dependency-graph",
-      "status": "success",
-      "confidence": 0.94,
-        "path": "Documentation/.meta/diagrams/dependency-graph.mmd"
-    },
-    {
-      "name": "layered-architecture",
-      "status": "success",
-      "confidence": 0.88,
-        "path": "Documentation/.meta/diagrams/layered-architecture.mmd"
-    },
-    {
-      "name": "system-context",
-      "status": "skipped",
-      "confidence": 0.62
-    }
-  ]
-}
-```
-
----
-
-## STEP 4 — Produce Human-Readable Summary
-
-Write `Documentation/.meta/diagrams/diagrams.summary.md`:
-
-```markdown
-# Architecture Diagram Generation Summary
-Generated at: $DATE_GENERATED  
-Confidence threshold: 0.75
-
-| Diagram | Confidence | Status | Output Path |
-|----------|-------------|---------|-------------|
-| Dependency Graph | 0.94 | ✅ Success | `Documentation/.meta/diagrams/dependency-graph.mmd` |
-| Layered Architecture | 0.88 | ✅ Success | `Documentation/.meta/diagrams/layered-architecture.mmd` |
-| System Context | 0.62 | ❌ Skipped | — |
-| Deployment Topology | — | ❌ Skipped | — |
-| Class Hierarchy | 0.91 | ✅ Success | `Documentation/.meta/diagrams/class-hierarchy.puml` |
-| Dataflow Sequence | 0.93 | ✅ Success | `Documentation/.meta/diagrams/dataflow-sequence.mmd` |
-
-**Overall Diagram Confidence Mean:** 0.92  
-**Coverage:** 5 of 7 diagrams successfully generated.
----
-
-## STEP 5 — Append to Audit Report
-
-Append section to `/Documentation/audit-report.md`:
-
-```markdown
-## Architecture Visualization Summary
-5 of 7 high-confidence diagrams generated (≥ 0.75 threshold).  
-See `/Documentation/.meta/diagrams/diagrams.summary.md` for details.
-```
-
----
-
-## [FAILSAFE BEHAVIOR]
-
-If no eligible data sources exist:
-
-* Output ⚠️ “No eligible data sources for diagram generation.”
-* Write an empty `diagrams.index.json` with zero entries.
-* Return status: `skipped`.
-
----
-
-# [OUTPUTS]
-
-| Artifact                             | Description                   |
-| ------------------------------------ | ----------------------------- |
-| `.meta/diagrams/*.mmd` / `.puml`     | Generated diagram files       |
-| `.meta/diagrams/diagrams.index.json` | Machine-readable manifest     |
-| `.meta/diagrams/diagrams.summary.md` | Human-readable summary        |
-| `audit-report.md (appendix)`         | Visualization results section |
-
----
-
-# [SUCCESS CRITERIA]
-
-* Each generated diagram ≥ 0.75 confidence
-* `diagrams.index.json` and `summary.md` written without error
-* Counts match across files
-* Skipped diagrams clearly logged
-
----
-
-# [FUTURE EXTENSIONS]
-
-When telemetry or runtime metrics become available:
-
-* Add **error propagation graphs**
-* Add **test coverage overlays**
-* Enable **change-impact topologies**
-* Raise thresholds dynamically with evidence weighting
-* Export HTML/SVG diagram bundles
-
----
-
-# [CLOSING MESSAGE]
-
-✅ Diagram generation complete.
-📊 Summary written to `/Documentation/.meta/diagrams/diagrams.summary.md`
-
-If partial:
-⚠️ Some diagrams skipped due to missing evidence — see summary for details.
-
-If none:
-❌ No diagrams generated (no high-confidence data detected).
-
-Return control to main workflow (AppDocU v6.1) using the following exit signaling and status artifact:
-
-- **Exit code:**
-  - `0` = success (all eligible diagrams generated)
-  - `1` = partial success (some diagrams generated, some skipped)
-  - `2` = failure (no diagrams generated)
-- **Status artifact:**
-  - Write a single-line JSON object to stdout with the following required fields:
-    - `status` (string: "success", "partial", or "failure")
-    - `message` (string: summary or error description)
-    - `artifacts` (array of strings: paths to generated diagram files)
-- **Main workflow reads:**
-  - The orchestrator will read both the process exit code and the JSON status line from stdout to determine completion and result state.
-  - Example status line:
-    `{ "status": "partial", "message": "3 diagrams generated, 2 skipped", "artifacts": ["Documentation/.meta/diagrams/dependency-graph.mmd", "Documentation/.meta/diagrams/layered-architecture.mmd"] }`
-
-```
-
----
-
-### ✅ Summary of Validation
-
-| Check | Result |
-|-------|---------|
-| Folder Path | `.github/prompts/diagrams/` → ✅ Correct |
-| Prompt Linking (Workflow v6.1) | ✅ References match |
-| Output Paths | ✅ Aligned with `/Documentation/.meta/diagrams/` |
-| Error Handling | ✅ Graceful for missing prompt/data |
-| Handoff Compatibility | ✅ Returns expected signals to workflow |
+### Diagram Type to Prompt File Mapping
+1. Dependency Graph → diagrams/generate.dependency.graph.prompt.md
+2. Layered Architecture → diagrams/generate.layered.architecture.prompt.md
+3. External Integrations → diagrams/generate.system.context.prompt.md
+4. Dataflow Sequence → diagrams/generate.dataflow.sequence.prompt.md
+5. Component Flow → diagrams/generate.component.flow.prompt.md
+6. Deployment Topology → diagrams/generate.deployment.topology.prompt.md
 
 
+## Output Requirements
+- Generate all diagrams in `.mmd` (Mermaid) format with confidence ≥ 0.75
+- Create index file `diagrams.index.json` with metadata and confidence scores
+- Create summary file `diagrams.summary.md` with descriptions and confidence metrics
+- Append diagram section to `audit-report.md` using an idempotent merge strategy:
+	- Use unique markers (e.g., `<!-- diagrams:start:{ID} -->` and `<!-- diagrams:end:{ID} -->` or a named heading) to delimit the diagram section.
+	- Before appending, search for an existing marker or heading using a regex-based search.
+	- If found, replace the content between markers atomically with the new diagram section.
+	- If identical content already exists, skip appending to avoid duplicates.
+	- Generate deterministic IDs (e.g., hash of diagram content or timestamp) for marker uniqueness.
+	- If no matching marker is found, create a new uniquely marked section at the end of the file.
+	- This ensures only one up-to-date diagram section is present and prevents duplicate entries.
+
+
+## Generation Workflow & Error Handling
+1. Validate all required source files exist and meet confidence thresholds
+	- If a source file is missing or fails validation, record it in the audit as `missing` or `validation_failed` with validation errors and confidence score.
+	- Emit a non-fatal warning and continue processing other sources; do not halt orchestration for partial failures.
+2. Generate each diagram type using specialized prompts with behavioral evidence
+	- If diagram generation returns below-confidence, mark that diagram as `skipped` with reason, confidence value, and any behavioral evidence.
+	- Include both skipped and generated diagram entries in the index and summary, with machine-readable fields: `status` (generated/skipped/missing/failed), `reason`, `confidence`, `evidence`.
+3. Create index and summary files with confidence tracking
+	- Totals: processed, generated, skipped, missing, failed.
+4. Update audit report with diagram references, confidence metrics, and error/warning logs
+	- Overall run status in the audit reflects partial success if any non-recoverable errors occurred.
+	- Set a non-zero exit or CI signal only for fatal/unrecoverable failures (e.g., all diagrams failed or critical source files missing).
+	- Log all errors, warnings, and skipped diagrams clearly for traceability.
+
+## Confidence Validation
+- Each diagram must reference behavior-graph.json edges with confidence scores
+- Minimum confidence threshold: 0.75 for all generated diagrams
+- Track and report mean confidence across all generated diagrams
+- Skip diagrams that don't meet confidence requirements
+
+
+## Required Diagram Prompts
+See the explicit mapping above for which prompt file corresponds to each diagram type. If any prompt file is missing or misnamed, diagram generation for that type will fail and must be remediated.
+1. diagrams/generate.dependency.graph.prompt.md - Uses behavior-graph.json for behavioral flows
+2. diagrams/generate.layered.architecture.prompt.md - Creates internal/external component graphs
+3. diagrams/generate.system.context.prompt.md - Uses system-integrations.json for external dependencies
+4. diagrams/generate.dataflow.sequence.prompt.md - Creates sequence diagrams for major flows
+5. diagrams/generate.component.flow.prompt.md - Maps component interactions with IO operations
+6. diagrams/generate.deployment.topology.prompt.md - Physical deployment structure
+
+## Output Format Requirements
+- Diagrams: `diagrams/*.mmd` files with Mermaid syntax
+- Index: `diagrams.index.json` with confidence scores and metadata
+- Summary: `diagrams.summary.md` with confidence metrics and status
+- Audit integration: Append to `audit-report.md` with confidence summary
+
+## Success Criteria
+- At least 3 diagrams generated with confidence ≥ 0.75
+- All behavioral evidence properly cited in diagrams
+- Consistent component naming across all diagrams
+- Proper Mermaid syntax validation

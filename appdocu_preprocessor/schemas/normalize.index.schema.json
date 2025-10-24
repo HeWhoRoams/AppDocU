@@ -1,0 +1,126 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Normalize Index Schema",
+  "description": "Schema for normalize.index.json file containing metadata about converted documents",
+  "required": ["generated_at", "documents"],
+  "properties": {
+    "generated_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp when the index was generated"
+    },
+    "documents": {
+      "type": "array",
+      "items": {
+    "type": "object",
+    "properties": {
+          "source": {
+            "type": "string",
+            "description": "Relative path to the original source file"
+          },
+          "output": {
+            "type": "string",
+            "description": "Relative path to the converted output file"
+          },
+          "converter": {
+            "type": "string",
+            "description": "Name of the converter used"
+          },
+          "status": {
+            "type": "string",
+            "enum": ["success", "failed", "skipped"],
+            "description": "Conversion status"
+          },
+          "error": {
+            "type": "string",
+            "description": "Error message, only present and required when status is 'failed'"
+          },
+          "hash": {
+            "type": "string",
+            "description": "SHA256 hash of the original file"
+          },
+          "pages": {
+            "type": "integer",
+            "description": "Number of pages (for documents with pages)"
+          },
+          "paragraphs": {
+            "type": "integer",
+            "description": "Number of paragraphs"
+          },
+          "tables": {
+            "type": "integer",
+            "description": "Number of tables"
+          },
+          "slides": {
+            "type": "integer",
+            "description": "Number of slides"
+          },
+          "has_notes": {
+            "type": "boolean",
+            "description": "Whether presentation has speaker notes"
+          },
+          "sheets": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "Sheet name"
+                },
+                "rows": {
+                  "type": "integer",
+                  "description": "Number of rows in sheet"
+                },
+                "columns": {
+                  "type": "integer",
+                  "description": "Number of columns in sheet"
+                },
+                "hidden": {
+                  "type": "boolean",
+                  "description": "Whether sheet is hidden"
+                }
+              }
+            }
+          }
+        },
+        "required": ["source", "output", "converter", "status"],
+        "additionalProperties": false,
+        "allOf": [
+          {
+            "if": {
+              "properties": {"status": {"const": "failed"}}
+            },
+            "then": {
+              "required": ["error"]
+            },
+            "else": {
+              "not": {
+                "required": ["error"]
+              }
+            }
+          }
+        ]
+            }
+          },
+          "total_sheets": {
+            "type": "integer",
+            "description": "Total number of sheets"
+          },
+          "total_rows": {
+            "type": "integer",
+            "description": "Total number of rows across all sheets"
+          },
+          "characters": {
+            "type": "integer",
+            "description": "Number of characters in text"
+          },
+          "edges": {
+            "type": "integer",
+            "description": "Number of edges/connectors (for diagrams)"
+          }
+        }
+      }
+    }
+  }

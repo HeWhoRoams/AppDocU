@@ -1,0 +1,52 @@
+{
+  "patterns": [
+    {
+      "language": "python",
+      "handler": "python_ast_analyzer",
+      "matcher": "*.py",
+      "pattern_file": "patterns/python.md"
+    },
+    {
+      "language": "csharp",
+      "handler": "csharp_roslyn_analyzer", 
+      "matcher": "*.cs",
+      "pattern_file": "patterns/csharp.md"
+    },
+    {
+      "language": "javascript",
+      "handler": "javascript_ast_analyzer",
+      "matcher": "*.js",
+      "pattern_file": "patterns/javascript.md"
+    },
+    {
+      "language": "react",
+      "handler": "react_component_analyzer",
+      "matcher": "*.jsx,*.tsx",
+      "pattern_file": "patterns/react.md"
+    },
+    {
+      "language": "sql",
+      "handler": "sql_parser",
+      "matcher": "*.sql",
+      "pattern_file": "patterns/sql.md"
+    },
+    {
+      "language": "abap",
+      "handler": "abap_analyzer",
+      "matcher": "*.abap",
+      "pattern_file": "patterns/abap.md"
+    },
+    {
+      "language": "generic",
+      "handler": "text_analyzer",
+      "matcher": "*",
+      "pattern_file": "patterns/generic.md"
+    },
+    {
+      "language": "docx",
+      "handler": "docx_extractor",
+      "matcher": "*.docx", 
+      "pattern_file": "patterns/docx.md"
+    }
+  ]
+}

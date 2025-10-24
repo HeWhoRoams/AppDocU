@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Normalized Map Schema",
+  "description": "Schema for normalized-map.json file mapping original files to converted outputs",
+  "patternProperties": {
+    "^[^\\/\\0]+$": {
+      "type": "string",
+      "description": "Path to the converted output file. Key must be a non-empty, filename-safe string (no slashes or null bytes)."
+    }
+  },
+  "additionalProperties": false
+}

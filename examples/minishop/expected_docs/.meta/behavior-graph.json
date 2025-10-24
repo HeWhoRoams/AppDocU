@@ -1,0 +1,168 @@
+{
+  "nodes": [
+    {
+      "id": "api.app.get_products",
+      "type": "function",
+      "name": "get_products",
+      "file": "api/app.py",
+      "line": 15,
+      "language": "python"
+    },
+    {
+      "id": "api.app.create_order",
+      "type": "function", 
+      "name": "create_order",
+      "file": "api/app.py",
+      "line": 25,
+      "language": "python"
+    },
+    {
+      "id": "api.app.call_payment_service",
+      "type": "function",
+      "name": "call_payment_service",
+      "file": "api/app.py", 
+      "line": 10,
+      "language": "python"
+    },
+    {
+      "id": "api.app.call_inventory_service",
+      "type": "function",
+      "name": "call_inventory_service", 
+      "file": "api/app.py",
+      "line": 14,
+      "language": "python"
+    },
+    {
+      "id": "api.app.get_db_connection",
+      "type": "function",
+      "name": "get_db_connection",
+      "file": "api/app.py",
+      "line": 42,
+      "language": "python"
+    },
+    {
+      "id": "service.OrderService.CreateOrder",
+      "type": "method",
+      "name": "CreateOrder",
+      "file": "service/OrderService.cs",
+      "line": 10,
+      "language": "csharp"
+    },
+    {
+      "id": "service.OrderService.GetOrdersByUser", 
+      "type": "method",
+      "name": "GetOrdersByUser",
+      "file": "service/OrderService.cs",
+      "line": 29,
+      "language": "csharp"
+    },
+    {
+      "id": "service.OrderService.ProcessPayment",
+      "type": "method", 
+      "name": "ProcessPayment",
+      "file": "service/OrderService.cs",
+      "line": 45,
+      "language": "csharp"
+    },
+    {
+      "id": "service.OrderService.EmitEvent",
+      "type": "method",
+      "name": "EmitEvent", 
+      "file": "service/OrderService.cs",
+      "line": 64,
+      "language": "csharp"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge1",
+      "source": "api.app.create_order",
+      "target": "api.app.get_db_connection",
+      "kind": "CALLS",
+      "file": "api/app.py",
+      "line": 30,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "edge2", 
+      "source": "api.app.create_order",
+      "target": "api.app.call_payment_service",
+      "kind": "CALLS",
+      "file": "api/app.py",
+      "line": 37,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "edge3",
+      "source": "api.app.get_products",
+      "target": "api.app.get_db_connection", 
+      "kind": "CALLS",
+      "file": "api/app.py",
+      "line": 18,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "edge4",
+      "source": "api.app.create_order",
+      "target": "db.orders",
+      "kind": "WRITES_DB",
+      "file": "api/app.py",
+      "line": 32,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "edge5",
+      "source": "api.app.get_products", 
+      "target": "db.products",
+      "kind": "READS_DB",
+      "file": "api/app.py",
+      "line": 20,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "edge6",
+      "source": "api.app.call_payment_service",
+      "target": "api.payment-api.example.com",
+      "kind": "CALLS_API",
+      "file": "api/app.py",
+      "line": 1,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "edge7",
+      "source": "api.app.call_inventory_service",
+      "target": "api.inventory-api.example.com", 
+      "kind": "CALLS_API",
+      "file": "api/app.py",
+      "line": 15,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "edge8",
+      "source": "service.OrderService.CreateOrder",
+      "target": "db.orders",
+      "kind": "WRITES_DB",
+      "file": "service/OrderService.cs",
+      "line": 18,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "edge9",
+      "source": "service.OrderService.CreateOrder",
+      "target": "service.OrderService.EmitEvent",
+      "kind": "CALLS",
+      "file": "service/OrderService.cs",
+      "line": 26,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "edge10",
+      "source": "service.OrderService.ProcessPayment",
+      "target": "api.payment-api.example.com",
+      "kind": "CALLS_API",
+      "file": "service/OrderService.cs",
+      "line": 50,
+      "confidence": "HIGH"
+    }
+  ]
+}

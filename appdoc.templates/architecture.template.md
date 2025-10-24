@@ -6,9 +6,9 @@
 title: "Architecture"
 app: "$ARGUMENTS"
 template: "architecture.template.md"
-version: "3.0"
+version: "4.0"
 doc_version: "$DOC_VERSION"
-generated_by: "AppDoc Agent v5.0"
+generated_by: "AppDoc Agent v7.0"
 generated_at: "$DATE_GENERATED"
 code_last_modified: "$LAST_CODE_CHANGE_DATE"
 sources_scanned: $SOURCES_SCANNED
@@ -16,8 +16,8 @@ language_handlers_used: $LANGUAGE_HANDLERS
 previous_doc_version: "$PREV_DOC_VERSION"
 ---
 
-## Executive Summary (2-3 sentences)
-$ARCH_EXECUTIVE_SUMMARY[CONFIDENCE:HIGH]
+## System Thesis
+$SYSTEM_THESIS[CONFIDENCE:HIGH]
 
 <details>
 <summary>Version History & Changes (click to expand)</summary>
@@ -52,16 +52,38 @@ $VERSION_CHANGES_SUMMARY
 
 | Layer | Purpose | Primary Modules | Key Dependencies | Confidence |
 |-------|---------|-----------------|------------------|------------|
-| Presentation | $LAYER_PRESENTATION_PURPOSE | $LAYER_PRESENTATION_MODULES | $LAYER_PRESENTATION_DEPENDENCIES | HIGH |
+| Controller/HTTP | $LAYER_CONTROLLER_PURPOSE | $LAYER_CONTROLLER_MODULES | $LAYER_CONTROLLER_DEPENDENCIES | HIGH |
 | Business Logic | $LAYER_LOGIC_PURPOSE | $LAYER_LOGIC_MODULES | $LAYER_LOGIC_DEPENDENCIES | HIGH |
-| Data Access | $LAYER_DATA_PURPOSE | $LAYER_DATA_MODULES | $LAYER_DATA_DEPENDENCIES | HIGH |
-| Integration | $LAYER_INTEGRATION_PURPOSE | $LAYER_INTEGRATION_MODULES | $LAYER_INTEGRATION_DEPENDENCIES | MEDIUM |
+| Repository/DB | $LAYER_REPO_PURPOSE | $LAYER_REPO_MODULES | $LAYER_REPO_DEPENDENCIES | HIGH |
+| External | $LAYER_EXTERNAL_PURPOSE | $LAYER_EXTERNAL_MODULES | $LAYER_EXTERNAL_DEPENDENCIES | MEDIUM |
 
-**Note:** These layers represent a common model but can be merged, split, or extended in real implementations. For example, simple apps may merge Presentation and Business Logic, while complex systems may add Security or Platform layers. Adapt as needed for your project. -->
+**Note:** Layered architecture following Controller → Service → Repository → External pattern. See behavior-graph.json for detailed call flows.
 </details>
 
 <details>
-<summary>2.2 Internal Components & Responsibilities (click to expand)</summary>
+<summary>2.2 Internal Component Graph (click to expand)</summary>
+
+**Generated from behavior-graph.json:**
+```mermaid
+graph TD
+    $INTERNAL_COMPONENT_GRAPH[CONFIDENCE:HIGH]
+```
+
+</details>
+
+<details>
+<summary>2.3 External Integrations Graph (click to expand)</summary>
+
+**Generated from system-integrations.json:**
+```mermaid
+graph LR
+    $EXTERNAL_INTEGRATIONS_GRAPH[CONFIDENCE:HIGH]
+```
+
+</details>
+
+<details>
+<summary>2.4 Internal Components & Responsibilities (click to expand)</summary>
 
 For each major component discovered, replicate the block below:
 
@@ -78,6 +100,7 @@ For each major component discovered, replicate the block below:
   - Code: $COMPONENT_TRACE_CODE (e.g., `src/service/x.cs:123`)
   - Tests: $COMPONENT_TRACE_TESTS (e.g., `tests/service-test.js:45`)
   - Config: $COMPONENT_TRACE_CONFIG
+  - Behavior Graph: $COMPONENT_BEHAVIOR_EVIDENCE (e.g., `behavior-graph.json#edge123`)
 
 (Repeat per component)
 
@@ -85,7 +108,7 @@ For each major component discovered, replicate the block below:
 
 ---
 
-### 2.3 Data Flow & Communication
+### 2.5 Data Flow & Communication
 
 <details>
 <summary>Expand for detailed data flow</summary>
@@ -111,7 +134,7 @@ graph LR
 
 ## 3. Integrations and External Systems
 
-Populate a table of detected integrations:
+Populate a table of detected integrations from system-integrations.json:
 
 | Integration Name | Type (DB/API/Queue) | Purpose | Config Placeholder | Confidence | Notes / Where Used |
 |------------------|----------------------|---------|--------------------|-----------|--------------------|
@@ -119,6 +142,8 @@ Populate a table of detected integrations:
 
 **Evidence Trail:**
 - See `inference-evidence.md` for detailed sourcing of each integration configuration
+- See `.meta/system-integrations.json` for complete integration mapping
+- See `.meta/behavior-graph.json` for usage patterns
 
 ---
 
@@ -189,9 +214,11 @@ Default (priority 3)
 - Inference Evidence: `inference-evidence.md` (NEW)
 - Change Impact Map: `change-impact-map.md` (NEW)
 - Dependency Graph: `dependency-graph.md`
+- Cognitive Audit: `cognitive-audit.md` (NEW)
+- Developer Preflight: `developer-preflight.md` (NEW)
 
 ### Source Evidence
-- Discovery metadata: `.meta/component-map.json`, `.meta/config-registry.json`
+- Discovery metadata: `.meta/behavior-graph.json`, `.meta/system-integrations.json`, `.meta/component-map.json`, `.meta/config-registry.json`
 - Test mapping: `.meta/test-coverage-map.json`
 - Language handler log: `.meta/language-handlers.json`
 
@@ -204,10 +231,13 @@ Default (priority 3)
 
 ## Quick Health Checklist (For New Team Members)
 
-- [ ] Review Executive Summary for high-level understanding
-- [ ] Check Component list (section 2.2) for ownership map
+- [ ] Review System Thesis for high-level understanding
+- [ ] Check Internal Component Graph (2.2) for runtime behavior
+- [ ] Review External Integrations Graph (2.3) for external dependencies
+- [ ] Check Component list (section 2.4) for ownership map
 - [ ] Review Integration table (section 3) for external dependencies
 - [ ] Check Section 6 for any LOW confidence items that need domain knowledge
 - [ ] Review `change-impact-map.md` before making any code changes
+- [ ] Review `developer-preflight.md` for component modification guidelines
 
 *(end of architecture document)*
