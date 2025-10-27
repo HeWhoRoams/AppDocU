@@ -1,0 +1,92 @@
+# C# / .NET
+bin/
+obj/
+out/
+Debug/
+Release/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.userprefs
+project.lock.json
+project.assets.json
+artifacts/
+**/Properties/launchSettings.json
+**/appsettings.json
+**/appsettings.*.json
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# Visual Studio
+.vs/
+*.VC.db
+*.VC.VC.opendb
+
+# JetBrains Rider
+.idea/
+*.DotSettings
+*.userprefs
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+build/
+bld/
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio 2015/2017/2019
+[VsTest]*
+
+# Roslyn
+*.rsp
+
+# NuGet
+*.nupkg
+nuget.exe
+NuGet.exe
+packages/
+.nuget/
+.nugetpackages.v2.lock
+.nuget/packages.lock.json
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# Logs
+*.log
+*.log.*
+
+# Environment specific files
+.env*
+.local
+
+# IDE
+*.swp
+*.swo
+*~
+
+# Coverage results
+coverage/
+*.lcov
+
+# Benchmark Results
+BenchmarkDotNet.Artifacts/
+
+# Others
+.vshistory/

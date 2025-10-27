@@ -3,5 +3,8 @@ python-docx>=0.8.11,<2.0
 docx2txt>=0.8,<1.0
 openpyxl>=3.0.10,<4.0
 python-pptx>=0.6.21,<2.0
-pdfminer.six>=20221105,<20260000
+pdfminer.six>=2021105,<20260000
 vsdx>=0.5.5,<1.0
+jsonschema>=4.0.0,<5.0.0
+Pillow>=9.0.0,<11.0.0; python_version < '3.14'
+Pillow>=10.0.0,<12.0.0; python_version >= '3.14'
