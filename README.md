@@ -34,7 +34,7 @@ graph TD
 
 ```bash
 # Clone the repository
-git clone <repo-url>
+git clone [<repo-url>](https://github.com/HeWhoRoams/AppDocU)
 cd AppDocU
 
 # Run end-to-end documentation generation
