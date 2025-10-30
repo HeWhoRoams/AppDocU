@@ -1,6 +1,11 @@
 """
 AppDocU Preprocessor & Normalizer
 Entrypoint script for converting binary document formats to text/structured representations
+
+This module provides the main normalization functionality for the AppDocU system,
+handling file enumeration, classification, conversion, and output generation. It
+manages the complete document preprocessing pipeline with caching, error handling,
+and comprehensive reporting capabilities.
 """
 import os
 import sys
@@ -14,6 +19,8 @@ from typing import Dict, List, Tuple, Optional, Callable
 import fnmatch
 from dataclasses import dataclass
 from enum import Enum
+
+from appdocu_preprocessor.config import get_global_config
 
 
 logger = logging.getLogger(__name__)
@@ -77,7 +84,7 @@ class DocumentNormalizer:
             # Document files (converted to .md in docs/)
             '.docx': FileType.DOCX, '.doc': FileType.DOCX,
             # Excel files (converted to .csv in data/)
-            '.xlsx': FileType.EXCEL, '.xls': FileType.EXCEL, '.csv': FileType.EXCEL,
+            '.xlsx': FileType.EXCEL, '.xls': FileType.EXCEL,
             # Visio files (converted to .mmd/.puml in diagrams/)
             '.vsdx': FileType.VISIO, '.vssx': FileType.VISIO,
             # PDF files (extracted to .md in docs/)
@@ -87,8 +94,6 @@ class DocumentNormalizer:
             # Image files (processed for diagrams)
             '.png': FileType.IMAGE, '.jpg': FileType.IMAGE, '.jpeg': FileType.IMAGE,
             '.svg': FileType.IMAGE,
-            # Ticket exports (converted to .md in tickets/)
-            '.json': FileType.TICKET, '.csv': FileType.TICKET,  # For ticket exports specifically
             # Other files
             '.other': FileType.OTHER,
         }
@@ -133,8 +138,22 @@ class DocumentNormalizer:
         return dir_name in skip_dirs
         
     def classify_file_type(self, file_path: Path) -> FileType:
-        """Classify file type based on extension"""
+        """Classify file type using extension and path/name heuristics for .json/.csv"""
         extension = file_path.suffix.lower()
+        path_parts = [p.lower() for p in file_path.parts]
+        stem = file_path.stem.lower()
+        parent_name = file_path.parent.name.lower() if file_path.parent else ""
+
+        # Heuristic for .json and .csv
+        if extension in {'.json', '.csv'}:
+            # Check if in a tickets directory or name contains 'ticket'
+            if any('ticket' in part for part in path_parts) or 'ticket' in stem or 'ticket' in parent_name:
+                return FileType.TICKET
+            if extension == '.csv':
+                return FileType.EXCEL
+            if extension == '.json':
+                return FileType.OTHER
+        # Fallback for other extensions
         return self.extension_to_type.get(extension, FileType.OTHER)
     
     def get_handler_name(self, file_path: Path) -> str:
@@ -512,6 +531,7 @@ def main():
     from converters.pdf_to_md import convert as pdf_convert
     from converters.visio_to_json import convert as visio_convert
     from converters.code_handler import convert as code_convert
+    from converters.sql_converter import convert as sql_convert
     from converters.ticket_handler import convert as ticket_convert
     from converters.image_handler import convert as image_convert
     
@@ -529,7 +549,7 @@ def main():
     normalizer.register_converter('.java', code_convert)
     normalizer.register_converter('.cpp', code_convert)
     normalizer.register_converter('.h', code_convert)
-    normalizer.register_converter('.sql', code_convert)
+    normalizer.register_converter('.sql', sql_convert)
     # Register ticket handler for JSON files (ticket exports)
     normalizer.register_converter('.json', ticket_convert)
     normalizer.register_converter('.yaml', code_convert)

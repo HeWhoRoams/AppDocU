@@ -1,6 +1,11 @@
 """
 Base Converter Class
 Abstract base class for all file converters with common functionality
+
+This module provides the abstract base converter class that defines the interface and
+common functionality shared by all file converters in the AppDocU system. It includes
+standardized methods for file processing, metadata handling, error management, and
+output generation to ensure consistency across all converter implementations.
 """
 import os
 import hashlib
@@ -10,6 +15,8 @@ from datetime import datetime, timezone
 from abc import ABC, abstractmethod
 from typing import Dict, Any, Optional
 import json
+
+from appdocu_preprocessor.config import get_global_config
 
 
 logger = logging.getLogger(__name__)

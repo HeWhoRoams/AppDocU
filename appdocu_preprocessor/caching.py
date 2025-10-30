@@ -1,13 +1,21 @@
 """
 Caching System for AppDocU Preprocessor
 Implements file change detection and caching to avoid unnecessary conversions
+
+This module provides intelligent caching capabilities for the AppDocU preprocessor system,
+enabling efficient file processing by detecting changes and avoiding unnecessary conversions.
+It tracks file hashes, manages cache expiration, handles dependencies, and provides
+comprehensive cache management functionality for optimal performance.
 """
 import hashlib
 import json
 import os
 from pathlib import Path
+from datetime import datetime, timedelta
 from typing import Dict, Optional, Set
 import logging
+
+from appdocu_preprocessor.config import get_global_config
 
 
 logger = logging.getLogger(__name__)

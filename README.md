@@ -156,9 +156,15 @@ cd AppDocU
 python appdoc.py --target /path/to/your/codebase
 
 # Or run individual passes
-python appdoc.py --pass 1 --target /path/to/your/codebase  # Discovery
-python appdoc.py --pass 2 --target /path/to/your/codebase  # Enrichment  
-python appdoc.py --pass 3 --target /path/to/your/codebase  # Cognitive Audit
+python appdoc.py --target /path/to/your/codebase --pass 1  # Discovery
+python appdoc.py --target /path/to/your/codebase --pass 2  # Enrichment  
+python appdoc.py --target /path/to/your/codebase --pass 3  # Cognitive Audit
+
+# Run with custom output directory
+python appdoc.py --target /path/to/your/codebase --output /custom/output/dir
+
+# Run with verbose logging
+python appdoc.py --target /path/to/your/codebase --verbose
 ```
 
 ## User Goals → Which Prompt to Run

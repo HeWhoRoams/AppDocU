@@ -122,10 +122,9 @@ class CodeHandler(BaseConverter):
         return language_map.get(extension.lower(), 'unknown')
 
 
-def convert(file_path: Path, output_dir: Path) -> Dict[str, Any]:
+def convert(file_path: Path, output_dir: Path, root_path: Optional[Path] = None) -> Dict[str, Any]:
     """Wrapper function for backward compatibility"""
     handler = CodeHandler()
-    # We need to determine the root path somehow - for now we'll use the parent of the output directory
-    # In a real implementation, this would be passed from the main preprocessor
-    root_path = file_path.parent  # This is a heuristic - in practice, the root would be passed
-    return handler.convert(file_path, output_dir, root_path)
+    # Use the provided root_path, or fall back to a heuristic if not provided
+    actual_root_path = root_path or file_path.parent
+    return handler.convert(file_path, output_dir, actual_root_path)

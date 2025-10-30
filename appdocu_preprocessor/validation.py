@@ -1,6 +1,10 @@
 """
 AppDocU Preprocessor Validation
 Validates preprocessing results and generates quality reports
+
+This module provides comprehensive validation capabilities for the AppDocU preprocessor system,
+including file manifest validation, conversion coverage analysis, metadata verification, and
+quality metrics reporting. It ensures the integrity and completeness of the preprocessing workflow.
 """
 import os
 import json
@@ -12,6 +16,7 @@ import hashlib
 
 from appdocu_preprocessor.file_enumerator import FileInfo, FileType
 from appdocu_preprocessor.converters.base_converter import BaseConverter
+from appdocu_preprocessor.config import get_global_config
 
 logger = logging.getLogger(__name__)
 

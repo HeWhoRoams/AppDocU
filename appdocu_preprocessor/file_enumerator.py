@@ -1,6 +1,11 @@
 """
 File Enumerator
 Scans repository and classifies files for preprocessing
+
+This module provides file enumeration and classification capabilities for the AppDocU system,
+identifying supported file types, calculating file hashes, and creating comprehensive file
+manifests for the preprocessing pipeline. It handles various file types and maintains
+metadata for tracking and validation purposes.
 """
 import os
 import hashlib
@@ -13,6 +18,7 @@ from enum import Enum
 import json
 
 from appdocu_preprocessor.converters.base_converter import BaseConverter
+from appdocu_preprocessor.config import get_global_config
 
 logger = logging.getLogger(__name__)
 

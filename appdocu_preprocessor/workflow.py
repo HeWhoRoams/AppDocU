@@ -1,6 +1,10 @@
 """
 AppDocU Preprocessor Workflow
 Orchestrates the complete preprocessing pipeline from file enumeration to normalization
+
+This module provides the core workflow orchestration for the AppDocU preprocessor system,
+handling file enumeration, processing, validation, and reporting. It manages the complete
+end-to-end preprocessing pipeline with proper error handling, logging, and metrics collection.
 """
 import os
 import sys
@@ -21,6 +25,7 @@ from appdocu_preprocessor.converters.pdf_to_md import PdfToMdConverter
 from appdocu_preprocessor.converters.pptx_to_md import PptxToMdConverter
 from appdocu_preprocessor.converters.ticket_handler import TicketHandler
 from appdocu_preprocessor.converters.image_handler import ImageHandler
+from appdocu_preprocessor.config import get_global_config
 
 logger = logging.getLogger(__name__)
 

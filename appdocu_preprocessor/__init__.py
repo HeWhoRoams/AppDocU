@@ -1,6 +1,11 @@
 """
 AppDocU Preprocessor Package
 Entry point and main exports for the preprocessing system
+
+This module provides the main entry point and core exports for the AppDocU preprocessor system,
+enabling comprehensive document preprocessing with file enumeration, conversion, validation,
+and reporting capabilities. It offers both high-level convenience functions and detailed
+component access for flexible integration and customization.
 """
 import logging
 from pathlib import Path
@@ -9,6 +14,9 @@ from typing import Optional
 from appdocu_preprocessor.workflow import PreprocessorWorkflow
 from appdocu_preprocessor.validation import PreprocessorValidator
 from appdocu_preprocessor.file_enumerator import FileEnumerator, FileInfo, FileType
+from appdocu_preprocessor.config import get_global_config, ConfigManager
+from appdocu_preprocessor.exceptions import *
+from appdocu_preprocessor.monitoring import *
 
 # Configure package-level logging
 logging.getLogger(__name__).addHandler(logging.NullHandler())
