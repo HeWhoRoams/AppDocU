@@ -1,0 +1,23 @@
+﻿# Gate Validation Report
+Generated: 10/30/2025 16:09:40
+Configuration: config.json
+
+2025-10-30 16:09:40 [FAIL] Configuration Validation - Config file not found: config.json
+2025-10-30 16:09:40 [PASS] Required Files - File README.md exists - Details: Path: README.md
+2025-10-30 16:09:40 [PASS] Required Files - File appdoc.py exists - Details: Path: appdoc.py
+2025-10-30 16:09:40 [PASS] Required Files - File IMPLEMENTATION_PLAN.md exists - Details: Path: IMPLEMENTATION_PLAN.md
+2025-10-30 16:09:40 [PASS] Required Files - File appdocu_preprocessor/__init__.py exists - Details: Path: appdocu_preprocessor/__init__.py
+2025-10-30 16:09:41 [PASS] Documentation Quality - Documentation meets quality standards - Details: Word count: 1020 (min: 50), Sections found: 4/4
+2025-10-30 16:09:41 [PASS] Python Functions - Content matches pattern in appdoc.py - Details: Pattern: def\s+\w+\s*\(
+2025-10-30 16:09:41 [PASS] Directory Structure - Directory .\patterns exists - Details: Expected: directory, Actual: DirectoryInfo
+2025-10-30 16:09:41 [PASS] Directory Structure - Directory .\docs exists - Details: Expected: directory, Actual: DirectoryInfo
+2025-10-30 16:09:41 [PASS] Directory Structure - File .\appdoc.py exists - Details: Expected: file, Actual: FileInfo
+2025-10-30 16:09:41 [PASS] Directory Structure - Directory .\appdocu_preprocessor exists - Details: Expected: directory, Actual: DirectoryInfo
+2025-10-30 16:09:41 [PASS] Directory Structure - File .\README.md exists - Details: Expected: file, Actual: FileInfo
+2025-10-30 16:09:41 [FAIL] Template Placeholders - Content matches pattern in C:\Github\AppDoc\appdoc.templates\architecture.template.md - Details: Pattern: {{\s*\w+\s*}}
+2025-10-30 16:09:41 [FAIL] Template Placeholders - Content matches pattern in C:\Github\AppDoc\appdoc.templates\audit.report.template.md - Details: Pattern: {{\s*\w+\s*}}
+2025-10-30 16:09:41 [FAIL] Template Placeholders - Content matches pattern in C:\Github\AppDoc\appdoc.templates\documentation.tasks.template.md - Details: Pattern: {{\s*\w+\s*}}
+2025-10-30 16:09:41 [FAIL] Template Placeholders - Content matches pattern in C:\Github\AppDoc\appdoc.templates\logic-and-workflows.template.md - Details: Pattern: {{\s*\w+\s*}}
+2025-10-30 16:09:41 [FAIL] Template Placeholders - Content matches pattern in C:\Github\AppDoc\appdoc.templates\troubleshooting.playbook.template.md - Details: Pattern: {{\s*\w+\s*}}
+
+OVERALL RESULT: FAILED - Some gates did not pass
