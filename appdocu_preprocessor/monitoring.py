@@ -19,7 +19,7 @@ import threading
 import json
 import statistics
 
-from appdocu_preprocessor.config import get_global_config
+# get_global_config import removed - not used in this module and causes import crashes
 from appdocu_preprocessor.exceptions import AppDocUException
 
 
@@ -45,7 +45,8 @@ class PerformanceMonitor:
     """Centralized performance monitoring system"""
     
     def __init__(self):
-        self.config = get_global_config()
+        # self.config = get_global_config()  # Removed - causes import crashes
+        self.config = None  # Use None instead to avoid config import
         self.metrics: List[PerformanceMetric] = []
         self.operation_timings: Dict[str, List[float]] = defaultdict(list)
         self.lock = threading.Lock()

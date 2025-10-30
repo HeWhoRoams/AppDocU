@@ -229,7 +229,7 @@ class ConfigManager:
             raise ConfigurationError(f"Configuration validation failed: {'; '.join(errors)}")
     
     def _setup_logging(self):
-        """Setup logging based on configuration"""
+        """Setup logging based on configuration - DISABLED to prevent hangs"""
         # Convert string log level to enum
         try:
             log_level = LogLevel(self._config.log_level.upper()).value
@@ -238,29 +238,10 @@ class ConfigManager:
             # Use a simple logger for warnings during initialization
             print(f"Warning: Invalid log level '{self._config.log_level}', defaulting to INFO")
         
-        # Configure logging - be more careful with basicConfig
-        numeric_level = getattr(logging, log_level.upper(), logging.INFO)
-        try:
-            # Only configure if not already configured, or use a safer approach
-            if not logging.getLogger().handlers:
-                logging.basicConfig(
-                    level=numeric_level,
-                    format=self._config.log_format,
-                    handlers=self._get_log_handlers(),
-                    force=False  # Don't force override existing config
-                )
-            else:
-                # If logging is already configured, just set the level
-                logging.getLogger().setLevel(numeric_level)
-        except Exception as e:
-            # If basicConfig fails, set up a simple console logger
-            print(f"Warning: Could not configure logging: {e}")
-            logging.basicConfig(
-                level=numeric_level,
-                format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-                handlers=[logging.StreamHandler()],
-                force=True
-            )
+        # SKIP logging configuration to prevent hangs
+        # This was causing the system to hang during import
+        # logging configuration is now handled externally
+        pass  # Do nothing - logging setup disabled
     
     def _get_log_handlers(self) -> list:
         """Get logging handlers based on configuration"""

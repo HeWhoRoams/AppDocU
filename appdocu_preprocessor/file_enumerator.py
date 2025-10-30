@@ -18,7 +18,7 @@ from enum import Enum
 import json
 
 from appdocu_preprocessor.converters.base_converter import BaseConverter
-from appdocu_preprocessor.config import get_global_config
+# get_global_config import removed - not used in this module and causes import crashes
 
 logger = logging.getLogger(__name__)
 

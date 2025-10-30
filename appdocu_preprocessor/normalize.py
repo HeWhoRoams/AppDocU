@@ -20,7 +20,7 @@ import fnmatch
 from dataclasses import dataclass
 from enum import Enum
 
-from appdocu_preprocessor.config import get_global_config
+# get_global_config import removed - not used in this module and causes import crashes
 
 
 logger = logging.getLogger(__name__)

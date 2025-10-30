@@ -15,17 +15,21 @@ from datetime import datetime, timezone
 from typing import Dict, List, Optional, Any
 import traceback
 
-from appdocu_preprocessor.file_enumerator import FileEnumerator, FileInfo, FileType
-from appdocu_preprocessor.converters.base_converter import BaseConverter, ConversionResult
-from appdocu_preprocessor.converters.code_handler import CodeHandler
-from appdocu_preprocessor.converters.docx_to_md import DocxToMdConverter
-from appdocu_preprocessor.converters.xlsx_to_csv import XlsxToCsvConverter
-from appdocu_preprocessor.converters.visio_to_json import VisioToJsonConverter
-from appdocu_preprocessor.converters.pdf_to_md import PdfToMdConverter
-from appdocu_preprocessor.converters.pptx_to_md import PptxToMdConverter
-from appdocu_preprocessor.converters.ticket_handler import TicketHandler
-from appdocu_preprocessor.converters.image_handler import ImageHandler
-from appdocu_preprocessor.config import get_global_config
+# Import modules only when needed to avoid config initialization issues
+# Move all imports inside methods where they're actually used
+# from appdocu_preprocessor.file_enumerator import FileEnumerator, FileInfo, FileType
+# from appdocu_preprocessor.converters.base_converter import BaseConverter, ConversionResult
+# from appdocu_preprocessor.converters.code_handler import CodeHandler
+# from appdocu_preprocessor.converters.docx_to_md import DocxToMdConverter
+# from appdocu_preprocessor.converters.xlsx_to_csv import XlsxToCsvConverter
+# from appdocu_preprocessor.converters.visio_to_json import VisioToJsonConverter
+# from appdocu_preprocessor.converters.pdf_to_md import PdfToMdConverter
+# from appdocu_preprocessor.converters.pptx_to_md import PptxToMdConverter
+# from appdocu_preprocessor.converters.ticket_handler import TicketHandler
+# from appdocu_preprocessor.converters.image_handler import ImageHandler
+# Import get_global_config only when needed to avoid config initialization issues
+# get_global_config is not actually used in this module, so we can remove it
+# from appdocu_preprocessor.config import get_global_config
 
 logger = logging.getLogger(__name__)
 
@@ -41,8 +45,8 @@ class PreprocessorWorkflow:
             root_path: Root path of repository to process
             output_dir: Output directory (defaults to root_path/_normalized)
         """
-        self.root_path = root_path
-        self.output_dir = output_dir or root_path / "_normalized"
+        self.root_path = Path(root_path)
+        self.output_dir = Path(output_dir) if output_dir else self.root_path / "_normalized"
         self.meta_dir = self.output_dir / ".meta"
         self.normalized_dir = self.output_dir / "normalized"
         
@@ -51,10 +55,12 @@ class PreprocessorWorkflow:
         self.meta_dir.mkdir(exist_ok=True)
         self.normalized_dir.mkdir(exist_ok=True)
         
-        # Initialize components
+        # Import and initialize components only when needed
+        # Move FileEnumerator import here to avoid config issues
+        from appdocu_preprocessor.file_enumerator import FileEnumerator
         self.enumerator = FileEnumerator(root_path)
         self.handlers = self._initialize_handlers()
-        self.file_manifest: List[FileInfo] = []
+        self.file_manifest: List[Any] = []  # Will be populated during workflow execution
         self.conversion_results: List[Dict[str, Any]] = []
         self.stats = {
             'total_files': 0,
@@ -66,6 +72,18 @@ class PreprocessorWorkflow:
     
     def _initialize_handlers(self) -> Dict[FileType, BaseConverter]:
         """Initialize all file type handlers"""
+        # Import handlers only when needed to avoid config initialization issues
+        from appdocu_preprocessor.converters.code_handler import CodeHandler
+        from appdocu_preprocessor.converters.docx_to_md import DocxToMdConverter
+        from appdocu_preprocessor.converters.xlsx_to_csv import XlsxToCsvConverter
+        from appdocu_preprocessor.converters.visio_to_json import VisioToJsonConverter
+        from appdocu_preprocessor.converters.pdf_to_md import PdfToMdConverter
+        from appdocu_preprocessor.converters.pptx_to_md import PptxToMdConverter
+        from appdocu_preprocessor.converters.ticket_handler import TicketHandler
+        from appdocu_preprocessor.converters.image_handler import ImageHandler
+        from appdocu_preprocessor.file_enumerator import FileType
+        from appdocu_preprocessor.converters.base_converter import BaseConverter
+        
         return {
             FileType.CODE: CodeHandler(),
             FileType.DOCX: DocxToMdConverter(),

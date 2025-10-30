@@ -15,7 +15,7 @@ from datetime import datetime, timedelta
 from typing import Dict, Optional, Set
 import logging
 
-from appdocu_preprocessor.config import get_global_config
+# get_global_config import removed - not used in this module and causes import crashes
 
 
 logger = logging.getLogger(__name__)

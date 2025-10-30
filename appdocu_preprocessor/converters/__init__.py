@@ -18,7 +18,8 @@ from .sql_converter import SqlConverter
 from .ticket_handler import TicketHandler
 from .visio_to_json import VisioToJsonConverter
 from .xlsx_to_csv import XlsxToCsvConverter
-from .config import get_global_config, ConfigManager
+# get_global_config import removed - not used in this module and causes import crashes
+# ConfigManager import removed - not used in this module and causes import crashes
 from .exceptions import *
 from .monitoring import *
 
@@ -33,7 +34,5 @@ __all__ = [
     'SqlConverter',
     'TicketHandler',
     'VisioToJsonConverter',
-    'XlsxToCsvConverter',
-    'get_global_config',
-    'ConfigManager'
+    'XlsxToCsvConverter'
 ]

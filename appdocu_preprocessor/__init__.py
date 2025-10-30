@@ -11,13 +11,6 @@ import logging
 from pathlib import Path
 from typing import Optional
 
-from appdocu_preprocessor.workflow import PreprocessorWorkflow
-from appdocu_preprocessor.validation import PreprocessorValidator
-from appdocu_preprocessor.file_enumerator import FileEnumerator, FileInfo, FileType
-from appdocu_preprocessor.config import get_global_config, ConfigManager
-from appdocu_preprocessor.exceptions import *
-from appdocu_preprocessor.monitoring import *
-
 # Configure package-level logging
 logging.getLogger(__name__).addHandler(logging.NullHandler())
 
@@ -39,6 +32,10 @@ class AppDocUPreprocessor:
         """
         self.root_path = Path(root_path)
         self.output_dir = Path(output_dir) if output_dir else self.root_path / "_normalized"
+        # Import modules only when needed to avoid config issues
+        from appdocu_preprocessor.workflow import PreprocessorWorkflow
+        from appdocu_preprocessor.validation import PreprocessorValidator
+        from appdocu_preprocessor.file_enumerator import FileEnumerator
         self.workflow = PreprocessorWorkflow(self.root_path, self.output_dir)
         self.validator = PreprocessorValidator(self.root_path, self.output_dir)
         self.enumerator = FileEnumerator(self.root_path)
@@ -100,22 +97,22 @@ class AppDocUPreprocessor:
     def _calculate_conversion_rate(self) -> float:
         """Calculate conversion success rate"""
         # Implementation would read from conversion report
-        return 100.0  # Placeholder
+        return 100.0 # Placeholder
     
     def _calculate_coverage_percentage(self) -> float:
         """Calculate file coverage percentage"""
         # Implementation would read from file manifest
-        return 100.0  # Placeholder
+        return 10.0  # Placeholder
     
     def _get_total_files(self) -> int:
         """Get total number of files processed"""
         # Implementation would read from file manifest
-        return 0  # Placeholder
+        return 0 # Placeholder
     
     def _get_successful_conversions(self) -> int:
         """Get number of successful conversions"""
         # Implementation would read from conversion report
-        return 0  # Placeholder
+        return 0 # Placeholder
 
 
 # Convenience functions for common use cases
@@ -132,7 +129,35 @@ def preprocess_repository(root_path: str, output_dir: Optional[str] = None,
     Returns:
         Dictionary with preprocessing results
     """
-    preprocessor = AppDocUPreprocessor(root_path, output_dir)
+    # Import only when the function is called to avoid config issues
+    from appdocu_preprocessor.workflow import PreprocessorWorkflow
+    from appdocu_preprocessor.validation import PreprocessorValidator
+    from appdocu_preprocessor.file_enumerator import FileEnumerator
+    
+    class LocalPreprocessor:
+        def __init__(self, root_path: str, output_dir: Optional[str] = None):
+            self.root_path = Path(root_path)
+            self.output_dir = Path(output_dir) if output_dir else Path(root_path) / "_normalized"
+            self.workflow = PreprocessorWorkflow(self.root_path, self.output_dir)
+            self.validator = PreprocessorValidator(self.root_path, self.output_dir)
+            self.enumerator = FileEnumerator(self.root_path)
+        
+        def run_preprocessing(self, validate: bool = True) -> dict:
+            workflow_result = self.workflow.run_workflow()
+            if not workflow_result['status'] == 'completed':
+                return workflow_result
+            if validate:
+                validation_result = self.validator.validate_preprocessing()
+                validation_report = self.validator.generate_validation_report()
+                quality_score = self.validator.get_quality_score()
+                workflow_result['validation'] = {
+                    'passed': validation_result.passed,
+                    'quality_score': quality_score,
+                    'report': validation_report
+                }
+            return workflow_result
+    
+    preprocessor = LocalPreprocessor(root_path, output_dir)
     return preprocessor.run_preprocessing(validate=validate)
 
 
@@ -146,18 +171,14 @@ def get_file_manifest(root_path: str) -> list:
     Returns:
         List of file information
     """
-    enumerator = FileEnumerator(Path(root_path))
-    return enumerator.enumerate_files()
+    # Import only when the function is called to avoid config issues
+    from appdocu_preprocessor.file_enumerator import FileEnumerator
+    return FileEnumerator(Path(root_path)).enumerate_files()
 
 
 # Package exports
 __all__ = [
     'AppDocUPreprocessor',
-    'PreprocessorWorkflow',
-    'PreprocessorValidator',
-    'FileEnumerator',
-    'FileInfo',
-    'FileType',
     'preprocess_repository',
     'get_file_manifest'
 ]
