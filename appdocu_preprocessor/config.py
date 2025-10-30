@@ -235,16 +235,32 @@ class ConfigManager:
             log_level = LogLevel(self._config.log_level.upper()).value
         except ValueError:
             log_level = "INFO"
-            self.logger.warning(f"Invalid log level '{self._config.log_level}', defaulting to INFO")
+            # Use a simple logger for warnings during initialization
+            print(f"Warning: Invalid log level '{self._config.log_level}', defaulting to INFO")
         
-        # Configure logging
+        # Configure logging - be more careful with basicConfig
         numeric_level = getattr(logging, log_level.upper(), logging.INFO)
-        logging.basicConfig(
-            level=numeric_level,
-            format=self._config.log_format,
-            handlers=self._get_log_handlers(),
-            force=True  # Override any existing configuration
-        )
+        try:
+            # Only configure if not already configured, or use a safer approach
+            if not logging.getLogger().handlers:
+                logging.basicConfig(
+                    level=numeric_level,
+                    format=self._config.log_format,
+                    handlers=self._get_log_handlers(),
+                    force=False  # Don't force override existing config
+                )
+            else:
+                # If logging is already configured, just set the level
+                logging.getLogger().setLevel(numeric_level)
+        except Exception as e:
+            # If basicConfig fails, set up a simple console logger
+            print(f"Warning: Could not configure logging: {e}")
+            logging.basicConfig(
+                level=numeric_level,
+                format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+                handlers=[logging.StreamHandler()],
+                force=True
+            )
     
     def _get_log_handlers(self) -> list:
         """Get logging handlers based on configuration"""
@@ -255,13 +271,25 @@ class ConfigManager:
         
         if self._config.log_to_file and self._config.log_file:
             from logging.handlers import RotatingFileHandler
-            handler = RotatingFileHandler(
-                self._config.log_file,
-                maxBytes=self._config.log_max_size_mb * 1024 * 1024,
-                backupCount=self._config.log_backup_count,
-                encoding='utf-8'
-            )
-            handlers.append(handler)
+            import os
+            from pathlib import Path
+            
+            try:
+                # Create directory for log file if it doesn't exist
+                log_path = Path(self._config.log_file)
+                log_path.parent.mkdir(parents=True, exist_ok=True)
+                
+                handler = RotatingFileHandler(
+                    self._config.log_file,
+                    maxBytes=self._config.log_max_size_mb * 1024 * 1024,
+                    backupCount=self._config.log_backup_count,
+                    encoding='utf-8'
+                )
+                handlers.append(handler)
+            except Exception as e:
+                # If file handler creation fails, log to console only
+                print(f"Warning: Could not create file log handler: {e}")
+                self.logger.warning(f"Could not create file log handler: {e}")
         
         return handlers
     

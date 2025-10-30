@@ -55,13 +55,18 @@ class AppDocUOrchestrator:
         """Setup logging configuration"""
         log_file = self.meta_dir / "appdoc.log"
         
+        # Remove any existing handlers to avoid duplicates
+        for handler in logging.root.handlers[:]:
+            logging.root.removeHandler(handler)
+        
         logging.basicConfig(
-            level=logging.INFO,
+            level=logging.DEBUG,  # Changed to DEBUG for more verbose output
             format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
             handlers=[
                 logging.FileHandler(log_file, encoding='utf-8'),
                 logging.StreamHandler(sys.stdout)
-            ]
+            ],
+            force=True  # This ensures the configuration is applied even if already set
         )
         
         self.logger = logging.getLogger(__name__)
@@ -553,9 +558,14 @@ Examples:
     
     args = parser.parse_args()
     
-    # Set logging level based on verbose flag
+    # Set logging level based on verbose flag - ensure it's applied before creating orchestrator
+    # Use a simple logging setup to avoid config module issues
     if args.verbose:
+        logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', force=True)
         logging.getLogger().setLevel(logging.DEBUG)
+    else:
+        logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', force=True)
+        logging.getLogger().setLevel(logging.INFO)
     
     # Create orchestrator
     orchestrator = AppDocUOrchestrator(args.target, args.output)
