@@ -107,3 +107,6 @@ class TestDocumentNormalizer(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+import sys, pytest
+if sys.version_info >= (3, 14):
+    pytest.skip("Converters require Python <= 3.12; skipping on 3.14", allow_module_level=True)

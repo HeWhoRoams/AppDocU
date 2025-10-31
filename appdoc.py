@@ -296,21 +296,22 @@ class AppDocUOrchestrator:
             status = file_info.get('status', 'unknown')
             
             # Create node for the file
+            norm_path = str(file_path).replace('\\\\', '/').replace('\\', '/')
             node = {
                 'id': file_hash[:8] if file_hash else f"file_{len(behavior_graph['nodes'])}",
                 'name': Path(file_path).name,
-                'path': file_path,
+                'path': norm_path,
                 'type': 'file',
                 'size_kb': file_size,
                 'status': status,
                 'extension': Path(file_path).suffix
             }
             behavior_graph['nodes'].append(node)
-            behavior_graph['components'][file_path] = node
+            behavior_graph['components'][norm_path] = node
             
             # Identify potential entry points based on file names and extensions
-            if any(keyword in file_path.lower() for keyword in ['main', 'index', 'app', 'entry', 'start']):
-                behavior_graph['entry_points'].append(file_path)
+            if any(keyword in norm_path.lower() for keyword in ['main', 'index', 'app', 'entry', 'start']):
+                behavior_graph['entry_points'].append(norm_path)
         
         # Add basic statistics
         behavior_graph['statistics'] = {
@@ -825,9 +826,19 @@ class AppDocUOrchestrator:
                                 elif isinstance(n, ast.ImportFrom):
                                     mod = n.module or ""
                                     if n.level and n.level > 0:
-                                        import_records['rel'].append((n.level, mod))
+                                        # Capture each imported name for relative resolution
+                                        for alias in (n.names or []):
+                                            name = alias.name if alias and alias.name else ""
+                                            full = f"{mod}.{name}" if mod else name
+                                            import_records['rel'].append((n.level, full))
                                     else:
-                                        import_records['abs'].append(mod)
+                                        # Absolute import-from: capture module and names
+                                        if mod:
+                                            import_records['abs'].append(mod)
+                                        for alias in (n.names or []):
+                                            if alias and alias.name:
+                                                full = f"{mod}.{alias.name}" if mod else alias.name
+                                                import_records['abs'].append(full)
                                 elif isinstance(n, ast.Import):
                                     for alias in n.names:
                                         if alias.name:
@@ -841,7 +852,8 @@ class AppDocUOrchestrator:
                         # Resolve imports to file nodes
                         def _resolve_rel(cur: Path, level: int, module: str) -> str | None:
                             base = cur.parent
-                            for _ in range(max(0, level)):
+                            # level=1 means current package; only go up (level-1)
+                            for _ in range(max(0, (level or 0) - 1)):
                                 base = base.parent
                             parts = (module or '').split('.') if module else []
                             candidate = base
@@ -850,7 +862,7 @@ class AppDocUOrchestrator:
                                     candidate = candidate / pseg
                             for cand in [candidate.with_suffix('.py'), candidate / '__init__.py']:
                                 try:
-                                    relp = str(cand.relative_to(self.target_path))
+                                    relp = cand.relative_to(self.target_path).as_posix()
                                     if relp in nodes_by_path:
                                         return relp
                                 except Exception:
@@ -866,7 +878,7 @@ class AppDocUOrchestrator:
                                     candidate = candidate / pseg
                             for cand in [candidate.with_suffix('.py'), candidate / '__init__.py']:
                                 try:
-                                    relp = str(cand.relative_to(self.target_path))
+                                    relp = cand.relative_to(self.target_path).as_posix()
                                     if relp in nodes_by_path:
                                         return relp
                                 except Exception:
@@ -903,7 +915,7 @@ class AppDocUOrchestrator:
                                 candidates += [(target / 'index').with_suffix(e) for e in exts]
                             for cand in candidates:
                                 try:
-                                    relp = str(cand.relative_to(self.target_path))
+                                    relp = cand.relative_to(self.target_path).as_posix()
                                     if relp in nodes_by_path:
                                         return relp
                                 except Exception:

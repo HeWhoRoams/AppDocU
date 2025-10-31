@@ -1,0 +1,49 @@
+{
+  "generated": [
+    "_normalized\\diagrams\\system_context.mmd",
+    "_normalized\\diagrams\\dependency_graph.mmd",
+    "_normalized\\diagrams\\component_flow.mmd",
+    "_normalized\\diagrams\\data_flow.mmd"
+  ],
+  "rendered": [
+    "_normalized\\diagrams\\dependency_graph.svg",
+    "_normalized\\diagrams\\component_flow.png",
+    "_normalized\\diagrams\\component_flow.svg",
+    "_normalized\\diagrams\\data_flow.png"
+  ],
+  "errors": [
+    {
+      "file": "_normalized\\diagrams\\system_context.mmd",
+      "renderer": "kroki",
+      "fmt": "png",
+      "error": "HTTP 400"
+    },
+    {
+      "file": "_normalized\\diagrams\\system_context.mmd",
+      "renderer": "kroki",
+      "fmt": "svg",
+      "error": "HTTP 400"
+    },
+    {
+      "file": "_normalized\\diagrams\\dependency_graph.mmd",
+      "renderer": "kroki",
+      "fmt": "png",
+      "error": "HTTP 400"
+    },
+    {
+      "file": "_normalized\\diagrams\\data_flow.mmd",
+      "renderer": "kroki",
+      "fmt": "svg",
+      "error": "HTTP 400"
+    }
+  ],
+  "settings": {
+    "max_nodes": 60,
+    "max_edges": 120,
+    "include_prefixes": [],
+    "only_file_targets": false,
+    "only_code_nodes": false,
+    "used_mmdc": false,
+    "kroki_url": "https://kroki.io"
+  }
+}

@@ -15,7 +15,6 @@ from typing import Dict, List, Optional, Any
 import hashlib
 
 from appdocu_preprocessor.file_enumerator import FileInfo, FileType
-from appdocu_preprocessor.converters.base_converter import BaseConverter
 # get_global_config import removed - not used in this module and causes import crashes
 
 logger = logging.getLogger(__name__)

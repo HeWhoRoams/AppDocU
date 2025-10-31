@@ -1,0 +1,36 @@
+{
+  "evaluated_at": "2025-10-31T15:02:21.976722",
+  "status": "passed",
+  "gates": [
+    {
+      "gate": "min_coverage",
+      "status": "passed",
+      "value": 70.8108108108108,
+      "threshold": 70.0
+    },
+    {
+      "gate": "max_failure_rate",
+      "status": "passed",
+      "value": 0.0,
+      "threshold": 10.0
+    },
+    {
+      "gate": "diagrams",
+      "status": "passed"
+    },
+    {
+      "gate": "doc_sections_architecture",
+      "status": "passed"
+    },
+    {
+      "gate": "doc_sections_logic",
+      "status": "passed"
+    }
+  ],
+  "metrics": {
+    "coverage_pct": 70.81,
+    "code_nodes": 131,
+    "manifest_code": 185,
+    "failure_rate_pct": 0.0
+  }
+}

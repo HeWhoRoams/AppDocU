@@ -1,0 +1,517 @@
+{
+  "last_run_date": "20251031-145900",
+  "root": "docs_runs\\20251031-145900",
+  "files": [
+    {
+      "path": "meta\\appdoc.log",
+      "category": "meta",
+      "size_bytes": 16807,
+      "size_kb": 16,
+      "sha256": "6fe630b1fbaa8852ffabcecd25210d5d90239bcfb0bc63b9846cbbbac1b819c3"
+    },
+    {
+      "path": "meta\\behavior-graph.json",
+      "category": "meta",
+      "size_bytes": 318662,
+      "size_kb": 311,
+      "sha256": "8f8b5435214408453a3a7b1eb49fb96d172e0bfe8bc6301af005e9c9864b9b7d"
+    },
+    {
+      "path": "meta\\csharp_artifacts.json",
+      "category": "meta",
+      "size_bytes": 180464,
+      "size_kb": 176,
+      "sha256": "50b5cad633aa0f6eb6115f29de72bce01670947cdccda50303383c3b64cfc04b"
+    },
+    {
+      "path": "meta\\diagram_report.json",
+      "category": "meta",
+      "size_bytes": 1286,
+      "size_kb": 1,
+      "sha256": "1f5be1fb02ae5085bd85072685acb860f5a6364114706136c0d005ac43641233"
+    },
+    {
+      "path": "meta\\docx-evidence.json",
+      "category": "meta",
+      "size_bytes": 156,
+      "size_kb": 0,
+      "sha256": "f0467deabbf655b5e552e29ce719467c9a3c45ced991c468f68168570a5f5ff8"
+    },
+    {
+      "path": "meta\\entity_registry.json",
+      "category": "meta",
+      "size_bytes": 1071757,
+      "size_kb": 1046,
+      "sha256": "fb645f61b1aa1aefef05eda725150e63857ea22c707ab5f0edefa39146216b51"
+    },
+    {
+      "path": "meta\\file_manifest.json",
+      "category": "meta",
+      "size_bytes": 126732,
+      "size_kb": 123,
+      "sha256": "6b512725829974a20ae3fcaa669441b4e68627251ea1f01b5e4d535642971410"
+    },
+    {
+      "path": "meta\\system-integrations.json",
+      "category": "meta",
+      "size_bytes": 48884,
+      "size_kb": 47,
+      "sha256": "a54145dbf1a9ac61d9b0b2951c86bf979e32627a98ff46e2e3fb819a08ddf437"
+    },
+    {
+      "path": "meta\\csharp\\artifacts\\AdaptiveReasoningModel.json",
+      "category": "meta",
+      "size_bytes": 10045,
+      "size_kb": 9,
+      "sha256": "7eb35ada55316f75df612f9ef72876c0434aeae39471d11ea0be62634fdda5da"
+    },
+    {
+      "path": "meta\\csharp\\artifacts\\AdaptiveReasoningService.json",
+      "category": "meta",
+      "size_bytes": 15001,
+      "size_kb": 14,
+      "sha256": "f18bc0e408fa8e6b59b7e3ebf8bd2ba357313723ba8862117ab42f782fa0b76f"
+    },
+    {
+      "path": "meta\\csharp\\artifacts\\AnalyzeFileCommand.json",
+      "category": "meta",
+      "size_bytes": 3037,
+      "size_kb": 2,
+      "sha256": "94fa8c1cbeaf20eb897fb3337dd3e35ac1c1b83d030a3c53237c9479de9bb32e"
+    },
+    {
+      "path": "meta\\csharp\\artifacts\\AnalyzeProjectCommand.json",
+      "category": "meta",
+      "size_bytes": 3182,
+      "size_kb": 3,
+      "sha256": "f1d4bbb8271a65958f19820de23b5ed097f9a32ae8b6291acc5a5b1b0d9277ee"
+    },
+    {
+      "path": "meta\\csharp\\artifacts\\ArchitectureModel.json",
+      "category": "meta",
+      "size_bytes": 16079,
+      "size_kb": 15,
+      "sha256": "0b0aa1f5032cf6c8443487d6281cd077102632081e8d3aa8fd003c29d334c8f5"
+    },
+    {
+      "path": "meta\\csharp\\artifacts\\ArtifactGenerator.json",
+      "category": "meta",
+      "size_bytes": 2450,
+      "size_kb": 2,
+      "sha256": "1457e08aafaaaeb9ef500ccf443b30c6281ffcacdff3ede5d6f8576c524b9272"
+    },
+    {
+      "path": "meta\\csharp\\artifacts\\AstInspector.json",
+      "category": "meta",
+      "size_bytes": 6241,
+      "size_kb": 6,
+      "sha256": "a7c151e246f71b870d408dd22c3d77924e3d5d91f4e6590b5d55af134fef547b"
+    },
+    {
+      "path": "meta\\csharp\\artifacts\\CodeArtifact.json",
+      "category": "meta",
+      "size_bytes": 11903,
+      "size_kb": 11,
+      "sha256": "7942e7ceb278f7889ee26da0b9ae8218de677747aacce4c729358a33c5df00b1"
+    },
+    {
+      "path": "meta\\csharp\\artifacts\\DependencyResolver.json",
+      "category": "meta",
+      "size_bytes": 3337,
+      "size_kb": 3,
+      "sha256": "37dd99b036ffdc93ce24be62acba39a086ae6429b7ea051b925ac92b89cf67a2"
+    },
+    {
+      "path": "meta\\csharp\\artifacts\\ImprovementTrackingModel.json",
+      "category": "meta",
+      "size_bytes": 18858,
+      "size_kb": 18,
+      "sha256": "aeb80b917e6cfa11d01a8cf87ece20cf537d1a334834bb41ce1c0cda2754b104"
+    },
+    {
+      "path": "meta\\csharp\\artifacts\\InvariantValidationModel.json",
+      "category": "meta",
+      "size_bytes": 13625,
+      "size_kb": 13,
+      "sha256": "a70b79187d1f1005fc8582c4955812356069339dbbbe02c38fa3733795a2ab30"
+    },
+    {
+      "path": "meta\\csharp\\artifacts\\MsBuildConfigurationIndex.json",
+      "category": "meta",
+      "size_bytes": 8566,
+      "size_kb": 8,
+      "sha256": "f0249e3cdf138e8429aabe392869d61831a579bc92b3928a0c79e517f863ae64"
+    },
+    {
+      "path": "meta\\csharp\\artifacts\\MsBuildWorkspaceService.json",
+      "category": "meta",
+      "size_bytes": 8985,
+      "size_kb": 8,
+      "sha256": "0a0afebae80332ba09990714bcea7b896273076a735e4b41c8f483b259563da6"
+    },
+    {
+      "path": "meta\\csharp\\artifacts\\OrderService.json",
+      "category": "meta",
+      "size_bytes": 6300,
+      "size_kb": 6,
+      "sha256": "9cdc1aedf6aab184aef7e186629cde20155bd74acc2b7d77e8f1b44f42338a5a"
+    },
+    {
+      "path": "meta\\csharp\\artifacts\\PreprocessorSymbolRegistry.json",
+      "category": "meta",
+      "size_bytes": 8309,
+      "size_kb": 8,
+      "sha256": "d50330af471c126f9ddd367d7e009157ff9c26febb99635d030292384af836e7"
+    },
+    {
+      "path": "meta\\csharp\\artifacts\\Program.json",
+      "category": "meta",
+      "size_bytes": 3291,
+      "size_kb": 3,
+      "sha256": "59220cc5a5a3dffd6184f65d36c74d745c9c8ae10966f4466750b4d89a50a92e"
+    },
+    {
+      "path": "meta\\csharp\\artifacts\\RoslynAnalyzer.json",
+      "category": "meta",
+      "size_bytes": 3070,
+      "size_kb": 2,
+      "sha256": "ea86b8663144d5ce4e1727ae0cf0d94b4610b05d53377f3338a2dd1e3ac59f57"
+    },
+    {
+      "path": "meta\\csharp\\artifacts\\StructuralAnalyzerService.json",
+      "category": "meta",
+      "size_bytes": 11881,
+      "size_kb": 11,
+      "sha256": "844af7742a62627a8e1aa540fba97283318bfef839d5adbe3dc31dc9fe5ff0ae"
+    },
+    {
+      "path": "meta\\csharp\\artifacts\\StructuralIntelligenceCommand.json",
+      "category": "meta",
+      "size_bytes": 1959,
+      "size_kb": 1,
+      "sha256": "75438186a0c3b7dcad6dac2e901f5c89c8c133e3da66335c6baa108ad82bde45"
+    },
+    {
+      "path": "meta\\csharp\\artifacts\\StructuredLogger.json",
+      "category": "meta",
+      "size_bytes": 1008,
+      "size_kb": 0,
+      "sha256": "290ce4a2c143d099de4e1309a1109dad38425a859c70ed0938859aa16843317a"
+    },
+    {
+      "path": "meta\\csharp\\artifacts\\SymbolResolutionMap.json",
+      "category": "meta",
+      "size_bytes": 7638,
+      "size_kb": 7,
+      "sha256": "9e0c0243403916a73565aba4eaf5f1c8a5c40e0f491f2c7ee1499083b762bf21"
+    },
+    {
+      "path": "meta\\csharp\\artifacts\\ValidateCommand.json",
+      "category": "meta",
+      "size_bytes": 2729,
+      "size_kb": 2,
+      "sha256": "5214756ad0a674394e8e028eb6bc4b47e75e70e290d46eb739d0d1df55ab6d59"
+    },
+    {
+      "path": "diagrams\\component_flow.mmd",
+      "category": "diagrams",
+      "size_bytes": 818,
+      "size_kb": 0,
+      "sha256": "5005d793fdbf6d23b0a9e05761f7dfd962cfc6ed7b628b366ceb60b09163aa5f"
+    },
+    {
+      "path": "diagrams\\component_flow.png",
+      "category": "diagrams",
+      "size_bytes": 81425,
+      "size_kb": 79,
+      "sha256": "9f237d6f783074ad77d455c9fc34d7a4c4b557b0b14cf0c587749ce6565f18d0"
+    },
+    {
+      "path": "diagrams\\component_flow.svg",
+      "category": "diagrams",
+      "size_bytes": 19821,
+      "size_kb": 19,
+      "sha256": "8e440bf49c832dd9884c15188c9346454cc63b7691f39f4eabe2556fd2e601c9"
+    },
+    {
+      "path": "diagrams\\data_flow.mmd",
+      "category": "diagrams",
+      "size_bytes": 7383,
+      "size_kb": 7,
+      "sha256": "4ce90d8545dfd58ae3da30803d30b86e194306bf88a650e36296c936dcc6df65"
+    },
+    {
+      "path": "diagrams\\data_flow.png",
+      "category": "diagrams",
+      "size_bytes": 481722,
+      "size_kb": 470,
+      "sha256": "8f581e555769c9480146bb54a8fcfc501ac25fa2b0d346e8e1cbe00623d2577c"
+    },
+    {
+      "path": "diagrams\\data_flow.svg",
+      "category": "diagrams",
+      "size_bytes": 122628,
+      "size_kb": 119,
+      "sha256": "8be4fb29dd27dce70e18fd5acfeab0350dfa58f3600096164bee89ec991cde3f"
+    },
+    {
+      "path": "diagrams\\data_flow.svg.err",
+      "category": "diagrams",
+      "size_bytes": 29,
+      "size_kb": 0,
+      "sha256": "d624aaf52b9079359f7d2259f2821c69e72058f1c79a57dba794e4ad99e50b77"
+    },
+    {
+      "path": "diagrams\\dependency_graph.mmd",
+      "category": "diagrams",
+      "size_bytes": 6245,
+      "size_kb": 6,
+      "sha256": "009d5b559035dbafab7e1c9c2d4255bad8f00adbdffef777b7e333072ad34b6d"
+    },
+    {
+      "path": "diagrams\\dependency_graph.png",
+      "category": "diagrams",
+      "size_bytes": 1689245,
+      "size_kb": 1649,
+      "sha256": "d2cf223cebbf5fe26de29366880d1aaea6489346b937a4b048cefc351dd7016a"
+    },
+    {
+      "path": "diagrams\\dependency_graph.png.err",
+      "category": "diagrams",
+      "size_bytes": 29,
+      "size_kb": 0,
+      "sha256": "d624aaf52b9079359f7d2259f2821c69e72058f1c79a57dba794e4ad99e50b77"
+    },
+    {
+      "path": "diagrams\\dependency_graph.svg",
+      "category": "diagrams",
+      "size_bytes": 185433,
+      "size_kb": 181,
+      "sha256": "b7a956e77bc926feb29af47e41ce614fb6458c7a500cbd167053ef57ae486ef7"
+    },
+    {
+      "path": "diagrams\\system_context.mmd",
+      "category": "diagrams",
+      "size_bytes": 2014,
+      "size_kb": 1,
+      "sha256": "9b225c33b17b17e84010464e8931290815ca25104ac42729a40cb6a05de296eb"
+    },
+    {
+      "path": "diagrams\\system_context.png.err",
+      "category": "diagrams",
+      "size_bytes": 29,
+      "size_kb": 0,
+      "sha256": "d624aaf52b9079359f7d2259f2821c69e72058f1c79a57dba794e4ad99e50b77"
+    },
+    {
+      "path": "diagrams\\system_context.svg.err",
+      "category": "diagrams",
+      "size_bytes": 29,
+      "size_kb": 0,
+      "sha256": "d624aaf52b9079359f7d2259f2821c69e72058f1c79a57dba794e4ad99e50b77"
+    },
+    {
+      "path": "context\\prompt.md",
+      "category": "context",
+      "size_bytes": 1045,
+      "size_kb": 1,
+      "sha256": "43d07bbb849c8669b8ca3a6700a3c32bdf8258c5107ad8886734e0f5fdbd4b44"
+    },
+    {
+      "path": "context\\summary.json",
+      "category": "context",
+      "size_bytes": 1687,
+      "size_kb": 1,
+      "sha256": "70c84bf75da47da755a3d67b5834f75890a34189f47efed19821276037cb2523"
+    },
+    {
+      "path": "docs\\architecture.md",
+      "category": "docs",
+      "size_bytes": 1257,
+      "size_kb": 1,
+      "sha256": "7150df8b10347ec6a19c8961225724f1ee7b4cb141819e92d79f6e0986cc7f0c"
+    },
+    {
+      "path": "docs\\logic-and-workflows.md",
+      "category": "docs",
+      "size_bytes": 1200,
+      "size_kb": 1,
+      "sha256": "b45bc3f35870e841c7e488f13e1ba3f2553fc989547b51a36ee068dcd0461dd8"
+    },
+    {
+      "path": "docs\\change-impact-map.md",
+      "category": "docs",
+      "size_bytes": 513,
+      "size_kb": 0,
+      "sha256": "4e983d1aa3c420f6bd70d36053b48409063b767bb15ef937af927537af615a1f"
+    },
+    {
+      "path": "docs\\developer-preflight.md",
+      "category": "docs",
+      "size_bytes": 772,
+      "size_kb": 0,
+      "sha256": "7f2fa08f982f52c03896de7582dffd0799309b6c7fb3b64b38d23cc818c67c78"
+    },
+    {
+      "path": "docs\\cognitive-audit.md",
+      "category": "docs",
+      "size_bytes": 615,
+      "size_kb": 0,
+      "sha256": "e5f4ec6243959045dba977fb8264d7208bb216e869cc93a30cabba8f34245f21"
+    },
+    {
+      "path": "artifacts\\csharp\\artifacts\\AdaptiveReasoningModel.json",
+      "category": "artifacts",
+      "size_bytes": 10045,
+      "size_kb": 9,
+      "sha256": "7eb35ada55316f75df612f9ef72876c0434aeae39471d11ea0be62634fdda5da"
+    },
+    {
+      "path": "artifacts\\csharp\\artifacts\\AdaptiveReasoningService.json",
+      "category": "artifacts",
+      "size_bytes": 15001,
+      "size_kb": 14,
+      "sha256": "f18bc0e408fa8e6b59b7e3ebf8bd2ba357313723ba8862117ab42f782fa0b76f"
+    },
+    {
+      "path": "artifacts\\csharp\\artifacts\\AnalyzeFileCommand.json",
+      "category": "artifacts",
+      "size_bytes": 3037,
+      "size_kb": 2,
+      "sha256": "94fa8c1cbeaf20eb897fb3337dd3e35ac1c1b83d030a3c53237c9479de9bb32e"
+    },
+    {
+      "path": "artifacts\\csharp\\artifacts\\AnalyzeProjectCommand.json",
+      "category": "artifacts",
+      "size_bytes": 3182,
+      "size_kb": 3,
+      "sha256": "f1d4bbb8271a65958f19820de23b5ed097f9a32ae8b6291acc5a5b1b0d9277ee"
+    },
+    {
+      "path": "artifacts\\csharp\\artifacts\\ArchitectureModel.json",
+      "category": "artifacts",
+      "size_bytes": 16079,
+      "size_kb": 15,
+      "sha256": "0b0aa1f5032cf6c8443487d6281cd077102632081e8d3aa8fd003c29d334c8f5"
+    },
+    {
+      "path": "artifacts\\csharp\\artifacts\\ArtifactGenerator.json",
+      "category": "artifacts",
+      "size_bytes": 2450,
+      "size_kb": 2,
+      "sha256": "1457e08aafaaaeb9ef500ccf443b30c6281ffcacdff3ede5d6f8576c524b9272"
+    },
+    {
+      "path": "artifacts\\csharp\\artifacts\\AstInspector.json",
+      "category": "artifacts",
+      "size_bytes": 6241,
+      "size_kb": 6,
+      "sha256": "a7c151e246f71b870d408dd22c3d77924e3d5d91f4e6590b5d55af134fef547b"
+    },
+    {
+      "path": "artifacts\\csharp\\artifacts\\CodeArtifact.json",
+      "category": "artifacts",
+      "size_bytes": 11903,
+      "size_kb": 11,
+      "sha256": "7942e7ceb278f7889ee26da0b9ae8218de677747aacce4c729358a33c5df00b1"
+    },
+    {
+      "path": "artifacts\\csharp\\artifacts\\DependencyResolver.json",
+      "category": "artifacts",
+      "size_bytes": 3337,
+      "size_kb": 3,
+      "sha256": "37dd99b036ffdc93ce24be62acba39a086ae6429b7ea051b925ac92b89cf67a2"
+    },
+    {
+      "path": "artifacts\\csharp\\artifacts\\ImprovementTrackingModel.json",
+      "category": "artifacts",
+      "size_bytes": 18858,
+      "size_kb": 18,
+      "sha256": "aeb80b917e6cfa11d01a8cf87ece20cf537d1a334834bb41ce1c0cda2754b104"
+    },
+    {
+      "path": "artifacts\\csharp\\artifacts\\InvariantValidationModel.json",
+      "category": "artifacts",
+      "size_bytes": 13625,
+      "size_kb": 13,
+      "sha256": "a70b79187d1f1005fc8582c4955812356069339dbbbe02c38fa3733795a2ab30"
+    },
+    {
+      "path": "artifacts\\csharp\\artifacts\\MsBuildConfigurationIndex.json",
+      "category": "artifacts",
+      "size_bytes": 8566,
+      "size_kb": 8,
+      "sha256": "f0249e3cdf138e8429aabe392869d61831a579bc92b3928a0c79e517f863ae64"
+    },
+    {
+      "path": "artifacts\\csharp\\artifacts\\MsBuildWorkspaceService.json",
+      "category": "artifacts",
+      "size_bytes": 8985,
+      "size_kb": 8,
+      "sha256": "0a0afebae80332ba09990714bcea7b896273076a735e4b41c8f483b259563da6"
+    },
+    {
+      "path": "artifacts\\csharp\\artifacts\\OrderService.json",
+      "category": "artifacts",
+      "size_bytes": 6300,
+      "size_kb": 6,
+      "sha256": "9cdc1aedf6aab184aef7e186629cde20155bd74acc2b7d77e8f1b44f42338a5a"
+    },
+    {
+      "path": "artifacts\\csharp\\artifacts\\PreprocessorSymbolRegistry.json",
+      "category": "artifacts",
+      "size_bytes": 8309,
+      "size_kb": 8,
+      "sha256": "d50330af471c126f9ddd367d7e009157ff9c26febb99635d030292384af836e7"
+    },
+    {
+      "path": "artifacts\\csharp\\artifacts\\Program.json",
+      "category": "artifacts",
+      "size_bytes": 3291,
+      "size_kb": 3,
+      "sha256": "59220cc5a5a3dffd6184f65d36c74d745c9c8ae10966f4466750b4d89a50a92e"
+    },
+    {
+      "path": "artifacts\\csharp\\artifacts\\RoslynAnalyzer.json",
+      "category": "artifacts",
+      "size_bytes": 3070,
+      "size_kb": 2,
+      "sha256": "ea86b8663144d5ce4e1727ae0cf0d94b4610b05d53377f3338a2dd1e3ac59f57"
+    },
+    {
+      "path": "artifacts\\csharp\\artifacts\\StructuralAnalyzerService.json",
+      "category": "artifacts",
+      "size_bytes": 11881,
+      "size_kb": 11,
+      "sha256": "844af7742a62627a8e1aa540fba97283318bfef839d5adbe3dc31dc9fe5ff0ae"
+    },
+    {
+      "path": "artifacts\\csharp\\artifacts\\StructuralIntelligenceCommand.json",
+      "category": "artifacts",
+      "size_bytes": 1959,
+      "size_kb": 1,
+      "sha256": "75438186a0c3b7dcad6dac2e901f5c89c8c133e3da66335c6baa108ad82bde45"
+    },
+    {
+      "path": "artifacts\\csharp\\artifacts\\StructuredLogger.json",
+      "category": "artifacts",
+      "size_bytes": 1008,
+      "size_kb": 0,
+      "sha256": "290ce4a2c143d099de4e1309a1109dad38425a859c70ed0938859aa16843317a"
+    },
+    {
+      "path": "artifacts\\csharp\\artifacts\\SymbolResolutionMap.json",
+      "category": "artifacts",
+      "size_bytes": 7638,
+      "size_kb": 7,
+      "sha256": "9e0c0243403916a73565aba4eaf5f1c8a5c40e0f491f2c7ee1499083b762bf21"
+    },
+    {
+      "path": "artifacts\\csharp\\artifacts\\ValidateCommand.json",
+      "category": "artifacts",
+      "size_bytes": 2729,
+      "size_kb": 2,
+      "sha256": "5214756ad0a674394e8e028eb6bc4b47e75e70e290d46eb739d0d1df55ab6d59"
+    }
+  ]
+}

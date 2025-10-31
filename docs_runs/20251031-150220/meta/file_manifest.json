@@ -1,0 +1,5375 @@
+[
+  {
+    "file": ".gitignore",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 1,
+    "hash": "1f3771",
+    "last_modified": "2025-10-27T13:11:14.283092",
+    "status": "pending"
+  },
+  {
+    "file": "appdoc.config.example.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 0,
+    "hash": "63a834",
+    "last_modified": "2025-10-31T13:59:31.151915",
+    "status": "pending"
+  },
+  {
+    "file": "appdoc.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 73,
+    "hash": "20db35",
+    "last_modified": "2025-10-31T14:35:43.940276",
+    "status": "pending"
+  },
+  {
+    "file": "AppDoc.sln",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 1,
+    "hash": "018ca4",
+    "last_modified": "2025-10-27T13:12:18.884373",
+    "status": "pending"
+  },
+  {
+    "file": "appdoc_copy.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 38,
+    "hash": "843e40",
+    "last_modified": "2025-10-31T12:09:14.277487",
+    "status": "pending"
+  },
+  {
+    "file": "architecture.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 1,
+    "hash": "7150df",
+    "last_modified": "2025-10-31T14:57:02.928398",
+    "status": "pending"
+  },
+  {
+    "file": "change-impact-map.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 0,
+    "hash": "4e983d",
+    "last_modified": "2025-10-31T14:56:08.167118",
+    "status": "pending"
+  },
+  {
+    "file": "cognitive-audit.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 0,
+    "hash": "e5f4ec",
+    "last_modified": "2025-10-31T14:57:03.149988",
+    "status": "pending"
+  },
+  {
+    "file": "debug_output.txt",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 0,
+    "hash": "e3b0c4",
+    "last_modified": "2025-10-30T12:32:07.451336",
+    "status": "pending"
+  },
+  {
+    "file": "developer-preflight.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 0,
+    "hash": "7f2fa0",
+    "last_modified": "2025-10-31T14:57:03.149988",
+    "status": "pending"
+  },
+  {
+    "file": "diagrams.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 0,
+    "hash": "3e5a9c",
+    "last_modified": "2025-10-31T14:57:02.932376",
+    "status": "pending"
+  },
+  {
+    "file": "IMPLEMENTATION_PLAN.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 4,
+    "hash": "234b4a",
+    "last_modified": "2025-10-29T16:29:48.449610",
+    "status": "pending"
+  },
+  {
+    "file": "launch_appdocu.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 6,
+    "hash": "1e8ae6",
+    "last_modified": "2025-10-30T14:07:14.961956",
+    "status": "pending"
+  },
+  {
+    "file": "logic-and-workflows.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 1,
+    "hash": "b45bc3",
+    "last_modified": "2025-10-31T14:57:02.929458",
+    "status": "pending"
+  },
+  {
+    "file": "minimal_test_import.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 1,
+    "hash": "b639eb",
+    "last_modified": "2025-10-30T13:37:23.644319",
+    "status": "pending"
+  },
+  {
+    "file": "OPTIMIZATION_TASKS.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 7,
+    "hash": "c9ae5b",
+    "last_modified": "2025-10-24T15:41:39.793206",
+    "status": "pending"
+  },
+  {
+    "file": "README.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 12,
+    "hash": "ff134b",
+    "last_modified": "2025-10-31T13:59:37.254522",
+    "status": "pending"
+  },
+  {
+    "file": "requirements.txt",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 0,
+    "hash": "b2d3c7",
+    "last_modified": "2025-10-30T16:36:40.139591",
+    "status": "pending"
+  },
+  {
+    "file": "run_docs.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 25,
+    "hash": "b67420",
+    "last_modified": "2025-10-31T14:09:32.334268",
+    "status": "pending"
+  },
+  {
+    "file": "run_docs_tmp.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 21,
+    "hash": "4a5618",
+    "last_modified": "2025-10-31T14:04:47.921030",
+    "status": "pending"
+  },
+  {
+    "file": "simple_appdoc.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 20,
+    "hash": "43555d",
+    "last_modified": "2025-10-30T12:23:43.981604",
+    "status": "pending"
+  },
+  {
+    "file": "standalone_workflow.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 17,
+    "hash": "2053c8",
+    "last_modified": "2025-10-30T14:38:09.451318",
+    "status": "pending"
+  },
+  {
+    "file": "summarize_output.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 5,
+    "hash": "55d2c9",
+    "last_modified": "2025-10-30T13:52:54.265192",
+    "status": "pending"
+  },
+  {
+    "file": "test-structural-intelligence.bat",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 1,
+    "hash": "30b1a5",
+    "last_modified": "2025-10-27T13:27:15.792353",
+    "status": "pending"
+  },
+  {
+    "file": "test-structural-intelligence.ps1",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 2,
+    "hash": "83ad01",
+    "last_modified": "2025-10-27T13:26:48.389671",
+    "status": "pending"
+  },
+  {
+    "file": "test.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 1,
+    "hash": "22d4e0",
+    "last_modified": "2025-10-30T16:19:39.437410",
+    "status": "pending"
+  },
+  {
+    "file": "test_file.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 0,
+    "hash": "1d2c6d",
+    "last_modified": "2025-10-24T16:24:32.282450",
+    "status": "pending"
+  },
+  {
+    "file": "validate_gates.ps1",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 12,
+    "hash": "aadd23",
+    "last_modified": "2025-10-31T13:26:01.524398",
+    "status": "pending"
+  },
+  {
+    "file": "validation_report.txt",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 2,
+    "hash": "e73f96",
+    "last_modified": "2025-10-30T16:09:41.621377",
+    "status": "pending"
+  },
+  {
+    "file": "appdoc.templates\\architecture.template.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 8,
+    "hash": "9e5451",
+    "last_modified": "2025-10-24T14:25:29.260487",
+    "status": "pending"
+  },
+  {
+    "file": "appdoc.templates\\audit.report.template.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 3,
+    "hash": "f38eb6",
+    "last_modified": "2025-10-23T13:09:19.742062",
+    "status": "pending"
+  },
+  {
+    "file": "appdoc.templates\\cognitive-audit.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 8,
+    "hash": "e01493",
+    "last_modified": "2025-10-24T14:52:40.343729",
+    "status": "pending"
+  },
+  {
+    "file": "appdoc.templates\\developer-preflight.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 5,
+    "hash": "80ab88",
+    "last_modified": "2025-10-24T14:53:12.510738",
+    "status": "pending"
+  },
+  {
+    "file": "appdoc.templates\\documentation.tasks.template.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 1,
+    "hash": "4434cb",
+    "last_modified": "2025-10-23T13:09:19.331633",
+    "status": "pending"
+  },
+  {
+    "file": "appdoc.templates\\logic-and-workflows.template.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 9,
+    "hash": "03baf5",
+    "last_modified": "2025-10-24T12:53:06.059546",
+    "status": "pending"
+  },
+  {
+    "file": "appdoc.templates\\PLACEHOLDERS.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 4,
+    "hash": "4ae2e6",
+    "last_modified": "2025-10-23T13:21:16.864150",
+    "status": "pending"
+  },
+  {
+    "file": "appdoc.templates\\troubleshooting.playbook.template.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 6,
+    "hash": "49b21b",
+    "last_modified": "2025-10-23T11:54:33.350501",
+    "status": "pending"
+  },
+  {
+    "file": "appdocu_preprocessor\\caching.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 9,
+    "hash": "b88b00",
+    "last_modified": "2025-10-30T13:32:08.125147",
+    "status": "pending"
+  },
+  {
+    "file": "appdocu_preprocessor\\config.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 15,
+    "hash": "6a732d",
+    "last_modified": "2025-10-30T14:27:53.397188",
+    "status": "pending"
+  },
+  {
+    "file": "appdocu_preprocessor\\exceptions.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 12,
+    "hash": "2c5f64",
+    "last_modified": "2025-10-29T16:34:28.854537",
+    "status": "pending"
+  },
+  {
+    "file": "appdocu_preprocessor\\file_enumerator.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 10,
+    "hash": "d40ae9",
+    "last_modified": "2025-10-31T14:32:07.258285",
+    "status": "pending"
+  },
+  {
+    "file": "appdocu_preprocessor\\monitoring.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 10,
+    "hash": "046cb1",
+    "last_modified": "2025-10-30T13:36:24.801999",
+    "status": "pending"
+  },
+  {
+    "file": "appdocu_preprocessor\\normalize.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 24,
+    "hash": "1b9e72",
+    "last_modified": "2025-10-31T11:59:01.852695",
+    "status": "pending"
+  },
+  {
+    "file": "appdocu_preprocessor\\requirements.txt",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 0,
+    "hash": "f02b4f",
+    "last_modified": "2025-10-24T16:19:06.908264",
+    "status": "pending"
+  },
+  {
+    "file": "appdocu_preprocessor\\schema_validator.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 5,
+    "hash": "242a7e",
+    "last_modified": "2025-10-24T15:48:20.624786",
+    "status": "pending"
+  },
+  {
+    "file": "appdocu_preprocessor\\validation.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 15,
+    "hash": "954cb9",
+    "last_modified": "2025-10-31T14:32:26.731276",
+    "status": "pending"
+  },
+  {
+    "file": "appdocu_preprocessor\\workflow.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 14,
+    "hash": "a0cfd5",
+    "last_modified": "2025-10-31T12:08:15.244937",
+    "status": "pending"
+  },
+  {
+    "file": "appdocu_preprocessor\\__init__.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 6,
+    "hash": "03488b",
+    "last_modified": "2025-10-30T13:20:04.458375",
+    "status": "pending"
+  },
+  {
+    "file": "appdocu_preprocessor\\converters\\base_converter.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 8,
+    "hash": "846222",
+    "last_modified": "2025-10-31T11:44:27.448625",
+    "status": "pending"
+  },
+  {
+    "file": "appdocu_preprocessor\\converters\\code_handler.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 5,
+    "hash": "4d7b7d",
+    "last_modified": "2025-10-29T15:25:48.266859",
+    "status": "pending"
+  },
+  {
+    "file": "appdocu_preprocessor\\converters\\docx_to_md.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 6,
+    "hash": "40d0fc",
+    "last_modified": "2025-10-24T15:43:02.483111",
+    "status": "pending"
+  },
+  {
+    "file": "appdocu_preprocessor\\converters\\image_handler.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 6,
+    "hash": "546495",
+    "last_modified": "2025-10-24T16:09:48.951842",
+    "status": "pending"
+  },
+  {
+    "file": "appdocu_preprocessor\\converters\\pdf_to_md.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 4,
+    "hash": "8cbb0d",
+    "last_modified": "2025-10-24T15:45:26.104036",
+    "status": "pending"
+  },
+  {
+    "file": "appdocu_preprocessor\\converters\\pptx_to_md.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 5,
+    "hash": "2cf078",
+    "last_modified": "2025-10-24T15:46:12.710301",
+    "status": "pending"
+  },
+  {
+    "file": "appdocu_preprocessor\\converters\\sql_converter.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 11,
+    "hash": "df856e",
+    "last_modified": "2025-10-29T15:26:40.259038",
+    "status": "pending"
+  },
+  {
+    "file": "appdocu_preprocessor\\converters\\ticket_handler.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 7,
+    "hash": "0c7ce1",
+    "last_modified": "2025-10-24T16:07:27.854669",
+    "status": "pending"
+  },
+  {
+    "file": "appdocu_preprocessor\\converters\\visio_to_json.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 9,
+    "hash": "18827a",
+    "last_modified": "2025-10-24T15:44:42.524243",
+    "status": "pending"
+  },
+  {
+    "file": "appdocu_preprocessor\\converters\\xlsx_to_csv.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 6,
+    "hash": "741472",
+    "last_modified": "2025-10-24T15:43:42.310458",
+    "status": "pending"
+  },
+  {
+    "file": "appdocu_preprocessor\\converters\\__init__.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 1,
+    "hash": "ea016f",
+    "last_modified": "2025-10-30T13:35:13.497374",
+    "status": "pending"
+  },
+  {
+    "file": "appdocu_preprocessor\\schemas\\base.schema.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 1,
+    "hash": "b75659",
+    "last_modified": "2025-10-24T15:47:25.304816",
+    "status": "pending"
+  },
+  {
+    "file": "appdocu_preprocessor\\schemas\\normalize.index.schema.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 2,
+    "hash": "034c06",
+    "last_modified": "2025-10-24T15:47:54.342067",
+    "status": "pending"
+  },
+  {
+    "file": "appdocu_preprocessor\\schemas\\normalized-map.schema.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 0,
+    "hash": "b811af",
+    "last_modified": "2025-10-24T14:48:11.033437",
+    "status": "pending"
+  },
+  {
+    "file": "archive\\README.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 0,
+    "hash": "c7b9c5",
+    "last_modified": "2025-10-31T14:12:45.591274",
+    "status": "pending"
+  },
+  {
+    "file": "archive\\generated\\DocTool_context_prompt.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 1,
+    "hash": "23313f",
+    "last_modified": "2025-10-31T13:15:31.346259",
+    "status": "pending"
+  },
+  {
+    "file": "archive\\legacy_docs\\AppDoc_roadmap.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 8,
+    "hash": "2cc89f",
+    "last_modified": "2025-10-31T14:13:11.293966",
+    "status": "pending"
+  },
+  {
+    "file": "archive\\legacy_docs\\recovery_tasklist.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 18,
+    "hash": "bc0341",
+    "last_modified": "2025-10-31T14:13:15.986773",
+    "status": "pending"
+  },
+  {
+    "file": "archive\\legacy_scripts\\check_lmsconnect.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 2,
+    "hash": "4d131c",
+    "last_modified": "2025-10-31T14:13:52.922008",
+    "status": "pending"
+  },
+  {
+    "file": "archive\\legacy_scripts\\clean_appdoc.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 8,
+    "hash": "601978",
+    "last_modified": "2025-10-31T14:13:26.346371",
+    "status": "pending"
+  },
+  {
+    "file": "archive\\legacy_scripts\\debug_appdoc.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 2,
+    "hash": "a3e75a",
+    "last_modified": "2025-10-31T14:13:32.796886",
+    "status": "pending"
+  },
+  {
+    "file": "archive\\legacy_scripts\\debug_run.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 1,
+    "hash": "432269",
+    "last_modified": "2025-10-31T14:13:58.876527",
+    "status": "pending"
+  },
+  {
+    "file": "archive\\legacy_scripts\\dependency_analysis.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 3,
+    "hash": "067d1d",
+    "last_modified": "2025-10-31T14:14:25.736323",
+    "status": "pending"
+  },
+  {
+    "file": "archive\\legacy_scripts\\diagnostic.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 4,
+    "hash": "5896cb",
+    "last_modified": "2025-10-31T14:13:39.600066",
+    "status": "pending"
+  },
+  {
+    "file": "archive\\legacy_scripts\\direct_run.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 1,
+    "hash": "fd58b8",
+    "last_modified": "2025-10-31T14:13:46.173811",
+    "status": "pending"
+  },
+  {
+    "file": "archive\\legacy_scripts\\run_all_passes.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 3,
+    "hash": "eeb74f",
+    "last_modified": "2025-10-31T14:14:06.281449",
+    "status": "pending"
+  },
+  {
+    "file": "docs\\DEMO_WORKFLOW.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 7,
+    "hash": "f1b34b",
+    "last_modified": "2025-10-31T14:12:57.140207",
+    "status": "pending"
+  },
+  {
+    "file": "docs\\FINAL_SUMMARY.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 3,
+    "hash": "fe817c",
+    "last_modified": "2025-10-31T14:13:01.488255",
+    "status": "pending"
+  },
+  {
+    "file": "docs\\INTEGRATED_WORKFLOW_PROMPT.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 16,
+    "hash": "72bb70",
+    "last_modified": "2025-10-31T14:13:06.576420",
+    "status": "pending"
+  },
+  {
+    "file": "docs\\optimization_documentation.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 7,
+    "hash": "1621a7",
+    "last_modified": "2025-10-24T15:50:53.387699",
+    "status": "pending"
+  },
+  {
+    "file": "docs\\preprocessor.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 5,
+    "hash": "214325",
+    "last_modified": "2025-10-24T13:20:18.635851",
+    "status": "pending"
+  },
+  {
+    "file": "docs\\VSCODE_INTEGRATION_GUIDE.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 11,
+    "hash": "4adfa2",
+    "last_modified": "2025-10-31T14:13:20.621212",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\index.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 3,
+    "hash": "6c0bc8",
+    "last_modified": "2025-10-31T14:59:02.528879",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\manifest.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 17,
+    "hash": "8a020c",
+    "last_modified": "2025-10-31T14:59:02.528879",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\validation_report.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 0,
+    "hash": "ea8238",
+    "last_modified": "2025-10-31T14:59:02.549679",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\validation_report.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 0,
+    "hash": "9a6475",
+    "last_modified": "2025-10-31T14:59:02.549679",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\artifacts\\csharp\\artifacts\\AdaptiveReasoningModel.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 9,
+    "hash": "7eb35a",
+    "last_modified": "2025-10-31T14:55:59.202382",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\artifacts\\csharp\\artifacts\\AdaptiveReasoningService.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 14,
+    "hash": "f18bc0",
+    "last_modified": "2025-10-31T14:56:05.429820",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\artifacts\\csharp\\artifacts\\AnalyzeFileCommand.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 2,
+    "hash": "94fa8c",
+    "last_modified": "2025-10-31T14:55:52.057096",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\artifacts\\csharp\\artifacts\\AnalyzeProjectCommand.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 3,
+    "hash": "f1d4bb",
+    "last_modified": "2025-10-31T14:55:52.807897",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\artifacts\\csharp\\artifacts\\ArchitectureModel.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 15,
+    "hash": "0b0aa1",
+    "last_modified": "2025-10-31T14:55:59.910654",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\artifacts\\csharp\\artifacts\\ArtifactGenerator.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 2,
+    "hash": "1457e0",
+    "last_modified": "2025-10-31T14:55:55.988757",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\artifacts\\csharp\\artifacts\\AstInspector.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 6,
+    "hash": "a7c151",
+    "last_modified": "2025-10-31T14:55:49.859635",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\artifacts\\csharp\\artifacts\\CodeArtifact.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 11,
+    "hash": "7942e7",
+    "last_modified": "2025-10-31T14:55:55.221483",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\artifacts\\csharp\\artifacts\\DependencyResolver.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 3,
+    "hash": "37dd99",
+    "last_modified": "2025-10-31T14:55:50.453313",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\artifacts\\csharp\\artifacts\\ImprovementTrackingModel.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 18,
+    "hash": "aeb80b",
+    "last_modified": "2025-10-31T14:56:00.791249",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\artifacts\\csharp\\artifacts\\InvariantValidationModel.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 13,
+    "hash": "a70b79",
+    "last_modified": "2025-10-31T14:56:01.427978",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\artifacts\\csharp\\artifacts\\MsBuildConfigurationIndex.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 8,
+    "hash": "f0249e",
+    "last_modified": "2025-10-31T14:56:02.429974",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\artifacts\\csharp\\artifacts\\MsBuildWorkspaceService.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 8,
+    "hash": "0a0afe",
+    "last_modified": "2025-10-31T14:56:06.342390",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\artifacts\\csharp\\artifacts\\OrderService.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 6,
+    "hash": "9cdc1a",
+    "last_modified": "2025-10-31T14:55:57.548758",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\artifacts\\csharp\\artifacts\\PreprocessorSymbolRegistry.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 8,
+    "hash": "d50330",
+    "last_modified": "2025-10-31T14:56:02.995077",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\artifacts\\csharp\\artifacts\\Program.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 3,
+    "hash": "59220c",
+    "last_modified": "2025-10-31T14:56:04.470336",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\artifacts\\csharp\\artifacts\\RoslynAnalyzer.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 2,
+    "hash": "ea86b8",
+    "last_modified": "2025-10-31T14:55:51.312433",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\artifacts\\csharp\\artifacts\\StructuralAnalyzerService.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 11,
+    "hash": "844af7",
+    "last_modified": "2025-10-31T14:56:07.203959",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\artifacts\\csharp\\artifacts\\StructuralIntelligenceCommand.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 1,
+    "hash": "754381",
+    "last_modified": "2025-10-31T14:55:58.399932",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\artifacts\\csharp\\artifacts\\StructuredLogger.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 0,
+    "hash": "290ce4",
+    "last_modified": "2025-10-31T14:55:54.358956",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\artifacts\\csharp\\artifacts\\SymbolResolutionMap.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 7,
+    "hash": "9e0c02",
+    "last_modified": "2025-10-31T14:56:03.815316",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\artifacts\\csharp\\artifacts\\ValidateCommand.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 2,
+    "hash": "521475",
+    "last_modified": "2025-10-31T14:55:53.676658",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\context\\prompt.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 1,
+    "hash": "43d07b",
+    "last_modified": "2025-10-31T14:56:08.110339",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\context\\summary.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 1,
+    "hash": "70c84b",
+    "last_modified": "2025-10-31T14:56:08.107817",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\diagrams\\component_flow.mmd",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 0,
+    "hash": "5005d7",
+    "last_modified": "2025-10-31T14:57:03.169513",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\diagrams\\component_flow.png",
+    "type": "image",
+    "handler": "ImageHandler",
+    "size_kb": 79,
+    "hash": "9f237d",
+    "last_modified": "2025-10-31T14:58:46.794074",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\diagrams\\component_flow.svg",
+    "type": "image",
+    "handler": "ImageHandler",
+    "size_kb": 19,
+    "hash": "8e440b",
+    "last_modified": "2025-10-31T14:58:50.062524",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\diagrams\\data_flow.mmd",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 7,
+    "hash": "4ce90d",
+    "last_modified": "2025-10-31T14:57:03.170666",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\diagrams\\data_flow.png",
+    "type": "image",
+    "handler": "ImageHandler",
+    "size_kb": 470,
+    "hash": "8f581e",
+    "last_modified": "2025-10-31T14:58:52.590376",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\diagrams\\data_flow.svg",
+    "type": "image",
+    "handler": "ImageHandler",
+    "size_kb": 119,
+    "hash": "8be4fb",
+    "last_modified": "2025-10-31T14:57:02.921913",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\diagrams\\data_flow.svg.err",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 0,
+    "hash": "d624aa",
+    "last_modified": "2025-10-31T14:59:00.908720",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\diagrams\\dependency_graph.mmd",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 6,
+    "hash": "009d5b",
+    "last_modified": "2025-10-31T14:57:03.167073",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\diagrams\\dependency_graph.png",
+    "type": "image",
+    "handler": "ImageHandler",
+    "size_kb": 1649,
+    "hash": "d2cf22",
+    "last_modified": "2025-10-31T14:56:39.493267",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\diagrams\\dependency_graph.png.err",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 0,
+    "hash": "d624aa",
+    "last_modified": "2025-10-31T14:58:16.371818",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\diagrams\\dependency_graph.svg",
+    "type": "image",
+    "handler": "ImageHandler",
+    "size_kb": 181,
+    "hash": "b7a956",
+    "last_modified": "2025-10-31T14:58:41.692251",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\diagrams\\system_context.mmd",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 1,
+    "hash": "9b225c",
+    "last_modified": "2025-10-31T14:57:03.165694",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\diagrams\\system_context.png.err",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 0,
+    "hash": "d624aa",
+    "last_modified": "2025-10-31T14:57:12.977848",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\diagrams\\system_context.svg.err",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 0,
+    "hash": "d624aa",
+    "last_modified": "2025-10-31T14:57:27.210787",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\docs\\architecture.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 1,
+    "hash": "7150df",
+    "last_modified": "2025-10-31T14:57:02.928398",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\docs\\change-impact-map.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 0,
+    "hash": "4e983d",
+    "last_modified": "2025-10-31T14:56:08.167118",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\docs\\cognitive-audit.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 0,
+    "hash": "e5f4ec",
+    "last_modified": "2025-10-31T14:57:03.149988",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\docs\\developer-preflight.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 0,
+    "hash": "7f2fa0",
+    "last_modified": "2025-10-31T14:57:03.149988",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\docs\\logic-and-workflows.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 1,
+    "hash": "b45bc3",
+    "last_modified": "2025-10-31T14:57:02.929458",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\meta\\appdoc.log",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 16,
+    "hash": "6fe630",
+    "last_modified": "2025-10-31T14:58:59.403382",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\meta\\behavior-graph.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 311,
+    "hash": "8f8b54",
+    "last_modified": "2025-10-31T14:56:08.015432",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\meta\\csharp_artifacts.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 176,
+    "hash": "50b5ca",
+    "last_modified": "2025-10-31T14:56:08.032842",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\meta\\diagram_report.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 1,
+    "hash": "1f5be1",
+    "last_modified": "2025-10-31T14:59:00.914047",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\meta\\docx-evidence.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 0,
+    "hash": "f0467d",
+    "last_modified": "2025-10-31T14:56:08.021810",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\meta\\entity_registry.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 1046,
+    "hash": "fb645f",
+    "last_modified": "2025-10-31T14:57:03.144918",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\meta\\file_manifest.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 123,
+    "hash": "6b5127",
+    "last_modified": "2025-10-31T14:55:48.716410",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\meta\\system-integrations.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 47,
+    "hash": "a54145",
+    "last_modified": "2025-10-31T14:56:08.020805",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\meta\\csharp\\artifacts\\AdaptiveReasoningModel.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 9,
+    "hash": "7eb35a",
+    "last_modified": "2025-10-31T14:55:59.202382",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\meta\\csharp\\artifacts\\AdaptiveReasoningService.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 14,
+    "hash": "f18bc0",
+    "last_modified": "2025-10-31T14:56:05.429820",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\meta\\csharp\\artifacts\\AnalyzeFileCommand.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 2,
+    "hash": "94fa8c",
+    "last_modified": "2025-10-31T14:55:52.057096",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\meta\\csharp\\artifacts\\AnalyzeProjectCommand.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 3,
+    "hash": "f1d4bb",
+    "last_modified": "2025-10-31T14:55:52.807897",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\meta\\csharp\\artifacts\\ArchitectureModel.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 15,
+    "hash": "0b0aa1",
+    "last_modified": "2025-10-31T14:55:59.910654",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\meta\\csharp\\artifacts\\ArtifactGenerator.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 2,
+    "hash": "1457e0",
+    "last_modified": "2025-10-31T14:55:55.988757",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\meta\\csharp\\artifacts\\AstInspector.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 6,
+    "hash": "a7c151",
+    "last_modified": "2025-10-31T14:55:49.859635",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\meta\\csharp\\artifacts\\CodeArtifact.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 11,
+    "hash": "7942e7",
+    "last_modified": "2025-10-31T14:55:55.221483",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\meta\\csharp\\artifacts\\DependencyResolver.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 3,
+    "hash": "37dd99",
+    "last_modified": "2025-10-31T14:55:50.453313",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\meta\\csharp\\artifacts\\ImprovementTrackingModel.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 18,
+    "hash": "aeb80b",
+    "last_modified": "2025-10-31T14:56:00.791249",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\meta\\csharp\\artifacts\\InvariantValidationModel.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 13,
+    "hash": "a70b79",
+    "last_modified": "2025-10-31T14:56:01.427978",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\meta\\csharp\\artifacts\\MsBuildConfigurationIndex.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 8,
+    "hash": "f0249e",
+    "last_modified": "2025-10-31T14:56:02.429974",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\meta\\csharp\\artifacts\\MsBuildWorkspaceService.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 8,
+    "hash": "0a0afe",
+    "last_modified": "2025-10-31T14:56:06.342390",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\meta\\csharp\\artifacts\\OrderService.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 6,
+    "hash": "9cdc1a",
+    "last_modified": "2025-10-31T14:55:57.548758",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\meta\\csharp\\artifacts\\PreprocessorSymbolRegistry.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 8,
+    "hash": "d50330",
+    "last_modified": "2025-10-31T14:56:02.995077",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\meta\\csharp\\artifacts\\Program.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 3,
+    "hash": "59220c",
+    "last_modified": "2025-10-31T14:56:04.470336",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\meta\\csharp\\artifacts\\RoslynAnalyzer.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 2,
+    "hash": "ea86b8",
+    "last_modified": "2025-10-31T14:55:51.312433",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\meta\\csharp\\artifacts\\StructuralAnalyzerService.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 11,
+    "hash": "844af7",
+    "last_modified": "2025-10-31T14:56:07.203959",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\meta\\csharp\\artifacts\\StructuralIntelligenceCommand.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 1,
+    "hash": "754381",
+    "last_modified": "2025-10-31T14:55:58.399932",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\meta\\csharp\\artifacts\\StructuredLogger.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 0,
+    "hash": "290ce4",
+    "last_modified": "2025-10-31T14:55:54.358956",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\meta\\csharp\\artifacts\\SymbolResolutionMap.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 7,
+    "hash": "9e0c02",
+    "last_modified": "2025-10-31T14:56:03.815316",
+    "status": "pending"
+  },
+  {
+    "file": "docs_runs\\20251031-145900\\meta\\csharp\\artifacts\\ValidateCommand.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 2,
+    "hash": "521475",
+    "last_modified": "2025-10-31T14:55:53.676658",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\architecture.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 1,
+    "hash": "e3b9a6",
+    "last_modified": "2025-10-31T12:51:06.253755",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\change-impact-map.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 0,
+    "hash": "1bb419",
+    "last_modified": "2025-10-31T12:50:45.957023",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\diagrams.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 0,
+    "hash": "f5eab1",
+    "last_modified": "2025-10-31T12:51:06.257768",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\DocTool.csproj",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 0,
+    "hash": "572d83",
+    "last_modified": "2025-10-30T16:04:36.960690",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\logic-and-workflows.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 1,
+    "hash": "dcec20",
+    "last_modified": "2025-10-31T12:51:06.255771",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\Program.cs",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 0,
+    "hash": "1d4a43",
+    "last_modified": "2025-10-30T16:23:18.343750",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\Analysis\\AstInspector.cs",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 7,
+    "hash": "f1cab6",
+    "last_modified": "2025-10-30T16:18:30.805352",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\Analysis\\DependencyResolver.cs",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 2,
+    "hash": "c19ccc",
+    "last_modified": "2025-10-30T16:18:59.756150",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\Analysis\\RoslynAnalyzer.cs",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 2,
+    "hash": "4cbb94",
+    "last_modified": "2025-10-30T16:18:49.699730",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\DocTool.deps.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 29,
+    "hash": "44abcd",
+    "last_modified": "2025-10-30T16:09:30.282357",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\DocTool.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 41,
+    "hash": "378269",
+    "last_modified": "2025-10-30T16:25:15.288351",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\DocTool.exe",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 148,
+    "hash": "47da0f",
+    "last_modified": "2025-10-30T16:25:15.297094",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\DocTool.pdb",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 21,
+    "hash": "e2440e",
+    "last_modified": "2025-10-30T16:25:15.282401",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\DocTool.runtimeconfig.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 0,
+    "hash": "28329c",
+    "last_modified": "2025-10-30T16:09:30.321213",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\Humanizer.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 347,
+    "hash": "d68530",
+    "last_modified": "2022-01-29T10:04:04",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\Microsoft.CodeAnalysis.CSharp.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 6370,
+    "hash": "c46e88",
+    "last_modified": "2024-07-26T18:24:10",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\Microsoft.CodeAnalysis.CSharp.Workspaces.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 897,
+    "hash": "a1666f",
+    "last_modified": "2024-07-26T18:24:16",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\Microsoft.CodeAnalysis.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 2915,
+    "hash": "8d919b",
+    "last_modified": "2024-07-26T18:09:26",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\Microsoft.CodeAnalysis.Workspaces.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 4030,
+    "hash": "a2e074",
+    "last_modified": "2024-07-26T18:18:12",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\Microsoft.Extensions.Configuration.Abstractions.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 27,
+    "hash": "fefcdb",
+    "last_modified": "2023-10-31T10:59:08",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\Microsoft.Extensions.Configuration.Binder.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 41,
+    "hash": "5a4775",
+    "last_modified": "2023-10-31T10:59:26",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\Microsoft.Extensions.Configuration.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 42,
+    "hash": "b5cd9d",
+    "last_modified": "2023-10-31T10:59:20",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 62,
+    "hash": "a0106a",
+    "last_modified": "2023-10-31T10:58:56",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\Microsoft.Extensions.DependencyInjection.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 90,
+    "hash": "8d6e7b",
+    "last_modified": "2023-10-31T10:59:00",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\Microsoft.Extensions.Logging.Abstractions.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 63,
+    "hash": "29e6bf",
+    "last_modified": "2023-10-31T10:59:12",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\Microsoft.Extensions.Logging.Configuration.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 27,
+    "hash": "4bd124",
+    "last_modified": "2023-10-31T10:59:42",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\Microsoft.Extensions.Logging.Console.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 69,
+    "hash": "b68366",
+    "last_modified": "2023-10-31T10:59:44",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\Microsoft.Extensions.Logging.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 49,
+    "hash": "4330a5",
+    "last_modified": "2023-10-31T10:59:24",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\Microsoft.Extensions.Options.ConfigurationExtensions.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 22,
+    "hash": "b9ea7b",
+    "last_modified": "2023-10-31T10:59:38",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\Microsoft.Extensions.Options.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 63,
+    "hash": "5f9b0e",
+    "last_modified": "2023-10-31T10:59:06",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\Microsoft.Extensions.Primitives.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 42,
+    "hash": "446ff1",
+    "last_modified": "2023-10-31T10:58:52",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\System.CommandLine.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 200,
+    "hash": "2158cf",
+    "last_modified": "2022-05-22T15:39:50",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\System.Composition.AttributedModel.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 19,
+    "hash": "0f403e",
+    "last_modified": "2023-10-31T10:58:58",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\System.Composition.Convention.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 52,
+    "hash": "88e716",
+    "last_modified": "2023-10-31T10:58:58",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\System.Composition.Hosting.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 53,
+    "hash": "8d9a23",
+    "last_modified": "2023-10-31T10:59:02",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\System.Composition.Runtime.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 25,
+    "hash": "324acd",
+    "last_modified": "2023-10-31T10:58:54",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\System.Composition.TypedParts.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 63,
+    "hash": "310019",
+    "last_modified": "2023-10-31T10:59:28",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\System.IO.Pipelines.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 76,
+    "hash": "86d0f5",
+    "last_modified": "2023-10-31T10:59:26",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\cs\\Microsoft.CodeAnalysis.CSharp.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 421,
+    "hash": "b770a8",
+    "last_modified": "2024-07-26T18:24:10",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\cs\\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 17,
+    "hash": "2577c1",
+    "last_modified": "2024-07-26T18:24:16",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\cs\\Microsoft.CodeAnalysis.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 46,
+    "hash": "4dd085",
+    "last_modified": "2024-07-26T18:09:26",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\cs\\Microsoft.CodeAnalysis.Workspaces.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 44,
+    "hash": "afe90d",
+    "last_modified": "2024-07-26T18:18:12",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\cs\\System.CommandLine.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 18,
+    "hash": "80a664",
+    "last_modified": "2022-05-22T15:39:50",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\de\\Microsoft.CodeAnalysis.CSharp.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 451,
+    "hash": "0f3bae",
+    "last_modified": "2024-07-26T18:24:10",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\de\\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 17,
+    "hash": "b3cfb7",
+    "last_modified": "2024-07-26T18:24:16",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\de\\Microsoft.CodeAnalysis.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 48,
+    "hash": "49d491",
+    "last_modified": "2024-07-26T18:09:26",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\de\\Microsoft.CodeAnalysis.Workspaces.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 45,
+    "hash": "925ebf",
+    "last_modified": "2024-07-26T18:18:12",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\de\\System.CommandLine.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 18,
+    "hash": "3dfa07",
+    "last_modified": "2022-05-22T15:39:50",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\es\\Microsoft.CodeAnalysis.CSharp.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 441,
+    "hash": "aeba90",
+    "last_modified": "2024-07-26T18:24:10",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\es\\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 17,
+    "hash": "3885ca",
+    "last_modified": "2024-07-26T18:24:16",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\es\\Microsoft.CodeAnalysis.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 48,
+    "hash": "0de25f",
+    "last_modified": "2024-07-26T18:09:26",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\es\\Microsoft.CodeAnalysis.Workspaces.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 45,
+    "hash": "48fb1e",
+    "last_modified": "2024-07-26T18:18:12",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\es\\System.CommandLine.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 18,
+    "hash": "428374",
+    "last_modified": "2022-05-22T15:39:50",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\fr\\Microsoft.CodeAnalysis.CSharp.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 453,
+    "hash": "3c6348",
+    "last_modified": "2024-07-26T18:24:10",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\fr\\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 17,
+    "hash": "6d9a54",
+    "last_modified": "2024-07-26T18:24:16",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\fr\\Microsoft.CodeAnalysis.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 48,
+    "hash": "21a58f",
+    "last_modified": "2024-07-26T18:09:26",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\fr\\Microsoft.CodeAnalysis.Workspaces.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 46,
+    "hash": "e11700",
+    "last_modified": "2024-07-26T18:18:12",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\fr\\System.CommandLine.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 18,
+    "hash": "e52478",
+    "last_modified": "2022-05-22T15:39:50",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\it\\Microsoft.CodeAnalysis.CSharp.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 447,
+    "hash": "90e447",
+    "last_modified": "2024-07-26T18:24:10",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\it\\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 17,
+    "hash": "193042",
+    "last_modified": "2024-07-26T18:24:16",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\it\\Microsoft.CodeAnalysis.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 48,
+    "hash": "c7d736",
+    "last_modified": "2024-07-26T18:09:26",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\it\\Microsoft.CodeAnalysis.Workspaces.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 46,
+    "hash": "acd37b",
+    "last_modified": "2024-07-26T18:18:12",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\it\\System.CommandLine.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 18,
+    "hash": "291da5",
+    "last_modified": "2022-05-22T15:39:50",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\ja\\Microsoft.CodeAnalysis.CSharp.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 494,
+    "hash": "168a44",
+    "last_modified": "2024-07-26T18:24:10",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\ja\\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 17,
+    "hash": "f1ce86",
+    "last_modified": "2024-07-26T18:24:18",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\ja\\Microsoft.CodeAnalysis.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 52,
+    "hash": "819bc2",
+    "last_modified": "2024-07-26T18:09:26",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\ja\\Microsoft.CodeAnalysis.Workspaces.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 48,
+    "hash": "988d33",
+    "last_modified": "2024-07-26T18:18:12",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\ja\\System.CommandLine.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 18,
+    "hash": "8b0312",
+    "last_modified": "2022-05-22T15:39:50",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\ko\\Microsoft.CodeAnalysis.CSharp.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 452,
+    "hash": "a8eaaf",
+    "last_modified": "2024-07-26T18:24:10",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\ko\\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 17,
+    "hash": "5ede43",
+    "last_modified": "2024-07-26T18:24:18",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\ko\\Microsoft.CodeAnalysis.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 48,
+    "hash": "b4b9fb",
+    "last_modified": "2024-07-26T18:09:26",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\ko\\Microsoft.CodeAnalysis.Workspaces.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 46,
+    "hash": "785c2f",
+    "last_modified": "2024-07-26T18:18:12",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\ko\\System.CommandLine.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 18,
+    "hash": "b4d790",
+    "last_modified": "2022-05-22T15:39:50",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\pl\\Microsoft.CodeAnalysis.CSharp.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 453,
+    "hash": "f36801",
+    "last_modified": "2024-07-26T18:24:10",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\pl\\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 17,
+    "hash": "75d298",
+    "last_modified": "2024-07-26T18:24:18",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\pl\\Microsoft.CodeAnalysis.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 48,
+    "hash": "d12771",
+    "last_modified": "2024-07-26T18:09:26",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\pl\\Microsoft.CodeAnalysis.Workspaces.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 45,
+    "hash": "665ca4",
+    "last_modified": "2024-07-26T18:18:12",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\pl\\System.CommandLine.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 18,
+    "hash": "5a51ca",
+    "last_modified": "2022-05-22T15:39:50",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\pt-BR\\Microsoft.CodeAnalysis.CSharp.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 434,
+    "hash": "96f67f",
+    "last_modified": "2024-07-26T18:24:10",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\pt-BR\\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 17,
+    "hash": "b9b1f6",
+    "last_modified": "2024-07-26T18:24:18",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\pt-BR\\Microsoft.CodeAnalysis.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 47,
+    "hash": "ade691",
+    "last_modified": "2024-07-26T18:09:26",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\pt-BR\\Microsoft.CodeAnalysis.Workspaces.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 45,
+    "hash": "b77884",
+    "last_modified": "2024-07-26T18:18:12",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\pt-BR\\System.CommandLine.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 18,
+    "hash": "8fd927",
+    "last_modified": "2022-05-22T15:39:50",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\ru\\Microsoft.CodeAnalysis.CSharp.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 594,
+    "hash": "250931",
+    "last_modified": "2024-07-26T18:24:10",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\ru\\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 17,
+    "hash": "45dc44",
+    "last_modified": "2024-07-26T18:24:18",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\ru\\Microsoft.CodeAnalysis.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 58,
+    "hash": "f62432",
+    "last_modified": "2024-07-26T18:09:26",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\ru\\Microsoft.CodeAnalysis.Workspaces.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 52,
+    "hash": "7949a1",
+    "last_modified": "2024-07-26T18:18:12",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\ru\\System.CommandLine.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 18,
+    "hash": "a56ee9",
+    "last_modified": "2022-05-22T15:39:50",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\tr\\Microsoft.CodeAnalysis.CSharp.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 430,
+    "hash": "76c1f8",
+    "last_modified": "2024-07-26T18:24:10",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\tr\\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 17,
+    "hash": "662af5",
+    "last_modified": "2024-07-26T18:24:18",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\tr\\Microsoft.CodeAnalysis.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 47,
+    "hash": "660fa2",
+    "last_modified": "2024-07-26T18:09:28",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\tr\\Microsoft.CodeAnalysis.Workspaces.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 44,
+    "hash": "53c766",
+    "last_modified": "2024-07-26T18:18:12",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\tr\\System.CommandLine.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 18,
+    "hash": "795abf",
+    "last_modified": "2022-05-22T15:39:50",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\zh-Hans\\Microsoft.CodeAnalysis.CSharp.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 382,
+    "hash": "eb9fd0",
+    "last_modified": "2024-07-26T18:24:10",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\zh-Hans\\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 16,
+    "hash": "827156",
+    "last_modified": "2024-07-26T18:24:18",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\zh-Hans\\Microsoft.CodeAnalysis.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 43,
+    "hash": "966487",
+    "last_modified": "2024-07-26T18:09:28",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\zh-Hans\\Microsoft.CodeAnalysis.Workspaces.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 42,
+    "hash": "dc9849",
+    "last_modified": "2024-07-26T18:18:12",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\zh-Hans\\System.CommandLine.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 18,
+    "hash": "b964e7",
+    "last_modified": "2022-05-22T15:39:50",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\zh-Hant\\Microsoft.CodeAnalysis.CSharp.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 382,
+    "hash": "1f4bca",
+    "last_modified": "2024-07-26T18:24:10",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\zh-Hant\\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 16,
+    "hash": "073eab",
+    "last_modified": "2024-07-26T18:24:18",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\zh-Hant\\Microsoft.CodeAnalysis.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 43,
+    "hash": "537fd0",
+    "last_modified": "2024-07-26T18:09:28",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\zh-Hant\\Microsoft.CodeAnalysis.Workspaces.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 42,
+    "hash": "e07ab8",
+    "last_modified": "2024-07-26T18:18:12",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\bin\\Release\\net8.0\\zh-Hant\\System.CommandLine.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 18,
+    "hash": "5536a7",
+    "last_modified": "2022-05-22T15:39:50",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\Commands\\AnalyzeFileCommand.cs",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 2,
+    "hash": "58f297",
+    "last_modified": "2025-10-30T16:17:52.342758",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\Commands\\AnalyzeProjectCommand.cs",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 3,
+    "hash": "86fb19",
+    "last_modified": "2025-10-30T16:22:54.040294",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\Commands\\ValidateCommand.cs",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 2,
+    "hash": "ff24b6",
+    "last_modified": "2025-10-30T16:24:52.025774",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\Logging\\StructuredLogger.cs",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 0,
+    "hash": "0bf4d6",
+    "last_modified": "2025-10-30T16:24:22.914614",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\Models\\CodeArtifact.cs",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 4,
+    "hash": "2bc37f",
+    "last_modified": "2025-10-30T16:06:49.014466",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\obj\\DocTool.csproj.nuget.dgspec.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 3,
+    "hash": "c4f732",
+    "last_modified": "2025-10-30T16:05:28.595815",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\obj\\DocTool.csproj.nuget.g.props",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 1,
+    "hash": "9c3047",
+    "last_modified": "2025-10-30T16:05:28.558340",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\obj\\DocTool.csproj.nuget.g.targets",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 1,
+    "hash": "0acb12",
+    "last_modified": "2025-10-30T16:05:28.559362",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\obj\\project.assets.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 148,
+    "hash": "c6d56f",
+    "last_modified": "2025-10-30T16:05:28.568164",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\obj\\project.nuget.cache",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 4,
+    "hash": "15da2f",
+    "last_modified": "2025-10-30T16:05:28.594432",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\obj\\Release\\net8.0\\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 0,
+    "hash": "f7a5d9",
+    "last_modified": "2025-10-30T16:05:38.789432",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\obj\\Release\\net8.0\\apphost.exe",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 148,
+    "hash": "47da0f",
+    "last_modified": "2025-10-30T16:25:15.297094",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\obj\\Release\\net8.0\\DocTool.AssemblyInfo.cs",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 0,
+    "hash": "23db7c",
+    "last_modified": "2025-10-30T16:23:26.283976",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\obj\\Release\\net8.0\\DocTool.AssemblyInfoInputs.cache",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 0,
+    "hash": "3ea58f",
+    "last_modified": "2025-10-30T16:23:26.278703",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\obj\\Release\\net8.0\\DocTool.assets.cache",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 39,
+    "hash": "e71f36",
+    "last_modified": "2025-10-30T16:05:38.606162",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\obj\\Release\\net8.0\\DocTool.csproj.AssemblyReference.cache",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 11,
+    "hash": "a371d1",
+    "last_modified": "2025-10-30T16:05:38.752515",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\obj\\Release\\net8.0\\DocTool.csproj.CoreCompileInputs.cache",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 0,
+    "hash": "d51bed",
+    "last_modified": "2025-10-30T16:23:26.285070",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\obj\\Release\\net8.0\\DocTool.csproj.FileListAbsolute.txt",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 8,
+    "hash": "f50b05",
+    "last_modified": "2025-10-30T16:09:30.334326",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\obj\\Release\\net8.0\\DocTool.csproj.Up2Date",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 0,
+    "hash": "e3b0c4",
+    "last_modified": "2025-10-30T16:09:30.191039",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\obj\\Release\\net8.0\\DocTool.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 41,
+    "hash": "378269",
+    "last_modified": "2025-10-30T16:25:15.288351",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\obj\\Release\\net8.0\\DocTool.GeneratedMSBuildEditorConfig.editorconfig",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 0,
+    "hash": "66b159",
+    "last_modified": "2025-10-30T16:05:38.788385",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\obj\\Release\\net8.0\\DocTool.genruntimeconfig.cache",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 0,
+    "hash": "d574cf",
+    "last_modified": "2025-10-30T16:09:30.284554",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\obj\\Release\\net8.0\\DocTool.pdb",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 21,
+    "hash": "e2440e",
+    "last_modified": "2025-10-30T16:25:15.282401",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\obj\\Release\\net8.0\\DocTool.sourcelink.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 0,
+    "hash": "895149",
+    "last_modified": "2025-10-30T16:23:26.313215",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\obj\\Release\\net8.0\\ref\\DocTool.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 15,
+    "hash": "1ec1aa",
+    "last_modified": "2025-10-30T16:25:15.288351",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\obj\\Release\\net8.0\\refint\\DocTool.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 15,
+    "hash": "1ec1aa",
+    "last_modified": "2025-10-30T16:25:15.288351",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\Output\\ArtifactGenerator.cs",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 1,
+    "hash": "9d3d51",
+    "last_modified": "2025-10-30T16:17:31.347837",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\_normalized\\context\\summary.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 1,
+    "hash": "476513",
+    "last_modified": "2025-10-31T13:15:31.345263",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\_normalized\\diagrams\\component_flow.mmd",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 1,
+    "hash": "30aa0f",
+    "last_modified": "2025-10-31T12:50:45.964772",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\_normalized\\diagrams\\component_flow.png",
+    "type": "image",
+    "handler": "ImageHandler",
+    "size_kb": 139,
+    "hash": "886a66",
+    "last_modified": "2025-10-31T12:50:59.151905",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\_normalized\\diagrams\\component_flow.svg",
+    "type": "image",
+    "handler": "ImageHandler",
+    "size_kb": 27,
+    "hash": "ec2d2f",
+    "last_modified": "2025-10-31T12:51:01.545685",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\_normalized\\diagrams\\data_flow.mmd",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 3,
+    "hash": "4b9324",
+    "last_modified": "2025-10-31T12:50:45.965769",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\_normalized\\diagrams\\data_flow.png",
+    "type": "image",
+    "handler": "ImageHandler",
+    "size_kb": 183,
+    "hash": "549cb1",
+    "last_modified": "2025-10-31T12:51:04.710643",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\_normalized\\diagrams\\data_flow.svg",
+    "type": "image",
+    "handler": "ImageHandler",
+    "size_kb": 65,
+    "hash": "f8515e",
+    "last_modified": "2025-10-31T12:38:39.119193",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\_normalized\\diagrams\\dependency_graph.mmd",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 3,
+    "hash": "a257b6",
+    "last_modified": "2025-10-31T12:50:45.963750",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\_normalized\\diagrams\\dependency_graph.png",
+    "type": "image",
+    "handler": "ImageHandler",
+    "size_kb": 598,
+    "hash": "4258f8",
+    "last_modified": "2025-10-31T12:38:24.786218",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\_normalized\\diagrams\\dependency_graph.svg",
+    "type": "image",
+    "handler": "ImageHandler",
+    "size_kb": 96,
+    "hash": "dbc4cd",
+    "last_modified": "2025-10-31T12:50:54.900644",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\_normalized\\diagrams\\system_context.mmd",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 1,
+    "hash": "b096ed",
+    "last_modified": "2025-10-31T12:50:45.963247",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\_normalized\\diagrams\\system_context.png",
+    "type": "image",
+    "handler": "ImageHandler",
+    "size_kb": 126,
+    "hash": "cea708",
+    "last_modified": "2025-10-31T12:50:48.813685",
+    "status": "pending"
+  },
+  {
+    "file": "DocTool\\_normalized\\diagrams\\system_context.svg",
+    "type": "image",
+    "handler": "ImageHandler",
+    "size_kb": 30,
+    "hash": "63f5e5",
+    "last_modified": "2025-10-31T12:50:50.560107",
+    "status": "pending"
+  },
+  {
+    "file": "examples\\minishop\\README.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 0,
+    "hash": "671224",
+    "last_modified": "2025-10-24T12:43:26.422441",
+    "status": "pending"
+  },
+  {
+    "file": "examples\\minishop\\api\\app.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 2,
+    "hash": "9c7b6b",
+    "last_modified": "2025-10-24T14:00:34.289363",
+    "status": "pending"
+  },
+  {
+    "file": "examples\\minishop\\db\\schema.sql",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 2,
+    "hash": "a470b4",
+    "last_modified": "2025-10-24T12:44:27.416774",
+    "status": "pending"
+  },
+  {
+    "file": "examples\\minishop\\expected_docs\\architecture.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 2,
+    "hash": "281d5d",
+    "last_modified": "2025-10-24T14:48:10.946411",
+    "status": "pending"
+  },
+  {
+    "file": "examples\\minishop\\expected_docs\\logic-and-workflows.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 2,
+    "hash": "8b08e6",
+    "last_modified": "2025-10-24T14:33:04.510166",
+    "status": "pending"
+  },
+  {
+    "file": "examples\\minishop\\service\\OrderService.cs",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 3,
+    "hash": "01c1a4",
+    "last_modified": "2025-10-24T12:43:55.753074",
+    "status": "pending"
+  },
+  {
+    "file": "full_test\\artifacts\\AdaptiveReasoningModel.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 9,
+    "hash": "0827be",
+    "last_modified": "2025-10-31T09:41:21.888278",
+    "status": "pending"
+  },
+  {
+    "file": "full_test\\artifacts\\AdaptiveReasoningService.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 14,
+    "hash": "407320",
+    "last_modified": "2025-10-31T09:41:25.317166",
+    "status": "pending"
+  },
+  {
+    "file": "full_test\\artifacts\\AnalyzeFileCommand.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 2,
+    "hash": "36e742",
+    "last_modified": "2025-10-31T09:41:18.617056",
+    "status": "pending"
+  },
+  {
+    "file": "full_test\\artifacts\\AnalyzeProjectCommand.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 3,
+    "hash": "931afb",
+    "last_modified": "2025-10-31T09:41:18.979712",
+    "status": "pending"
+  },
+  {
+    "file": "full_test\\artifacts\\ArchitectureModel.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 15,
+    "hash": "fd440d",
+    "last_modified": "2025-10-31T09:41:22.316385",
+    "status": "pending"
+  },
+  {
+    "file": "full_test\\artifacts\\ArtifactGenerator.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 2,
+    "hash": "c977a1",
+    "last_modified": "2025-10-31T09:41:20.387702",
+    "status": "pending"
+  },
+  {
+    "file": "full_test\\artifacts\\AstInspector.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 6,
+    "hash": "8044a3",
+    "last_modified": "2025-10-31T09:41:17.509072",
+    "status": "pending"
+  },
+  {
+    "file": "full_test\\artifacts\\CodeArtifact.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 11,
+    "hash": "146578",
+    "last_modified": "2025-10-31T09:41:20.075436",
+    "status": "pending"
+  },
+  {
+    "file": "full_test\\artifacts\\DependencyResolver.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 3,
+    "hash": "0477fc",
+    "last_modified": "2025-10-31T09:41:17.895346",
+    "status": "pending"
+  },
+  {
+    "file": "full_test\\artifacts\\ImprovementTrackingModel.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 18,
+    "hash": "0f472d",
+    "last_modified": "2025-10-31T09:41:22.706780",
+    "status": "pending"
+  },
+  {
+    "file": "full_test\\artifacts\\InvariantValidationModel.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 13,
+    "hash": "5e9610",
+    "last_modified": "2025-10-31T09:41:23.127647",
+    "status": "pending"
+  },
+  {
+    "file": "full_test\\artifacts\\MsBuildConfigurationIndex.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 8,
+    "hash": "1c1037",
+    "last_modified": "2025-10-31T09:41:23.490818",
+    "status": "pending"
+  },
+  {
+    "file": "full_test\\artifacts\\MsBuildWorkspaceService.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 8,
+    "hash": "8e108d",
+    "last_modified": "2025-10-31T09:41:25.761204",
+    "status": "pending"
+  },
+  {
+    "file": "full_test\\artifacts\\OrderService.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 6,
+    "hash": "6fd4fa",
+    "last_modified": "2025-10-31T09:41:21.085723",
+    "status": "pending"
+  },
+  {
+    "file": "full_test\\artifacts\\PreprocessorSymbolRegistry.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 8,
+    "hash": "9309a2",
+    "last_modified": "2025-10-31T09:41:23.933706",
+    "status": "pending"
+  },
+  {
+    "file": "full_test\\artifacts\\Program.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 3,
+    "hash": "7c39dc",
+    "last_modified": "2025-10-31T09:41:24.856461",
+    "status": "pending"
+  },
+  {
+    "file": "full_test\\artifacts\\RoslynAnalyzer.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 2,
+    "hash": "b19d11",
+    "last_modified": "2025-10-31T09:41:18.249660",
+    "status": "pending"
+  },
+  {
+    "file": "full_test\\artifacts\\StructuralAnalyzerService.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 11,
+    "hash": "4200b9",
+    "last_modified": "2025-10-31T09:41:26.203616",
+    "status": "pending"
+  },
+  {
+    "file": "full_test\\artifacts\\StructuralIntelligenceCommand.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 1,
+    "hash": "5fc92b",
+    "last_modified": "2025-10-31T09:41:21.482124",
+    "status": "pending"
+  },
+  {
+    "file": "full_test\\artifacts\\StructuredLogger.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 0,
+    "hash": "078673",
+    "last_modified": "2025-10-31T09:41:19.736293",
+    "status": "pending"
+  },
+  {
+    "file": "full_test\\artifacts\\SymbolResolutionMap.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 7,
+    "hash": "dbfa83",
+    "last_modified": "2025-10-31T09:41:24.421972",
+    "status": "pending"
+  },
+  {
+    "file": "full_test\\artifacts\\ValidateCommand.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 2,
+    "hash": "d3cb0f",
+    "last_modified": "2025-10-31T09:41:19.390946",
+    "status": "pending"
+  },
+  {
+    "file": "orchestrator\\artifact_processor.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 3,
+    "hash": "05bfb5",
+    "last_modified": "2025-10-31T14:05:03.898920",
+    "status": "pending"
+  },
+  {
+    "file": "orchestrator\\config.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 7,
+    "hash": "1ff735",
+    "last_modified": "2025-10-31T14:00:26.207584",
+    "status": "pending"
+  },
+  {
+    "file": "orchestrator\\csharp_runner.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 4,
+    "hash": "0e0ce3",
+    "last_modified": "2025-10-30T16:44:29.478448",
+    "status": "pending"
+  },
+  {
+    "file": "orchestrator\\diagram_generator.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 13,
+    "hash": "0cdfbe",
+    "last_modified": "2025-10-31T13:27:26.095124",
+    "status": "pending"
+  },
+  {
+    "file": "orchestrator\\entity_registry.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 11,
+    "hash": "12ec3d",
+    "last_modified": "2025-10-31T14:43:47.101607",
+    "status": "pending"
+  },
+  {
+    "file": "orchestrator\\error_handler.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 1,
+    "hash": "59fe5b",
+    "last_modified": "2025-10-30T16:45:10.938011",
+    "status": "pending"
+  },
+  {
+    "file": "orchestrator\\file_scanner.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 1,
+    "hash": "693b43",
+    "last_modified": "2025-10-30T16:50:32.517514",
+    "status": "pending"
+  },
+  {
+    "file": "orchestrator\\llm_client.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 4,
+    "hash": "f8ddf5",
+    "last_modified": "2025-10-31T14:55:32.831630",
+    "status": "pending"
+  },
+  {
+    "file": "orchestrator\\logger.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 1,
+    "hash": "ffa6c2",
+    "last_modified": "2025-10-30T16:30:20.605626",
+    "status": "pending"
+  },
+  {
+    "file": "orchestrator\\packager.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 6,
+    "hash": "b78bcf",
+    "last_modified": "2025-10-31T12:41:26.905894",
+    "status": "pending"
+  },
+  {
+    "file": "orchestrator\\quality_gates.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 9,
+    "hash": "809a15",
+    "last_modified": "2025-10-31T13:22:15.598939",
+    "status": "pending"
+  },
+  {
+    "file": "orchestrator\\self_tester.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 6,
+    "hash": "eaaca8",
+    "last_modified": "2025-10-31T13:40:52.094130",
+    "status": "pending"
+  },
+  {
+    "file": "orchestrator\\__init__.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 0,
+    "hash": "035ff1",
+    "last_modified": "2025-10-30T16:30:08.811244",
+    "status": "pending"
+  },
+  {
+    "file": "patterns\\abap.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 2,
+    "hash": "7ec9d6",
+    "last_modified": "2025-10-24T14:48:10.981686",
+    "status": "pending"
+  },
+  {
+    "file": "patterns\\csharp.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 2,
+    "hash": "4456e6",
+    "last_modified": "2025-10-24T13:02:24.807485",
+    "status": "pending"
+  },
+  {
+    "file": "patterns\\docx.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 1,
+    "hash": "fd88ce",
+    "last_modified": "2025-10-24T13:06:27.214149",
+    "status": "pending"
+  },
+  {
+    "file": "patterns\\generic.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 2,
+    "hash": "bf5744",
+    "last_modified": "2025-10-24T13:05:38.683684",
+    "status": "pending"
+  },
+  {
+    "file": "patterns\\index.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 1,
+    "hash": "2fc94a",
+    "last_modified": "2025-10-24T13:00:07.424328",
+    "status": "pending"
+  },
+  {
+    "file": "patterns\\javascript.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 2,
+    "hash": "b1ae79",
+    "last_modified": "2025-10-24T13:03:28.886493",
+    "status": "pending"
+  },
+  {
+    "file": "patterns\\python.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 3,
+    "hash": "b4e870",
+    "last_modified": "2025-10-24T15:06:27.025772",
+    "status": "pending"
+  },
+  {
+    "file": "patterns\\react.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 2,
+    "hash": "ee289c",
+    "last_modified": "2025-10-24T14:48:38.203546",
+    "status": "pending"
+  },
+  {
+    "file": "patterns\\sql.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 2,
+    "hash": "b5a102",
+    "last_modified": "2025-10-24T14:48:11.078883",
+    "status": "pending"
+  },
+  {
+    "file": "scripts\\run_full.ps1",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 1,
+    "hash": "917f6d",
+    "last_modified": "2025-10-31T13:53:06.411626",
+    "status": "pending"
+  },
+  {
+    "file": "scripts\\run_full.sh",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 0,
+    "hash": "5bf959",
+    "last_modified": "2025-10-31T13:53:13.127547",
+    "status": "pending"
+  },
+  {
+    "file": "specs\\1-structural-intelligence-csharp\\data-model.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 4,
+    "hash": "6f297e",
+    "last_modified": "2025-10-27T14:08:41.719310",
+    "status": "pending"
+  },
+  {
+    "file": "specs\\1-structural-intelligence-csharp\\plan.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 3,
+    "hash": "5098a7",
+    "last_modified": "2025-10-27T12:34:55.392992",
+    "status": "pending"
+  },
+  {
+    "file": "specs\\1-structural-intelligence-csharp\\quickstart.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 3,
+    "hash": "e91aad",
+    "last_modified": "2025-10-27T14:10:12.589144",
+    "status": "pending"
+  },
+  {
+    "file": "specs\\1-structural-intelligence-csharp\\research.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 6,
+    "hash": "087ac2",
+    "last_modified": "2025-10-27T14:05:29.471894",
+    "status": "pending"
+  },
+  {
+    "file": "specs\\1-structural-intelligence-csharp\\spec.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 6,
+    "hash": "4b3170",
+    "last_modified": "2025-10-27T13:05:01.320274",
+    "status": "pending"
+  },
+  {
+    "file": "specs\\1-structural-intelligence-csharp\\tasks.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 9,
+    "hash": "c1e187",
+    "last_modified": "2025-10-27T13:08:29.995156",
+    "status": "pending"
+  },
+  {
+    "file": "specs\\1-structural-intelligence-csharp\\checklists\\requirements.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 1,
+    "hash": "bde726",
+    "last_modified": "2025-10-27T12:59:25.784248",
+    "status": "pending"
+  },
+  {
+    "file": "specs\\1-structural-intelligence-csharp\\contracts\\structural-intelligence-api.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 12,
+    "hash": "79bc93",
+    "last_modified": "2025-10-27T14:07:33.608162",
+    "status": "pending"
+  },
+  {
+    "file": "specs\\2-adaptive-reasoning-validators\\data-model.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 8,
+    "hash": "cc68f6",
+    "last_modified": "2025-10-28T15:37:04.127988",
+    "status": "pending"
+  },
+  {
+    "file": "specs\\2-adaptive-reasoning-validators\\plan.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 3,
+    "hash": "bf8ca0",
+    "last_modified": "2025-10-28T15:34:53.571383",
+    "status": "pending"
+  },
+  {
+    "file": "specs\\2-adaptive-reasoning-validators\\quickstart.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 7,
+    "hash": "edf83e",
+    "last_modified": "2025-10-28T12:05:14.234856",
+    "status": "pending"
+  },
+  {
+    "file": "specs\\2-adaptive-reasoning-validators\\research.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 6,
+    "hash": "44ee49",
+    "last_modified": "2025-10-28T15:33:09.673266",
+    "status": "pending"
+  },
+  {
+    "file": "specs\\2-adaptive-reasoning-validators\\spec.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 8,
+    "hash": "cfabb0",
+    "last_modified": "2025-10-27T17:44:03.301044",
+    "status": "pending"
+  },
+  {
+    "file": "specs\\2-adaptive-reasoning-validators\\tasks.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 17,
+    "hash": "ae160b",
+    "last_modified": "2025-10-28T15:28:56.333596",
+    "status": "pending"
+  },
+  {
+    "file": "specs\\2-adaptive-reasoning-validators\\contracts\\adaptive-reasoning-api.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 39,
+    "hash": "1ed533",
+    "last_modified": "2025-10-28T12:31:18.510778",
+    "status": "pending"
+  },
+  {
+    "file": "specs\\2-adaptive-reasoning-validators\\contracts\\structural-intelligence-api.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 38,
+    "hash": "dcc3e2",
+    "last_modified": "2025-10-27T17:37:09.373829",
+    "status": "pending"
+  },
+  {
+    "file": "specs\\3-deterministic-doc-packaging\\data-model.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 11,
+    "hash": "5e9783",
+    "last_modified": "2025-10-28T14:36:17.241579",
+    "status": "pending"
+  },
+  {
+    "file": "specs\\3-deterministic-doc-packaging\\plan.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 4,
+    "hash": "a80c26",
+    "last_modified": "2025-10-28T14:31:32.558122",
+    "status": "pending"
+  },
+  {
+    "file": "specs\\3-deterministic-doc-packaging\\research.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 7,
+    "hash": "5b61fd",
+    "last_modified": "2025-10-28T14:32:56.113872",
+    "status": "pending"
+  },
+  {
+    "file": "specs\\3-deterministic-doc-packaging\\spec.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 7,
+    "hash": "4230fd",
+    "last_modified": "2025-10-28T14:30:01.811888",
+    "status": "pending"
+  },
+  {
+    "file": "specs\\3-deterministic-doc-packaging\\contracts\\structural-intelligence-api.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 33,
+    "hash": "4b05f1",
+    "last_modified": "2025-10-28T15:24:11.887784",
+    "status": "pending"
+  },
+  {
+    "file": "specs\\main\\plan.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 3,
+    "hash": "5098a7",
+    "last_modified": "2025-10-27T12:34:55.392992",
+    "status": "pending"
+  },
+  {
+    "file": "specs\\main\\spec.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 2,
+    "hash": "723d3b",
+    "last_modified": "2025-10-27T13:16:51.201217",
+    "status": "pending"
+  },
+  {
+    "file": "src\\Program.cs",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 7,
+    "hash": "8e128d",
+    "last_modified": "2025-10-27T13:30:59.070352",
+    "status": "pending"
+  },
+  {
+    "file": "src\\StructuralIntelligence.csproj",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 0,
+    "hash": "d13799",
+    "last_modified": "2025-10-27T13:12:07.016093",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\Humanizer.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 347,
+    "hash": "d68530",
+    "last_modified": "2022-01-29T10:04:04",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\Microsoft.Build.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 1837,
+    "hash": "ffc967",
+    "last_modified": "2023-07-26T10:05:28",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\Microsoft.Build.Framework.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 285,
+    "hash": "9873b3",
+    "last_modified": "2023-07-26T10:05:08",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\Microsoft.Build.Tasks.Core.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 1077,
+    "hash": "a6ed85",
+    "last_modified": "2023-07-26T10:05:32",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\Microsoft.Build.Utilities.Core.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 282,
+    "hash": "999e85",
+    "last_modified": "2023-07-26T10:05:18",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\Microsoft.CodeAnalysis.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 2958,
+    "hash": "395736",
+    "last_modified": "2025-05-13T01:23:30",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\Microsoft.CodeAnalysis.ExternalAccess.RazorCompiler.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 20,
+    "hash": "ac1f62",
+    "last_modified": "2025-05-13T01:26:50",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\Microsoft.CodeAnalysis.Workspaces.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 4081,
+    "hash": "fa1b84",
+    "last_modified": "2025-05-13T01:29:58",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\Microsoft.CodeAnalysis.Workspaces.MSBuild.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 128,
+    "hash": "a4e9b8",
+    "last_modified": "2025-05-13T01:31:14",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 64,
+    "hash": "99a08f",
+    "last_modified": "2024-10-28T22:38:16",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\Microsoft.Extensions.DependencyInjection.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 91,
+    "hash": "09c80c",
+    "last_modified": "2024-10-28T22:38:42",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\Microsoft.Extensions.Logging.Abstractions.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 65,
+    "hash": "7c5e0d",
+    "last_modified": "2024-10-28T22:38:44",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\Microsoft.Extensions.Logging.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 51,
+    "hash": "faed6c",
+    "last_modified": "2024-10-28T22:38:50",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\Microsoft.Extensions.Options.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 64,
+    "hash": "1e832b",
+    "last_modified": "2024-10-28T22:38:24",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\Microsoft.Extensions.Primitives.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 44,
+    "hash": "c6d27b",
+    "last_modified": "2024-10-28T22:38:00",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\Microsoft.NET.StringTools.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 30,
+    "hash": "e9f3bb",
+    "last_modified": "2023-07-26T10:05:10",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\Microsoft.VisualStudio.Setup.Configuration.Interop.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 21,
+    "hash": "a3a5ae",
+    "last_modified": "2022-04-19T17:35:34",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\Newtonsoft.Json.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 695,
+    "hash": "22c649",
+    "last_modified": "2023-03-08T02:09:54",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\StructuralIntelligence.deps.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 37,
+    "hash": "3fa493",
+    "last_modified": "2025-10-27T13:32:49.053180",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\StructuralIntelligence.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 61,
+    "hash": "26dba0",
+    "last_modified": "2025-10-27T13:50:56.411981",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\StructuralIntelligence.exe",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 153,
+    "hash": "419c90",
+    "last_modified": "2025-10-27T13:50:56.459392",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\StructuralIntelligence.pdb",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 42,
+    "hash": "23ddda",
+    "last_modified": "2025-10-27T13:50:56.387444",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\StructuralIntelligence.runtimeconfig.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 0,
+    "hash": "a45057",
+    "last_modified": "2025-10-27T13:32:49.107788",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\System.CodeDom.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 182,
+    "hash": "4d33e2",
+    "last_modified": "2022-10-18T12:16:40",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\System.CommandLine.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 148,
+    "hash": "736a84",
+    "last_modified": "2025-10-02T15:26:10",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\System.Composition.AttributedModel.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 19,
+    "hash": "d4f1ec",
+    "last_modified": "2024-10-28T22:38:10",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\System.Composition.Convention.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 52,
+    "hash": "be95f4",
+    "last_modified": "2024-10-28T22:38:24",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\System.Composition.Hosting.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 54,
+    "hash": "2c8f10",
+    "last_modified": "2024-10-28T22:38:28",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\System.Composition.Runtime.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 26,
+    "hash": "148012",
+    "last_modified": "2024-10-28T22:38:16",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\System.Composition.TypedParts.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 64,
+    "hash": "ebc942",
+    "last_modified": "2024-10-28T22:38:36",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\System.Configuration.ConfigurationManager.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 432,
+    "hash": "df7950",
+    "last_modified": "2024-10-28T22:38:34",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\System.Diagnostics.EventLog.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 52,
+    "hash": "803ba4",
+    "last_modified": "2024-10-28T22:38:26",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\System.Formats.Nrbf.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 66,
+    "hash": "7018d6",
+    "last_modified": "2024-10-28T22:38:42",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\System.Reflection.MetadataLoadContext.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 236,
+    "hash": "3f83c1",
+    "last_modified": "2022-10-18T12:16:58",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\System.Resources.Extensions.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 104,
+    "hash": "bf9b6e",
+    "last_modified": "2024-10-28T22:38:48",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\System.Security.Cryptography.Pkcs.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 255,
+    "hash": "c72cba",
+    "last_modified": "2023-05-24T10:39:24",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\System.Security.Cryptography.ProtectedData.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 37,
+    "hash": "b761c9",
+    "last_modified": "2024-10-28T22:38:10",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\System.Security.Cryptography.Xml.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 171,
+    "hash": "deb76d",
+    "last_modified": "2022-12-06T14:02:04",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\System.Security.Permissions.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 114,
+    "hash": "c4188e",
+    "last_modified": "2024-10-28T22:38:46",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\System.Windows.Extensions.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 28,
+    "hash": "96c9bf",
+    "last_modified": "2024-10-28T22:38:44",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\BuildHost-net472\\Microsoft.Build.Locator.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 34,
+    "hash": "1d4222",
+    "last_modified": "2023-09-20T04:38:38",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\BuildHost-net472\\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.exe",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 435,
+    "hash": "bea27a",
+    "last_modified": "2025-05-13T01:24:14",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\BuildHost-net472\\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.exe.config",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 2,
+    "hash": "43169e",
+    "last_modified": "2025-05-13T01:24:10",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\BuildHost-net472\\Microsoft.IO.Redist.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 128,
+    "hash": "6d0b0a",
+    "last_modified": "2024-06-14T14:02:12",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\BuildHost-net472\\Newtonsoft.Json.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 705,
+    "hash": "bcb1dd",
+    "last_modified": "2023-03-08T02:09:56",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\BuildHost-net472\\System.Buffers.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 20,
+    "hash": "accccf",
+    "last_modified": "2020-02-19T05:05:18",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\BuildHost-net472\\System.Collections.Immutable.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 253,
+    "hash": "77d705",
+    "last_modified": "2024-10-28T22:43:12",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\BuildHost-net472\\System.CommandLine.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 145,
+    "hash": "ef4bc4",
+    "last_modified": "2024-10-28T09:47:44",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\BuildHost-net472\\System.Memory.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 138,
+    "hash": "bf3fb8",
+    "last_modified": "2022-05-07T23:31:02",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\BuildHost-net472\\System.Numerics.Vectors.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 113,
+    "hash": "1d3ef8",
+    "last_modified": "2018-05-15T09:29:44",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\BuildHost-net472\\System.Runtime.CompilerServices.Unsafe.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 17,
+    "hash": "377684",
+    "last_modified": "2021-10-22T19:40:18",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\BuildHost-net472\\System.Threading.Tasks.Extensions.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 25,
+    "hash": "4f81ff",
+    "last_modified": "2020-02-19T05:05:18",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\BuildHost-net472\\cs\\System.CommandLine.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 18,
+    "hash": "0613e6",
+    "last_modified": "2024-10-28T09:48:00",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\BuildHost-net472\\de\\System.CommandLine.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 18,
+    "hash": "6f77e8",
+    "last_modified": "2024-10-28T09:48:02",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\BuildHost-net472\\es\\System.CommandLine.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 18,
+    "hash": "99d6cf",
+    "last_modified": "2024-10-28T09:48:04",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\BuildHost-net472\\fr\\System.CommandLine.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 18,
+    "hash": "3f5b76",
+    "last_modified": "2024-10-28T09:48:06",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\BuildHost-net472\\it\\System.CommandLine.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 18,
+    "hash": "70b1cd",
+    "last_modified": "2024-10-28T09:48:08",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\BuildHost-net472\\ja\\System.CommandLine.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 18,
+    "hash": "a60f1b",
+    "last_modified": "2024-10-28T09:48:10",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\BuildHost-net472\\ko\\System.CommandLine.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 18,
+    "hash": "14c738",
+    "last_modified": "2024-10-28T09:48:10",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\BuildHost-net472\\pl\\System.CommandLine.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 18,
+    "hash": "29d28d",
+    "last_modified": "2024-10-28T09:48:12",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\BuildHost-net472\\pt-BR\\System.CommandLine.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 18,
+    "hash": "7ffb47",
+    "last_modified": "2024-10-28T09:48:14",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\BuildHost-net472\\ru\\System.CommandLine.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 19,
+    "hash": "cda0d3",
+    "last_modified": "2024-10-28T09:48:16",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\BuildHost-net472\\tr\\System.CommandLine.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 18,
+    "hash": "06f12a",
+    "last_modified": "2024-10-28T09:48:18",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\BuildHost-net472\\zh-Hans\\System.CommandLine.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 18,
+    "hash": "a4c168",
+    "last_modified": "2024-10-28T09:48:18",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\BuildHost-net472\\zh-Hant\\System.CommandLine.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 18,
+    "hash": "dacb3b",
+    "last_modified": "2024-10-28T09:48:20",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\BuildHost-netcore\\Microsoft.Build.Locator.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 42,
+    "hash": "0adbe6",
+    "last_modified": "2023-09-20T04:38:38",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\BuildHost-netcore\\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.deps.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 11,
+    "hash": "a63d1e",
+    "last_modified": "2025-05-13T01:24:14",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\BuildHost-netcore\\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 432,
+    "hash": "5542b6",
+    "last_modified": "2025-05-13T01:24:14",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\BuildHost-netcore\\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.dll.config",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 33,
+    "hash": "73b9a8",
+    "last_modified": "2025-05-13T01:24:10",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\BuildHost-netcore\\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.runtimeconfig.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 0,
+    "hash": "dfbed9",
+    "last_modified": "2025-05-13T01:24:14",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\BuildHost-netcore\\Newtonsoft.Json.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 705,
+    "hash": "265b08",
+    "last_modified": "2023-03-08T02:09:54",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\BuildHost-netcore\\System.Collections.Immutable.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 253,
+    "hash": "4743e4",
+    "last_modified": "2024-10-28T22:43:18",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\BuildHost-netcore\\System.CommandLine.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 145,
+    "hash": "ef4bc4",
+    "last_modified": "2024-10-28T09:47:44",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\BuildHost-netcore\\cs\\System.CommandLine.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 18,
+    "hash": "0613e6",
+    "last_modified": "2024-10-28T09:48:00",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\BuildHost-netcore\\de\\System.CommandLine.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 18,
+    "hash": "6f77e8",
+    "last_modified": "2024-10-28T09:48:02",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\BuildHost-netcore\\es\\System.CommandLine.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 18,
+    "hash": "99d6cf",
+    "last_modified": "2024-10-28T09:48:04",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\BuildHost-netcore\\fr\\System.CommandLine.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 18,
+    "hash": "3f5b76",
+    "last_modified": "2024-10-28T09:48:06",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\BuildHost-netcore\\it\\System.CommandLine.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 18,
+    "hash": "70b1cd",
+    "last_modified": "2024-10-28T09:48:08",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\BuildHost-netcore\\ja\\System.CommandLine.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 18,
+    "hash": "a60f1b",
+    "last_modified": "2024-10-28T09:48:10",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\BuildHost-netcore\\ko\\System.CommandLine.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 18,
+    "hash": "14c738",
+    "last_modified": "2024-10-28T09:48:10",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\BuildHost-netcore\\pl\\System.CommandLine.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 18,
+    "hash": "29d28d",
+    "last_modified": "2024-10-28T09:48:12",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\BuildHost-netcore\\pt-BR\\System.CommandLine.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 18,
+    "hash": "7ffb47",
+    "last_modified": "2024-10-28T09:48:14",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\BuildHost-netcore\\ru\\System.CommandLine.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 19,
+    "hash": "cda0d3",
+    "last_modified": "2024-10-28T09:48:16",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\BuildHost-netcore\\tr\\System.CommandLine.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 18,
+    "hash": "06f12a",
+    "last_modified": "2024-10-28T09:48:18",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\BuildHost-netcore\\zh-Hans\\System.CommandLine.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 18,
+    "hash": "a4c168",
+    "last_modified": "2024-10-28T09:48:18",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\BuildHost-netcore\\zh-Hant\\System.CommandLine.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 18,
+    "hash": "dacb3b",
+    "last_modified": "2024-10-28T09:48:20",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\cs\\Microsoft.CodeAnalysis.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 47,
+    "hash": "818f84",
+    "last_modified": "2025-05-13T01:23:30",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\cs\\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 17,
+    "hash": "609b63",
+    "last_modified": "2025-05-13T01:31:14",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\cs\\Microsoft.CodeAnalysis.Workspaces.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 45,
+    "hash": "ed8cbc",
+    "last_modified": "2025-05-13T01:29:58",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\cs\\System.CommandLine.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 18,
+    "hash": "4cc96b",
+    "last_modified": "2025-10-02T15:26:12",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\de\\Microsoft.CodeAnalysis.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 49,
+    "hash": "1b1d80",
+    "last_modified": "2025-05-13T01:23:30",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\de\\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 17,
+    "hash": "c20da3",
+    "last_modified": "2025-05-13T01:31:14",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\de\\Microsoft.CodeAnalysis.Workspaces.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 46,
+    "hash": "1f8815",
+    "last_modified": "2025-05-13T01:29:58",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\de\\System.CommandLine.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 18,
+    "hash": "aaa94d",
+    "last_modified": "2025-10-02T15:26:12",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\es\\Microsoft.CodeAnalysis.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 48,
+    "hash": "4c83f9",
+    "last_modified": "2025-05-13T01:23:30",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\es\\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 17,
+    "hash": "0a547a",
+    "last_modified": "2025-05-13T01:31:14",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\es\\Microsoft.CodeAnalysis.Workspaces.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 46,
+    "hash": "748f16",
+    "last_modified": "2025-05-13T01:29:58",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\es\\System.CommandLine.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 18,
+    "hash": "97b9fc",
+    "last_modified": "2025-10-02T15:26:14",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\fr\\Microsoft.CodeAnalysis.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 49,
+    "hash": "a92746",
+    "last_modified": "2025-05-13T01:23:30",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\fr\\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 17,
+    "hash": "ea7594",
+    "last_modified": "2025-05-13T01:31:14",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\fr\\Microsoft.CodeAnalysis.Workspaces.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 47,
+    "hash": "8ea7e5",
+    "last_modified": "2025-05-13T01:29:58",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\fr\\System.CommandLine.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 18,
+    "hash": "bba823",
+    "last_modified": "2025-10-02T15:26:18",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\it\\Microsoft.CodeAnalysis.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 49,
+    "hash": "948958",
+    "last_modified": "2025-05-13T01:23:30",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\it\\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 17,
+    "hash": "75c769",
+    "last_modified": "2025-05-13T01:31:14",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\it\\Microsoft.CodeAnalysis.Workspaces.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 47,
+    "hash": "e57091",
+    "last_modified": "2025-05-13T01:29:58",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\it\\System.CommandLine.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 18,
+    "hash": "e36ab8",
+    "last_modified": "2025-10-02T15:26:24",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\ja\\Microsoft.CodeAnalysis.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 52,
+    "hash": "9b0bea",
+    "last_modified": "2025-05-13T01:23:32",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\ja\\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 17,
+    "hash": "ce621c",
+    "last_modified": "2025-05-13T01:31:14",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\ja\\Microsoft.CodeAnalysis.Workspaces.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 49,
+    "hash": "9b91a2",
+    "last_modified": "2025-05-13T01:29:58",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\ja\\System.CommandLine.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 18,
+    "hash": "42c78f",
+    "last_modified": "2025-10-02T15:26:28",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\ko\\Microsoft.CodeAnalysis.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 49,
+    "hash": "2c7994",
+    "last_modified": "2025-05-13T01:23:32",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\ko\\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 17,
+    "hash": "cebae2",
+    "last_modified": "2025-05-13T01:31:14",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\ko\\Microsoft.CodeAnalysis.Workspaces.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 47,
+    "hash": "b9ac84",
+    "last_modified": "2025-05-13T01:29:58",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\ko\\System.CommandLine.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 18,
+    "hash": "3d2012",
+    "last_modified": "2025-10-02T15:26:28",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\pl\\Microsoft.CodeAnalysis.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 49,
+    "hash": "a6d855",
+    "last_modified": "2025-05-13T01:23:32",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\pl\\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 17,
+    "hash": "927054",
+    "last_modified": "2025-05-13T01:31:14",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\pl\\Microsoft.CodeAnalysis.Workspaces.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 46,
+    "hash": "830764",
+    "last_modified": "2025-05-13T01:29:58",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\pl\\System.CommandLine.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 18,
+    "hash": "b215f3",
+    "last_modified": "2025-10-02T15:26:28",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\pt-BR\\Microsoft.CodeAnalysis.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 48,
+    "hash": "40258d",
+    "last_modified": "2025-05-13T01:23:32",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\pt-BR\\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 17,
+    "hash": "73a655",
+    "last_modified": "2025-05-13T01:31:14",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\pt-BR\\Microsoft.CodeAnalysis.Workspaces.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 46,
+    "hash": "fb2b2d",
+    "last_modified": "2025-05-13T01:29:58",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\pt-BR\\System.CommandLine.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 18,
+    "hash": "312d44",
+    "last_modified": "2025-10-02T15:26:34",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\ru\\Microsoft.CodeAnalysis.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 59,
+    "hash": "9f6778",
+    "last_modified": "2025-05-13T01:23:32",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\ru\\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 17,
+    "hash": "44ca56",
+    "last_modified": "2025-05-13T01:31:14",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\ru\\Microsoft.CodeAnalysis.Workspaces.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 53,
+    "hash": "206717",
+    "last_modified": "2025-05-13T01:29:58",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\ru\\System.CommandLine.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 19,
+    "hash": "9bb59f",
+    "last_modified": "2025-10-02T15:26:34",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\runtimes\\win\\lib\\net7.0\\System.Security.Cryptography.Pkcs.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 306,
+    "hash": "0781b3",
+    "last_modified": "2023-05-24T10:40:10",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\runtimes\\win\\lib\\net9.0\\System.Diagnostics.EventLog.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 170,
+    "hash": "2b887c",
+    "last_modified": "2024-10-28T22:39:18",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\runtimes\\win\\lib\\net9.0\\System.Diagnostics.EventLog.Messages.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 782,
+    "hash": "aa8cb3",
+    "last_modified": "2024-10-28T22:39:04",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\runtimes\\win\\lib\\net9.0\\System.Windows.Extensions.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 73,
+    "hash": "f892fe",
+    "last_modified": "2024-10-28T22:39:20",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\tr\\Microsoft.CodeAnalysis.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 47,
+    "hash": "6af8e8",
+    "last_modified": "2025-05-13T01:23:32",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\tr\\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 17,
+    "hash": "d752c8",
+    "last_modified": "2025-05-13T01:31:14",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\tr\\Microsoft.CodeAnalysis.Workspaces.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 45,
+    "hash": "051b37",
+    "last_modified": "2025-05-13T01:29:58",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\tr\\System.CommandLine.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 18,
+    "hash": "e44423",
+    "last_modified": "2025-10-02T15:26:36",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\zh-Hans\\Microsoft.CodeAnalysis.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 44,
+    "hash": "a41b72",
+    "last_modified": "2025-05-13T01:23:32",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\zh-Hans\\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 17,
+    "hash": "47c604",
+    "last_modified": "2025-05-13T01:31:14",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\zh-Hans\\Microsoft.CodeAnalysis.Workspaces.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 43,
+    "hash": "5f6eb2",
+    "last_modified": "2025-05-13T01:29:58",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\zh-Hans\\System.CommandLine.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 18,
+    "hash": "39930f",
+    "last_modified": "2025-10-02T15:26:38",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\zh-Hant\\Microsoft.CodeAnalysis.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 44,
+    "hash": "0bb422",
+    "last_modified": "2025-05-13T01:23:32",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\zh-Hant\\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 17,
+    "hash": "dbdfb6",
+    "last_modified": "2025-05-13T01:31:14",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\zh-Hant\\Microsoft.CodeAnalysis.Workspaces.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 43,
+    "hash": "3fdc09",
+    "last_modified": "2025-05-13T01:29:58",
+    "status": "pending"
+  },
+  {
+    "file": "src\\bin\\Debug\\net9.0\\zh-Hant\\System.CommandLine.resources.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 18,
+    "hash": "d13999",
+    "last_modified": "2025-10-02T15:26:42",
+    "status": "pending"
+  },
+  {
+    "file": "src\\cli\\StructuralIntelligenceCommand.cs",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 0,
+    "hash": "565da1",
+    "last_modified": "2025-10-27T13:32:12.501041",
+    "status": "pending"
+  },
+  {
+    "file": "src\\models\\AdaptiveReasoningModel.cs",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 6,
+    "hash": "eb04c6",
+    "last_modified": "2025-10-27T16:08:06.316322",
+    "status": "pending"
+  },
+  {
+    "file": "src\\models\\ArchitectureModel.cs",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 4,
+    "hash": "8f8280",
+    "last_modified": "2025-10-27T13:12:34.914140",
+    "status": "pending"
+  },
+  {
+    "file": "src\\models\\ImprovementTrackingModel.cs",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 11,
+    "hash": "adb409",
+    "last_modified": "2025-10-27T16:13:15.209509",
+    "status": "pending"
+  },
+  {
+    "file": "src\\models\\InvariantValidationModel.cs",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 8,
+    "hash": "844722",
+    "last_modified": "2025-10-27T16:10:22.121260",
+    "status": "pending"
+  },
+  {
+    "file": "src\\models\\MsBuildConfigurationIndex.cs",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 5,
+    "hash": "645268",
+    "last_modified": "2025-10-27T13:13:50.057209",
+    "status": "pending"
+  },
+  {
+    "file": "src\\models\\PreprocessorSymbolRegistry.cs",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 3,
+    "hash": "83d274",
+    "last_modified": "2025-10-27T13:13:22.123509",
+    "status": "pending"
+  },
+  {
+    "file": "src\\models\\SymbolResolutionMap.cs",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 2,
+    "hash": "350822",
+    "last_modified": "2025-10-27T13:13:02.259439",
+    "status": "pending"
+  },
+  {
+    "file": "src\\obj\\project.assets.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 189,
+    "hash": "d700dc",
+    "last_modified": "2025-10-27T13:12:07.022407",
+    "status": "pending"
+  },
+  {
+    "file": "src\\obj\\project.nuget.cache",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 5,
+    "hash": "297f98",
+    "last_modified": "2025-10-27T13:12:07.025666",
+    "status": "pending"
+  },
+  {
+    "file": "src\\obj\\StructuralIntelligence.csproj.nuget.dgspec.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 2,
+    "hash": "fdc0b1",
+    "last_modified": "2025-10-27T13:12:07.030085",
+    "status": "pending"
+  },
+  {
+    "file": "src\\obj\\StructuralIntelligence.csproj.nuget.g.props",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 42,
+    "hash": "9006a9",
+    "last_modified": "2025-10-27T13:11:48.054612",
+    "status": "pending"
+  },
+  {
+    "file": "src\\obj\\StructuralIntelligence.csproj.nuget.g.targets",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 1,
+    "hash": "c4937a",
+    "last_modified": "2025-10-27T13:11:48.056708",
+    "status": "pending"
+  },
+  {
+    "file": "src\\obj\\Debug\\net9.0\\.NETCoreApp,Version=v9.0.AssemblyAttributes.cs",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 0,
+    "hash": "9e7649",
+    "last_modified": "2025-10-27T13:12:23.219164",
+    "status": "pending"
+  },
+  {
+    "file": "src\\obj\\Debug\\net9.0\\apphost.exe",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 153,
+    "hash": "419c90",
+    "last_modified": "2025-10-27T13:50:56.459392",
+    "status": "pending"
+  },
+  {
+    "file": "src\\obj\\Debug\\net9.0\\Structur.61BF67AF.Up2Date",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 0,
+    "hash": "e3b0c4",
+    "last_modified": "2025-10-27T13:32:48.904536",
+    "status": "pending"
+  },
+  {
+    "file": "src\\obj\\Debug\\net9.0\\StructuralIntelligence.AssemblyInfo.cs",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 1,
+    "hash": "f737c0",
+    "last_modified": "2025-10-30T16:04:54.678618",
+    "status": "pending"
+  },
+  {
+    "file": "src\\obj\\Debug\\net9.0\\StructuralIntelligence.AssemblyInfoInputs.cache",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 0,
+    "hash": "399033",
+    "last_modified": "2025-10-30T16:04:54.668258",
+    "status": "pending"
+  },
+  {
+    "file": "src\\obj\\Debug\\net9.0\\StructuralIntelligence.assets.cache",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 44,
+    "hash": "eb22d9",
+    "last_modified": "2025-10-27T13:12:23.042803",
+    "status": "pending"
+  },
+  {
+    "file": "src\\obj\\Debug\\net9.0\\StructuralIntelligence.csproj.AssemblyReference.cache",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 16,
+    "hash": "65f142",
+    "last_modified": "2025-10-27T13:12:23.190372",
+    "status": "pending"
+  },
+  {
+    "file": "src\\obj\\Debug\\net9.0\\StructuralIntelligence.csproj.CoreCompileInputs.cache",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 0,
+    "hash": "25960b",
+    "last_modified": "2025-10-27T13:27:24.504803",
+    "status": "pending"
+  },
+  {
+    "file": "src\\obj\\Debug\\net9.0\\StructuralIntelligence.csproj.FileListAbsolute.txt",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 12,
+    "hash": "b149a2",
+    "last_modified": "2025-10-27T13:32:49.125916",
+    "status": "pending"
+  },
+  {
+    "file": "src\\obj\\Debug\\net9.0\\StructuralIntelligence.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 61,
+    "hash": "26dba0",
+    "last_modified": "2025-10-27T13:50:56.411981",
+    "status": "pending"
+  },
+  {
+    "file": "src\\obj\\Debug\\net9.0\\StructuralIntelligence.GeneratedMSBuildEditorConfig.editorconfig",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 1,
+    "hash": "106f3b",
+    "last_modified": "2025-10-27T13:12:23.217658",
+    "status": "pending"
+  },
+  {
+    "file": "src\\obj\\Debug\\net9.0\\StructuralIntelligence.genruntimeconfig.cache",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 0,
+    "hash": "0a51b7",
+    "last_modified": "2025-10-27T13:32:49.055192",
+    "status": "pending"
+  },
+  {
+    "file": "src\\obj\\Debug\\net9.0\\StructuralIntelligence.GlobalUsings.g.cs",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 0,
+    "hash": "f3f134",
+    "last_modified": "2025-10-27T13:12:23.116172",
+    "status": "pending"
+  },
+  {
+    "file": "src\\obj\\Debug\\net9.0\\StructuralIntelligence.pdb",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 42,
+    "hash": "23ddda",
+    "last_modified": "2025-10-27T13:50:56.387444",
+    "status": "pending"
+  },
+  {
+    "file": "src\\obj\\Debug\\net9.0\\StructuralIntelligence.sourcelink.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 0,
+    "hash": "acb7b6",
+    "last_modified": "2025-10-27T13:50:54.100966",
+    "status": "pending"
+  },
+  {
+    "file": "src\\obj\\Debug\\net9.0\\ref\\StructuralIntelligence.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 23,
+    "hash": "5b7bd3",
+    "last_modified": "2025-10-27T13:50:56.411981",
+    "status": "pending"
+  },
+  {
+    "file": "src\\obj\\Debug\\net9.0\\refint\\StructuralIntelligence.dll",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 23,
+    "hash": "5b7bd3",
+    "last_modified": "2025-10-27T13:50:56.411981",
+    "status": "pending"
+  },
+  {
+    "file": "src\\services\\AdaptiveReasoningService.cs",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 27,
+    "hash": "ba5b09",
+    "last_modified": "2025-10-28T11:29:36.238501",
+    "status": "pending"
+  },
+  {
+    "file": "src\\services\\MsBuildWorkspaceService.cs",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 13,
+    "hash": "52f12e",
+    "last_modified": "2025-10-27T13:29:00.571662",
+    "status": "pending"
+  },
+  {
+    "file": "src\\services\\StructuralAnalyzerService.cs",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 23,
+    "hash": "d16144",
+    "last_modified": "2025-10-27T13:29:48.240050",
+    "status": "pending"
+  },
+  {
+    "file": "tests\\conftest.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 1,
+    "hash": "97e98a",
+    "last_modified": "2025-10-31T13:37:37.977981",
+    "status": "pending"
+  },
+  {
+    "file": "tests\\test_diagram_generator.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 1,
+    "hash": "8d3ba2",
+    "last_modified": "2025-10-31T13:38:05.477535",
+    "status": "pending"
+  },
+  {
+    "file": "tests\\test_entity_registry.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 1,
+    "hash": "ac4a5a",
+    "last_modified": "2025-10-31T13:42:57.119052",
+    "status": "pending"
+  },
+  {
+    "file": "tests\\test_file_enumerator.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 0,
+    "hash": "5ed11f",
+    "last_modified": "2025-10-31T13:37:43.898068",
+    "status": "pending"
+  },
+  {
+    "file": "tests\\test_integration.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 11,
+    "hash": "1f08d3",
+    "last_modified": "2025-10-24T16:39:50.949601",
+    "status": "pending"
+  },
+  {
+    "file": "tests\\test_integration_pipeline.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 2,
+    "hash": "ae7d00",
+    "last_modified": "2025-10-31T13:42:47.851834",
+    "status": "pending"
+  },
+  {
+    "file": "tests\\test_normalize.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 4,
+    "hash": "d2ef21",
+    "last_modified": "2025-10-31T14:46:49.960246",
+    "status": "pending"
+  },
+  {
+    "file": "tests\\test_packager.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 1,
+    "hash": "718c38",
+    "last_modified": "2025-10-31T13:37:50.333030",
+    "status": "pending"
+  },
+  {
+    "file": "tests\\test_preprocessor.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 8,
+    "hash": "d9efc1",
+    "last_modified": "2025-10-31T14:46:44.311847",
+    "status": "pending"
+  },
+  {
+    "file": "tests\\test_quality_gates.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 1,
+    "hash": "d3ea67",
+    "last_modified": "2025-10-31T13:37:57.103333",
+    "status": "pending"
+  },
+  {
+    "file": "tests\\__init__.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 0,
+    "hash": "049931",
+    "last_modified": "2025-10-31T13:37:31.473908",
+    "status": "pending"
+  },
+  {
+    "file": "tests\\converters\\conftest.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 0,
+    "hash": "15f467",
+    "last_modified": "2025-10-31T14:46:54.687018",
+    "status": "pending"
+  },
+  {
+    "file": "tests\\converters\\__init__.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 0,
+    "hash": "826cc2",
+    "last_modified": "2025-10-24T13:19:44.425625",
+    "status": "pending"
+  },
+  {
+    "file": "tests\\scratch\\config_test.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 2,
+    "hash": "fd74e9",
+    "last_modified": "2025-10-31T14:14:59.761962",
+    "status": "pending"
+  },
+  {
+    "file": "tests\\scratch\\direct_import_test.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 1,
+    "hash": "a2d45d",
+    "last_modified": "2025-10-31T14:15:08.404432",
+    "status": "pending"
+  },
+  {
+    "file": "tests\\scratch\\final_test.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 2,
+    "hash": "99bdd6",
+    "last_modified": "2025-10-31T14:15:35.337310",
+    "status": "pending"
+  },
+  {
+    "file": "tests\\scratch\\import_only_test.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 1,
+    "hash": "35fa9b",
+    "last_modified": "2025-10-31T14:15:17.294107",
+    "status": "pending"
+  },
+  {
+    "file": "tests\\scratch\\import_test.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 1,
+    "hash": "da3cf9",
+    "last_modified": "2025-10-31T14:15:54.030977",
+    "status": "pending"
+  },
+  {
+    "file": "tests\\scratch\\minimal_appdoc.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 4,
+    "hash": "ea3cd8",
+    "last_modified": "2025-10-31T14:15:45.435102",
+    "status": "pending"
+  },
+  {
+    "file": "tests\\scratch\\minimal_import_test.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 1,
+    "hash": "f8029f",
+    "last_modified": "2025-10-31T14:16:13.486056",
+    "status": "pending"
+  },
+  {
+    "file": "tests\\scratch\\minimal_test.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 2,
+    "hash": "1fcb4e",
+    "last_modified": "2025-10-31T14:14:50.253772",
+    "status": "pending"
+  },
+  {
+    "file": "tests\\scratch\\simple_init_test.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 0,
+    "hash": "663a04",
+    "last_modified": "2025-10-31T14:16:23.482630",
+    "status": "pending"
+  },
+  {
+    "file": "tests\\scratch\\simple_test.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 1,
+    "hash": "a61af7",
+    "last_modified": "2025-10-31T14:14:34.812778",
+    "status": "pending"
+  },
+  {
+    "file": "tests\\scratch\\standalone_appdoc.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 7,
+    "hash": "7c51ac",
+    "last_modified": "2025-10-31T14:16:03.286121",
+    "status": "pending"
+  },
+  {
+    "file": "tests\\scratch\\step_by_step_import.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 1,
+    "hash": "7c0807",
+    "last_modified": "2025-10-31T14:15:26.307962",
+    "status": "pending"
+  },
+  {
+    "file": "tests\\scratch\\test_imports.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 1,
+    "hash": "9856d2",
+    "last_modified": "2025-10-31T14:14:42.201798",
+    "status": "pending"
+  },
+  {
+    "file": "tests\\scratch\\test_main_call.py",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 1,
+    "hash": "f8e06a",
+    "last_modified": "2025-10-31T14:16:34.232031",
+    "status": "pending"
+  },
+  {
+    "file": "test_output\\artifacts\\AstInspector.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 6,
+    "hash": "19ca2d",
+    "last_modified": "2025-10-30T16:51:10.312978",
+    "status": "pending"
+  },
+  {
+    "file": "_normalized\\normalize.log",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 0,
+    "hash": "e3b0c4",
+    "last_modified": "2025-10-24T13:20:55.217880",
+    "status": "pending"
+  },
+  {
+    "file": "_normalized\\context\\prompt.md",
+    "type": "code",
+    "handler": "CodeHandler",
+    "size_kb": 1,
+    "hash": "43d07b",
+    "last_modified": "2025-10-31T14:56:08.110339",
+    "status": "pending"
+  },
+  {
+    "file": "_normalized\\context\\summary.json",
+    "type": "ticket",
+    "handler": "TicketHandler",
+    "size_kb": 1,
+    "hash": "70c84b",
+    "last_modified": "2025-10-31T14:56:08.107817",
+    "status": "pending"
+  },
+  {
+    "file": "_normalized\\diagrams\\component_flow.mmd",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 0,
+    "hash": "5005d7",
+    "last_modified": "2025-10-31T14:57:03.169513",
+    "status": "pending"
+  },
+  {
+    "file": "_normalized\\diagrams\\component_flow.png",
+    "type": "image",
+    "handler": "ImageHandler",
+    "size_kb": 79,
+    "hash": "9f237d",
+    "last_modified": "2025-10-31T14:58:46.794074",
+    "status": "pending"
+  },
+  {
+    "file": "_normalized\\diagrams\\component_flow.svg",
+    "type": "image",
+    "handler": "ImageHandler",
+    "size_kb": 19,
+    "hash": "8e440b",
+    "last_modified": "2025-10-31T14:58:50.062524",
+    "status": "pending"
+  },
+  {
+    "file": "_normalized\\diagrams\\data_flow.mmd",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 7,
+    "hash": "4ce90d",
+    "last_modified": "2025-10-31T14:57:03.170666",
+    "status": "pending"
+  },
+  {
+    "file": "_normalized\\diagrams\\data_flow.png",
+    "type": "image",
+    "handler": "ImageHandler",
+    "size_kb": 470,
+    "hash": "8f581e",
+    "last_modified": "2025-10-31T14:58:52.590376",
+    "status": "pending"
+  },
+  {
+    "file": "_normalized\\diagrams\\data_flow.svg",
+    "type": "image",
+    "handler": "ImageHandler",
+    "size_kb": 119,
+    "hash": "8be4fb",
+    "last_modified": "2025-10-31T14:57:02.921913",
+    "status": "pending"
+  },
+  {
+    "file": "_normalized\\diagrams\\data_flow.svg.err",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 0,
+    "hash": "d624aa",
+    "last_modified": "2025-10-31T14:59:00.908720",
+    "status": "pending"
+  },
+  {
+    "file": "_normalized\\diagrams\\dependency_graph.mmd",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 6,
+    "hash": "009d5b",
+    "last_modified": "2025-10-31T14:57:03.167073",
+    "status": "pending"
+  },
+  {
+    "file": "_normalized\\diagrams\\dependency_graph.png",
+    "type": "image",
+    "handler": "ImageHandler",
+    "size_kb": 1649,
+    "hash": "d2cf22",
+    "last_modified": "2025-10-31T14:56:39.493267",
+    "status": "pending"
+  },
+  {
+    "file": "_normalized\\diagrams\\dependency_graph.png.err",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 0,
+    "hash": "d624aa",
+    "last_modified": "2025-10-31T14:58:16.371818",
+    "status": "pending"
+  },
+  {
+    "file": "_normalized\\diagrams\\dependency_graph.svg",
+    "type": "image",
+    "handler": "ImageHandler",
+    "size_kb": 181,
+    "hash": "b7a956",
+    "last_modified": "2025-10-31T14:58:41.692251",
+    "status": "pending"
+  },
+  {
+    "file": "_normalized\\diagrams\\system_context.mmd",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 1,
+    "hash": "9b225c",
+    "last_modified": "2025-10-31T14:57:03.165694",
+    "status": "pending"
+  },
+  {
+    "file": "_normalized\\diagrams\\system_context.png.err",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 0,
+    "hash": "d624aa",
+    "last_modified": "2025-10-31T14:57:12.977848",
+    "status": "pending"
+  },
+  {
+    "file": "_normalized\\diagrams\\system_context.svg.err",
+    "type": "other",
+    "handler": "GenericHandler",
+    "size_kb": 0,
+    "hash": "d624aa",
+    "last_modified": "2025-10-31T14:57:27.210787",
+    "status": "pending"
+  }
+]

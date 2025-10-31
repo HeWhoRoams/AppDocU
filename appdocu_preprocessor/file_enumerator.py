@@ -17,8 +17,7 @@ from dataclasses import dataclass, asdict
 from enum import Enum
 import json
 
-from appdocu_preprocessor.converters.base_converter import BaseConverter
-# get_global_config import removed - not used in this module and causes import crashes
+# Avoid importing converters at module load to keep lightweight and Python-version agnostic.
 
 logger = logging.getLogger(__name__)
 

@@ -1,0 +1,5984 @@
+[
+  {
+    "file_path": "DocTool\\Analysis\\AstInspector.cs",
+    "namespace": "DocTool.Analysis",
+    "classes": [
+      {
+        "name": "AstInspector",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [
+          {
+            "name": "ExtractClasses",
+            "return_type": "List<ClassInfo>",
+            "parameters": [
+              {
+                "name": "root",
+                "type": "SyntaxNode",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "public",
+            "summary": "",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 2
+          },
+          {
+            "name": "ExtractBaseTypes",
+            "return_type": "List<string>",
+            "parameters": [
+              {
+                "name": "classDecl",
+                "type": "ClassDeclarationSyntax",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "private",
+            "summary": "",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 2
+          },
+          {
+            "name": "ExtractMethods",
+            "return_type": "List<MethodInfo>",
+            "parameters": [
+              {
+                "name": "classDecl",
+                "type": "ClassDeclarationSyntax",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "private",
+            "summary": "",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 2
+          },
+          {
+            "name": "ExtractParameters",
+            "return_type": "List<ParameterInfo>",
+            "parameters": [
+              {
+                "name": "parameterList",
+                "type": "ParameterListSyntax",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "private",
+            "summary": "",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 1
+          },
+          {
+            "name": "ExtractProperties",
+            "return_type": "List<PropertyInfo>",
+            "parameters": [
+              {
+                "name": "classDecl",
+                "type": "ClassDeclarationSyntax",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "private",
+            "summary": "",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 2
+          },
+          {
+            "name": "ExtractFields",
+            "return_type": "List<FieldInfo>",
+            "parameters": [
+              {
+                "name": "classDecl",
+                "type": "ClassDeclarationSyntax",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "private",
+            "summary": "",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 3
+          },
+          {
+            "name": "ExtractXmlDocSummary",
+            "return_type": "string",
+            "parameters": [
+              {
+                "name": "node",
+                "type": "SyntaxNode",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "private",
+            "summary": "",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 4
+          },
+          {
+            "name": "CalculateCyclomaticComplexity",
+            "return_type": "int",
+            "parameters": [
+              {
+                "name": "methodDecl",
+                "type": "MethodDeclarationSyntax",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "private",
+            "summary": "",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 10
+          }
+        ],
+        "properties": [],
+        "fields": [
+          {
+            "name": "_logger",
+            "type": "ILogger",
+            "modifiers": "private readonly",
+            "is_readonly": true,
+            "is_const": false
+          }
+        ],
+        "summary": "",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      }
+    ],
+    "dependencies": [
+      {
+        "namespace": "System",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.Collections.Generic",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.Linq",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "Microsoft.CodeAnalysis",
+        "type": "Microsoft",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "Microsoft.CodeAnalysis.CSharp.Syntax",
+        "type": "Microsoft",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "Microsoft.Extensions.Logging",
+        "type": "Microsoft",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "DocTool.Models",
+        "type": "Internal",
+        "is_alias": false,
+        "alias_name": null
+      }
+    ],
+    "lines_of_code": 205,
+    "analysis_timestamp": "2025-10-31T19:00:14.8267865Z"
+  },
+  {
+    "file_path": "DocTool\\Analysis\\DependencyResolver.cs",
+    "namespace": "DocTool.Analysis",
+    "classes": [
+      {
+        "name": "DependencyResolver",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [
+          {
+            "name": "ExtractDependencies",
+            "return_type": "List<DependencyInfo>",
+            "parameters": [
+              {
+                "name": "root",
+                "type": "SyntaxNode",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "public",
+            "summary": "",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 3
+          },
+          {
+            "name": "ClassifyDependency",
+            "return_type": "string",
+            "parameters": [
+              {
+                "name": "namespaceName",
+                "type": "string",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "private",
+            "summary": "",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 5
+          },
+          {
+            "name": "IsKnownThirdParty",
+            "return_type": "bool",
+            "parameters": [
+              {
+                "name": "root",
+                "type": "string",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "private",
+            "summary": "",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 1
+          }
+        ],
+        "properties": [],
+        "fields": [
+          {
+            "name": "_logger",
+            "type": "ILogger",
+            "modifiers": "private readonly",
+            "is_readonly": true,
+            "is_const": false
+          }
+        ],
+        "summary": "",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      }
+    ],
+    "dependencies": [
+      {
+        "namespace": "System",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.Collections.Generic",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.Linq",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "Microsoft.CodeAnalysis",
+        "type": "Microsoft",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "Microsoft.CodeAnalysis.CSharp.Syntax",
+        "type": "Microsoft",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "Microsoft.Extensions.Logging",
+        "type": "Microsoft",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "DocTool.Models",
+        "type": "Internal",
+        "is_alias": false,
+        "alias_name": null
+      }
+    ],
+    "lines_of_code": 78,
+    "analysis_timestamp": "2025-10-31T19:00:15.3932548Z"
+  },
+  {
+    "file_path": "DocTool\\Analysis\\RoslynAnalyzer.cs",
+    "namespace": "DocTool.Analysis",
+    "classes": [
+      {
+        "name": "RoslynAnalyzer",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [
+          {
+            "name": "AnalyzeFileAsync",
+            "return_type": "Task<CodeArtifact>",
+            "parameters": [
+              {
+                "name": "filePath",
+                "type": "string",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "public async",
+            "summary": "",
+            "is_async": true,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 3
+          }
+        ],
+        "properties": [],
+        "fields": [
+          {
+            "name": "_logger",
+            "type": "ILogger",
+            "modifiers": "private readonly",
+            "is_readonly": true,
+            "is_const": false
+          },
+          {
+            "name": "_astInspector",
+            "type": "AstInspector",
+            "modifiers": "private readonly",
+            "is_readonly": true,
+            "is_const": false
+          },
+          {
+            "name": "_dependencyResolver",
+            "type": "DependencyResolver",
+            "modifiers": "private readonly",
+            "is_readonly": true,
+            "is_const": false
+          }
+        ],
+        "summary": "",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      }
+    ],
+    "dependencies": [
+      {
+        "namespace": "System",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.Collections.Generic",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.IO",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.Linq",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.Threading.Tasks",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "Microsoft.CodeAnalysis",
+        "type": "Microsoft",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "Microsoft.CodeAnalysis.CSharp",
+        "type": "Microsoft",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "Microsoft.CodeAnalysis.CSharp.Syntax",
+        "type": "Microsoft",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "Microsoft.Extensions.Logging",
+        "type": "Microsoft",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "DocTool.Models",
+        "type": "Internal",
+        "is_alias": false,
+        "alias_name": null
+      }
+    ],
+    "lines_of_code": 82,
+    "analysis_timestamp": "2025-10-31T19:00:16.0267818Z"
+  },
+  {
+    "file_path": "DocTool\\Commands\\AnalyzeFileCommand.cs",
+    "namespace": "DocTool.Commands",
+    "classes": [
+      {
+        "name": "AnalyzeFileCommand",
+        "modifiers": "public static",
+        "base_types": [],
+        "methods": [
+          {
+            "name": "Create",
+            "return_type": "Command",
+            "parameters": [
+              {
+                "name": "logger",
+                "type": "ILogger",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "public static",
+            "summary": "",
+            "is_async": false,
+            "is_static": true,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 2
+          },
+          {
+            "name": "ExecuteAsync",
+            "return_type": "Task",
+            "parameters": [
+              {
+                "name": "file",
+                "type": "FileInfo",
+                "has_default_value": false,
+                "default_value": null
+              },
+              {
+                "name": "output",
+                "type": "FileInfo",
+                "has_default_value": false,
+                "default_value": null
+              },
+              {
+                "name": "logger",
+                "type": "ILogger",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "private static async",
+            "summary": "",
+            "is_async": true,
+            "is_static": true,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 2
+          }
+        ],
+        "properties": [],
+        "fields": [],
+        "summary": "",
+        "is_abstract": false,
+        "is_static": true,
+        "is_sealed": false
+      }
+    ],
+    "dependencies": [
+      {
+        "namespace": "System",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.CommandLine",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.IO",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.Text.Json",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.Threading.Tasks",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "DocTool.Analysis",
+        "type": "Internal",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "DocTool.Output",
+        "type": "Internal",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "Microsoft.Extensions.Logging",
+        "type": "Microsoft",
+        "is_alias": false,
+        "alias_name": null
+      }
+    ],
+    "lines_of_code": 82,
+    "analysis_timestamp": "2025-10-31T19:00:16.6066656Z"
+  },
+  {
+    "file_path": "DocTool\\Commands\\AnalyzeProjectCommand.cs",
+    "namespace": "DocTool.Commands",
+    "classes": [
+      {
+        "name": "AnalyzeProjectCommand",
+        "modifiers": "public static",
+        "base_types": [],
+        "methods": [
+          {
+            "name": "Create",
+            "return_type": "Command",
+            "parameters": [
+              {
+                "name": "logger",
+                "type": "ILogger",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "public static",
+            "summary": "",
+            "is_async": false,
+            "is_static": true,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 2
+          },
+          {
+            "name": "ExecuteAsync",
+            "return_type": "Task",
+            "parameters": [
+              {
+                "name": "project",
+                "type": "DirectoryInfo",
+                "has_default_value": false,
+                "default_value": null
+              },
+              {
+                "name": "output",
+                "type": "FileInfo",
+                "has_default_value": false,
+                "default_value": null
+              },
+              {
+                "name": "logger",
+                "type": "ILogger",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "private static async",
+            "summary": "",
+            "is_async": true,
+            "is_static": true,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 5
+          }
+        ],
+        "properties": [],
+        "fields": [],
+        "summary": "",
+        "is_abstract": false,
+        "is_static": true,
+        "is_sealed": false
+      }
+    ],
+    "dependencies": [
+      {
+        "namespace": "System",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.CommandLine",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.IO",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.Linq",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.Text.Json",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.Threading.Tasks",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "DocTool.Analysis",
+        "type": "Internal",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "DocTool.Output",
+        "type": "Internal",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "Microsoft.Extensions.Logging",
+        "type": "Microsoft",
+        "is_alias": false,
+        "alias_name": null
+      }
+    ],
+    "lines_of_code": 104,
+    "analysis_timestamp": "2025-10-31T19:00:17.143333Z"
+  },
+  {
+    "file_path": "DocTool\\Commands\\ValidateCommand.cs",
+    "namespace": "DocTool.Commands",
+    "classes": [
+      {
+        "name": "ValidateCommand",
+        "modifiers": "public static",
+        "base_types": [],
+        "methods": [
+          {
+            "name": "Create",
+            "return_type": "Command",
+            "parameters": [
+              {
+                "name": "logger",
+                "type": "ILogger",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "public static",
+            "summary": "",
+            "is_async": false,
+            "is_static": true,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 2
+          },
+          {
+            "name": "ExecuteAsync",
+            "return_type": "Task",
+            "parameters": [
+              {
+                "name": "file",
+                "type": "FileInfo",
+                "has_default_value": false,
+                "default_value": null
+              },
+              {
+                "name": "logger",
+                "type": "ILogger",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "private static async",
+            "summary": "",
+            "is_async": true,
+            "is_static": true,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 4
+          }
+        ],
+        "properties": [],
+        "fields": [],
+        "summary": "",
+        "is_abstract": false,
+        "is_static": true,
+        "is_sealed": false
+      }
+    ],
+    "dependencies": [
+      {
+        "namespace": "System",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.CommandLine",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.IO",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.Linq",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.Threading.Tasks",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "Microsoft.CodeAnalysis.CSharp",
+        "type": "Microsoft",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "Microsoft.Extensions.Logging",
+        "type": "Microsoft",
+        "is_alias": false,
+        "alias_name": null
+      }
+    ],
+    "lines_of_code": 72,
+    "analysis_timestamp": "2025-10-31T19:00:17.7099564Z"
+  },
+  {
+    "file_path": "DocTool\\Logging\\StructuredLogger.cs",
+    "namespace": "DocTool.Logging",
+    "classes": [
+      {
+        "name": "StructuredLogger",
+        "modifiers": "public static",
+        "base_types": [],
+        "methods": [
+          {
+            "name": "Create",
+            "return_type": "ILogger",
+            "parameters": [],
+            "modifiers": "public static",
+            "summary": "",
+            "is_async": false,
+            "is_static": true,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 1
+          }
+        ],
+        "properties": [],
+        "fields": [],
+        "summary": "",
+        "is_abstract": false,
+        "is_static": true,
+        "is_sealed": false
+      }
+    ],
+    "dependencies": [
+      {
+        "namespace": "Microsoft.Extensions.Logging",
+        "type": "Microsoft",
+        "is_alias": false,
+        "alias_name": null
+      }
+    ],
+    "lines_of_code": 18,
+    "analysis_timestamp": "2025-10-31T19:00:18.200636Z"
+  },
+  {
+    "file_path": "DocTool\\Models\\CodeArtifact.cs",
+    "namespace": "DocTool.Models",
+    "classes": [
+      {
+        "name": "CodeArtifact",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [],
+        "properties": [
+          {
+            "name": "FilePath",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "Namespace",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "Classes",
+            "type": "List<ClassInfo>",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "Dependencies",
+            "type": "List<DependencyInfo>",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "LinesOfCode",
+            "type": "int",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "AnalysisTimestamp",
+            "type": "DateTime",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          }
+        ],
+        "fields": [],
+        "summary": "",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      },
+      {
+        "name": "ClassInfo",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [],
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "Modifiers",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "BaseTypes",
+            "type": "List<string>",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "Methods",
+            "type": "List<MethodInfo>",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "Properties",
+            "type": "List<PropertyInfo>",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "Fields",
+            "type": "List<FieldInfo>",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "Summary",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "IsAbstract",
+            "type": "bool",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "IsStatic",
+            "type": "bool",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "IsSealed",
+            "type": "bool",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          }
+        ],
+        "fields": [],
+        "summary": "",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      },
+      {
+        "name": "MethodInfo",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [],
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "ReturnType",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "Parameters",
+            "type": "List<ParameterInfo>",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "Modifiers",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "Summary",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "IsAsync",
+            "type": "bool",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "IsStatic",
+            "type": "bool",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "IsVirtual",
+            "type": "bool",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "IsOverride",
+            "type": "bool",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "CyclomaticComplexity",
+            "type": "int",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          }
+        ],
+        "fields": [],
+        "summary": "",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      },
+      {
+        "name": "ParameterInfo",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [],
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "Type",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "HasDefaultValue",
+            "type": "bool",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "DefaultValue",
+            "type": "string?",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          }
+        ],
+        "fields": [],
+        "summary": "",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      },
+      {
+        "name": "PropertyInfo",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [],
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "Type",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "Modifiers",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "HasGetter",
+            "type": "bool",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "HasSetter",
+            "type": "bool",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "Summary",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          }
+        ],
+        "fields": [],
+        "summary": "",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      },
+      {
+        "name": "FieldInfo",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [],
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "Type",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "Modifiers",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "IsReadOnly",
+            "type": "bool",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "IsConst",
+            "type": "bool",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          }
+        ],
+        "fields": [],
+        "summary": "",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      },
+      {
+        "name": "DependencyInfo",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [],
+        "properties": [
+          {
+            "name": "Namespace",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "Type",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "IsAlias",
+            "type": "bool",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "AliasName",
+            "type": "string?",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          }
+        ],
+        "fields": [],
+        "summary": "",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      }
+    ],
+    "dependencies": [
+      {
+        "namespace": "System",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.Collections.Generic",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.Text.Json.Serialization",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      }
+    ],
+    "lines_of_code": 162,
+    "analysis_timestamp": "2025-10-31T19:00:18.7037622Z"
+  },
+  {
+    "file_path": "DocTool\\Output\\ArtifactGenerator.cs",
+    "namespace": "DocTool.Output",
+    "classes": [
+      {
+        "name": "ArtifactGenerator",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [
+          {
+            "name": "WriteArtifactAsync",
+            "return_type": "Task",
+            "parameters": [
+              {
+                "name": "artifact",
+                "type": "CodeArtifact",
+                "has_default_value": false,
+                "default_value": null
+              },
+              {
+                "name": "outputPath",
+                "type": "string",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "public async",
+            "summary": "",
+            "is_async": true,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 2
+          }
+        ],
+        "properties": [],
+        "fields": [
+          {
+            "name": "_logger",
+            "type": "ILogger",
+            "modifiers": "private readonly",
+            "is_readonly": true,
+            "is_const": false
+          },
+          {
+            "name": "_jsonOptions",
+            "type": "JsonSerializerOptions",
+            "modifiers": "private readonly",
+            "is_readonly": true,
+            "is_const": false
+          }
+        ],
+        "summary": "",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      }
+    ],
+    "dependencies": [
+      {
+        "namespace": "System",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.IO",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.Text.Json",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.Threading.Tasks",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "Microsoft.Extensions.Logging",
+        "type": "Microsoft",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "DocTool.Models",
+        "type": "Internal",
+        "is_alias": false,
+        "alias_name": null
+      }
+    ],
+    "lines_of_code": 41,
+    "analysis_timestamp": "2025-10-31T19:00:19.2010575Z"
+  },
+  {
+    "file_path": "DocTool\\Program.cs",
+    "namespace": "DocTool",
+    "classes": [
+      {
+        "name": "Program",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [
+          {
+            "name": "Main",
+            "return_type": "Task<int>",
+            "parameters": [
+              {
+                "name": "args",
+                "type": "string[]",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "public static async",
+            "summary": "",
+            "is_async": true,
+            "is_static": true,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 2
+          }
+        ],
+        "properties": [],
+        "fields": [],
+        "summary": "",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      }
+    ],
+    "dependencies": [
+      {
+        "namespace": "System",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.CommandLine",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.Threading.Tasks",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "DocTool.Commands",
+        "type": "Internal",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "DocTool.Logging",
+        "type": "Internal",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "Microsoft.Extensions.Logging",
+        "type": "Microsoft",
+        "is_alias": false,
+        "alias_name": null
+      }
+    ],
+    "lines_of_code": 34,
+    "analysis_timestamp": "2025-10-31T19:00:19.7530873Z"
+  },
+  {
+    "file_path": "examples\\minishop\\service\\OrderService.cs",
+    "namespace": "",
+    "classes": [
+      {
+        "name": "OrderService",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [
+          {
+            "name": "CreateOrder",
+            "return_type": "Order",
+            "parameters": [
+              {
+                "name": "order",
+                "type": "Order",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "public",
+            "summary": "",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 1
+          },
+          {
+            "name": "GetOrdersByUser",
+            "return_type": "List<Order>",
+            "parameters": [
+              {
+                "name": "userId",
+                "type": "int",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "public",
+            "summary": "",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 2
+          },
+          {
+            "name": "ProcessPayment",
+            "return_type": "PaymentResult",
+            "parameters": [
+              {
+                "name": "request",
+                "type": "PaymentRequest",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "public",
+            "summary": "",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 1
+          },
+          {
+            "name": "EmitEvent",
+            "return_type": "void",
+            "parameters": [
+              {
+                "name": "eventName",
+                "type": "string",
+                "has_default_value": false,
+                "default_value": null
+              },
+              {
+                "name": "data",
+                "type": "object",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "private",
+            "summary": "",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 1
+          }
+        ],
+        "properties": [],
+        "fields": [
+          {
+            "name": "connectionString",
+            "type": "string",
+            "modifiers": "private",
+            "is_readonly": false,
+            "is_const": false
+          }
+        ],
+        "summary": "",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      },
+      {
+        "name": "Order",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [],
+        "properties": [
+          {
+            "name": "Id",
+            "type": "int",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "UserId",
+            "type": "int",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "ProductId",
+            "type": "int",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "Quantity",
+            "type": "int",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "Total",
+            "type": "decimal",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          }
+        ],
+        "fields": [],
+        "summary": "",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      },
+      {
+        "name": "PaymentRequest",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [],
+        "properties": [
+          {
+            "name": "Amount",
+            "type": "decimal",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "CardToken",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          }
+        ],
+        "fields": [],
+        "summary": "",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      },
+      {
+        "name": "PaymentResult",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [],
+        "properties": [
+          {
+            "name": "Success",
+            "type": "bool",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "TransactionId",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "Message",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          }
+        ],
+        "fields": [],
+        "summary": "",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      }
+    ],
+    "dependencies": [
+      {
+        "namespace": "System",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.Collections.Generic",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.Data.SqlClient",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      }
+    ],
+    "lines_of_code": 111,
+    "analysis_timestamp": "2025-10-31T19:00:20.3260848Z"
+  },
+  {
+    "file_path": "src\\cli\\StructuralIntelligenceCommand.cs",
+    "namespace": "StructuralIntelligence.Cli",
+    "classes": [
+      {
+        "name": "StructuralIntelligenceCommand",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [
+          {
+            "name": "Run",
+            "return_type": "Task<int>",
+            "parameters": [
+              {
+                "name": "args",
+                "type": "string[]",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "public static async",
+            "summary": "",
+            "is_async": true,
+            "is_static": true,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 1
+          }
+        ],
+        "properties": [],
+        "fields": [],
+        "summary": "CLI command for structural intelligence analysis",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      }
+    ],
+    "dependencies": [
+      {
+        "namespace": "System",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.IO",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.Threading.Tasks",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "StructuralIntelligence.Services",
+        "type": "Internal",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "StructuralIntelligence.Models",
+        "type": "Internal",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.Text.Json",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      }
+    ],
+    "lines_of_code": 23,
+    "analysis_timestamp": "2025-10-31T19:00:20.8840397Z"
+  },
+  {
+    "file_path": "src\\models\\AdaptiveReasoningModel.cs",
+    "namespace": "StructuralIntelligence.Models",
+    "classes": [
+      {
+        "name": "AdaptiveReasoningModel",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [],
+        "properties": [
+          {
+            "name": "IterationDepth",
+            "type": "int",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Current depth of analysis iteration (baseline ≤ 3, adaptive expansion when uncertainty > 75% threshold)"
+          },
+          {
+            "name": "UncertaintyThreshold",
+            "type": "double",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Threshold for triggering adaptive expansion (75% default)"
+          },
+          {
+            "name": "MaxIterationDepth",
+            "type": "int",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Maximum allowed iteration depth (configurable cap)"
+          },
+          {
+            "name": "CurrentUncertaintyLevel",
+            "type": "double",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Real-time measurement of uncertainty in current analysis context (0-100%)"
+          },
+          {
+            "name": "AdaptiveExpansionTriggered",
+            "type": "bool",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Boolean flag indicating if adaptive expansion has been activated"
+          },
+          {
+            "name": "InvariantValidationStatus",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Current status of continuous invariant validation (PASS/FAIL)"
+          },
+          {
+            "name": "ProcessingState",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Current state of the analysis engine (Running, Paused, Stopped, Completed)"
+          },
+          {
+            "name": "UncertaintyMeasurements",
+            "type": "List<UncertaintyMeasurement>",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Collection of uncertainty measurements for different code regions"
+          },
+          {
+            "name": "IterationAdjustments",
+            "type": "List<IterationAdjustment>",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "History of iteration depth adjustments"
+          },
+          {
+            "name": "Configuration",
+            "type": "AdaptiveReasoningConfiguration",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Configuration settings for adaptive reasoning"
+          }
+        ],
+        "fields": [],
+        "summary": "Represents the adaptive reasoning engine that controls iteration depth based on uncertainty measurements",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      },
+      {
+        "name": "AdaptiveReasoningConfiguration",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [],
+        "properties": [
+          {
+            "name": "BaselineIterationDepth",
+            "type": "int",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Baseline iteration depth (≤3 levels)"
+          },
+          {
+            "name": "AdaptiveExpansionEnabled",
+            "type": "bool",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Whether adaptive expansion was triggered when uncertainty > threshold"
+          },
+          {
+            "name": "AverageIterationDepth",
+            "type": "double",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Average iteration depth across all analyzed elements"
+          },
+          {
+            "name": "MaxIterationDepthReached",
+            "type": "int",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Maximum iteration depth reached during analysis"
+          },
+          {
+            "name": "ElementsBelowThreshold",
+            "type": "int",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Number of elements with uncertainty below threshold"
+          },
+          {
+            "name": "ElementsAboveThreshold",
+            "type": "int",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Number of elements with uncertainty above threshold"
+          }
+        ],
+        "fields": [],
+        "summary": "Configuration settings for adaptive reasoning engine",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      },
+      {
+        "name": "UncertaintyMeasurement",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [],
+        "properties": [
+          {
+            "name": "RegionId",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Identifier for the code region (file path, class name, method name, etc.)"
+          },
+          {
+            "name": "RegionType",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Type of the code region (File, Class, Method, etc.)"
+          },
+          {
+            "name": "SymbolResolutionAmbiguity",
+            "type": "double",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Measurement of symbol resolution uncertainty (0-100%)"
+          },
+          {
+            "name": "StructuralCompleteness",
+            "type": "double",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Assessment of structural mapping completeness (0-100%)"
+          },
+          {
+            "name": "DependencyConfidence",
+            "type": "double",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Confidence level in dependency relationships (0-100%)"
+          },
+          {
+            "name": "OverallUncertaintyScore",
+            "type": "double",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Composite uncertainty score combining all metrics (0-100%)"
+          },
+          {
+            "name": "MeasurementTimestamp",
+            "type": "DateTime",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Timestamp of measurement"
+          },
+          {
+            "name": "TriggeredAdaptiveExpansion",
+            "type": "bool",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Whether this region triggered adaptive expansion"
+          }
+        ],
+        "fields": [],
+        "summary": "Measurement of uncertainty for a specific code region",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      },
+      {
+        "name": "IterationAdjustment",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [],
+        "properties": [
+          {
+            "name": "RegionId",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Identifier for the code region where adjustment occurred"
+          },
+          {
+            "name": "PreviousDepth",
+            "type": "int",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Previous iteration depth"
+          },
+          {
+            "name": "NewDepth",
+            "type": "int",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "New iteration depth"
+          },
+          {
+            "name": "AdjustmentReason",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Reason for adjustment (UncertaintyThresholdExceeded, PerformanceOptimization, etc.)"
+          },
+          {
+            "name": "AdjustmentTimestamp",
+            "type": "DateTime",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Timestamp of adjustment"
+          },
+          {
+            "name": "UncertaintyLevel",
+            "type": "double",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Uncertainty level that triggered the adjustment"
+          }
+        ],
+        "fields": [],
+        "summary": "Record of iteration depth adjustment",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      }
+    ],
+    "dependencies": [
+      {
+        "namespace": "System",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.Collections.Generic",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      }
+    ],
+    "lines_of_code": 180,
+    "analysis_timestamp": "2025-10-31T19:00:21.5158583Z"
+  },
+  {
+    "file_path": "src\\models\\ArchitectureModel.cs",
+    "namespace": "StructuralIntelligence.Models",
+    "classes": [
+      {
+        "name": "ArchitectureModel",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [],
+        "properties": [
+          {
+            "name": "Projects",
+            "type": "List<ProjectInfo>",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "List of analyzed projects with their configurations"
+          },
+          {
+            "name": "Namespaces",
+            "type": "List<NamespaceInfo>",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Collection of namespace definitions and relationships"
+          },
+          {
+            "name": "Classes",
+            "type": "List<ClassInfo>",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Class definitions with inheritance and interface relationships"
+          },
+          {
+            "name": "Methods",
+            "type": "List<MethodInfo>",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Method signatures, parameters, and call relationships"
+          },
+          {
+            "name": "Properties",
+            "type": "List<PropertyInfo>",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Property definitions and access patterns"
+          },
+          {
+            "name": "Dependencies",
+            "type": "List<DependencyInfo>",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Inter-project and inter-assembly dependencies"
+          },
+          {
+            "name": "ConditionalPaths",
+            "type": "List<ConditionalPathInfo>",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Code paths based on preprocessor symbols"
+          }
+        ],
+        "fields": [],
+        "summary": "Represents the structural relationships between code elements including classes, methods, properties, and their dependencies",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      },
+      {
+        "name": "ProjectInfo",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [],
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "Path",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "Language",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "References",
+            "type": "List<string>",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "Properties",
+            "type": "Dictionary<string, string>",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          }
+        ],
+        "fields": [],
+        "summary": "",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      },
+      {
+        "name": "NamespaceInfo",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [],
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "FullName",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "Types",
+            "type": "List<string>",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "ParentNamespace",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          }
+        ],
+        "fields": [],
+        "summary": "",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      },
+      {
+        "name": "ClassInfo",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [],
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "FullName",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "Namespace",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "BaseClass",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "Interfaces",
+            "type": "List<string>",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "Methods",
+            "type": "List<string>",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "Properties",
+            "type": "List<string>",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "Visibility",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "IsAbstract",
+            "type": "bool",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "IsSealed",
+            "type": "bool",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          }
+        ],
+        "fields": [],
+        "summary": "",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      },
+      {
+        "name": "MethodInfo",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [],
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "FullName",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "DeclaringType",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "ReturnType",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "Parameters",
+            "type": "List<ParameterInfo>",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "Visibility",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "IsStatic",
+            "type": "bool",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "IsVirtual",
+            "type": "bool",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "IsOverride",
+            "type": "bool",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "CalledMethods",
+            "type": "List<string>",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          }
+        ],
+        "fields": [],
+        "summary": "",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      },
+      {
+        "name": "PropertyInfo",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [],
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "FullName",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "DeclaringType",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "Type",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "Visibility",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "HasGetter",
+            "type": "bool",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "HasSetter",
+            "type": "bool",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "IsStatic",
+            "type": "bool",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          }
+        ],
+        "fields": [],
+        "summary": "",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      },
+      {
+        "name": "ParameterInfo",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [],
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "Type",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "IsOptional",
+            "type": "bool",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "DefaultValue",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          }
+        ],
+        "fields": [],
+        "summary": "",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      },
+      {
+        "name": "DependencyInfo",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [],
+        "properties": [
+          {
+            "name": "From",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "To",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "Type",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "Version",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          }
+        ],
+        "fields": [],
+        "summary": "",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      },
+      {
+        "name": "ConditionalPathInfo",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [],
+        "properties": [
+          {
+            "name": "Symbol",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "Condition",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "CodeBlock",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "FilePath",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "StartLine",
+            "type": "int",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "EndLine",
+            "type": "int",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "IncludedCode",
+            "type": "List<string>",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "ExcludedCode",
+            "type": "List<string>",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          }
+        ],
+        "fields": [],
+        "summary": "",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      }
+    ],
+    "dependencies": [
+      {
+        "namespace": "System",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.Collections.Generic",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      }
+    ],
+    "lines_of_code": 132,
+    "analysis_timestamp": "2025-10-31T19:00:22.0416041Z"
+  },
+  {
+    "file_path": "src\\models\\ImprovementTrackingModel.cs",
+    "namespace": "StructuralIntelligence.Models",
+    "classes": [
+      {
+        "name": "ImprovementTrackingModel",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [
+          {
+            "name": "IsImprovementTargetMet",
+            "return_type": "bool",
+            "parameters": [],
+            "modifiers": "public",
+            "summary": "Whether improvement tracking shows ≥50% confidence boost from medium→high levels",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 1
+          },
+          {
+            "name": "IsDriftPreventionTargetMet",
+            "return_type": "bool",
+            "parameters": [],
+            "modifiers": "public",
+            "summary": "Whether drift prevention maintains 0% cross-file inference drift rate",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 1
+          },
+          {
+            "name": "IsValidationSuccessTargetMet",
+            "return_type": "bool",
+            "parameters": [],
+            "modifiers": "public",
+            "summary": "Whether validation success maintains 100% success rate",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 1
+          }
+        ],
+        "properties": [
+          {
+            "name": "ConfidenceTransitionRate",
+            "type": "double",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Rate of confidence level transitions from medium→high (≥50% target)"
+          },
+          {
+            "name": "RunComparisonHistory",
+            "type": "List<RunComparison>",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Historical comparisons between consecutive analysis runs"
+          },
+          {
+            "name": "LearningEffectiveness",
+            "type": "double",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Measurement of adaptive reasoning learning effectiveness"
+          },
+          {
+            "name": "AccuracyImprovement",
+            "type": "double",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Improvement in structural analysis accuracy over time"
+          },
+          {
+            "name": "ProcessingEfficiency",
+            "type": "double",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Efficiency gains from learned patterns and motifs"
+          },
+          {
+            "name": "DriftPreventionScore",
+            "type": "double",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Score for cross-file inference drift prevention (0% target)"
+          },
+          {
+            "name": "ImprovementTrend",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Trend analysis of improvement metrics over multiple runs"
+          },
+          {
+            "name": "ValidationSuccessRate",
+            "type": "double",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Rate of successful validation outcomes (100% target)"
+          }
+        ],
+        "fields": [],
+        "summary": "Represents improvement tracking across consecutive analysis runs to measure adaptive reasoning effectiveness",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      },
+      {
+        "name": "RunComparison",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [],
+        "properties": [
+          {
+            "name": "RunId",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Identifier for this analysis run"
+          },
+          {
+            "name": "Timestamp",
+            "type": "DateTime",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Timestamp of the analysis run"
+          },
+          {
+            "name": "ConfidenceLevels",
+            "type": "ConfidenceLevels",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Confidence levels for this run"
+          },
+          {
+            "name": "PerformanceMetrics",
+            "type": "PerformanceMetrics",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Performance metrics for this run"
+          },
+          {
+            "name": "ImprovementIndicators",
+            "type": "ImprovementIndicators",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Improvement indicators for this run"
+          }
+        ],
+        "fields": [],
+        "summary": "Represents a comparison between two consecutive analysis runs",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      },
+      {
+        "name": "ConfidenceLevels",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [],
+        "properties": [
+          {
+            "name": "Low",
+            "type": "int",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Count of elements with low confidence (0-50%)"
+          },
+          {
+            "name": "Medium",
+            "type": "int",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Count of elements with medium confidence (50-75%)"
+          },
+          {
+            "name": "High",
+            "type": "int",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Count of elements with high confidence (>75%)"
+          },
+          {
+            "name": "Total",
+            "type": "int",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Total count of analyzed elements"
+          },
+          {
+            "name": "HighConfidencePercentage",
+            "type": "double",
+            "modifiers": "public",
+            "has_getter": false,
+            "has_setter": false,
+            "summary": "Percentage of elements with high confidence"
+          },
+          {
+            "name": "MediumConfidencePercentage",
+            "type": "double",
+            "modifiers": "public",
+            "has_getter": false,
+            "has_setter": false,
+            "summary": "Percentage of elements with medium confidence"
+          },
+          {
+            "name": "LowConfidencePercentage",
+            "type": "double",
+            "modifiers": "public",
+            "has_getter": false,
+            "has_setter": false,
+            "summary": "Percentage of elements with low confidence"
+          }
+        ],
+        "fields": [],
+        "summary": "Represents confidence levels across different categories",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      },
+      {
+        "name": "PerformanceMetrics",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [],
+        "properties": [
+          {
+            "name": "ProcessingTimeMs",
+            "type": "double",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Total processing time in milliseconds"
+          },
+          {
+            "name": "MemoryUsageMb",
+            "type": "double",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Peak memory usage in megabytes"
+          },
+          {
+            "name": "CpuUtilization",
+            "type": "double",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Average CPU utilization during processing"
+          },
+          {
+            "name": "IoOperations",
+            "type": "int",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Number of I/O operations performed"
+          },
+          {
+            "name": "EfficiencyGain",
+            "type": "double",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Processing efficiency compared to previous runs"
+          },
+          {
+            "name": "MemoryEfficiencyGain",
+            "type": "double",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Memory efficiency compared to previous runs"
+          },
+          {
+            "name": "CpuEfficiencyGain",
+            "type": "double",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "CPU efficiency compared to previous runs"
+          },
+          {
+            "name": "IoEfficiencyGain",
+            "type": "double",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "I/O efficiency compared to previous runs"
+          }
+        ],
+        "fields": [],
+        "summary": "Represents performance metrics for an analysis run",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      },
+      {
+        "name": "ImprovementIndicators",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [],
+        "properties": [
+          {
+            "name": "ConfidenceTransitions",
+            "type": "int",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Number of confidence level transitions from medium→high"
+          },
+          {
+            "name": "UncertaintyReduction",
+            "type": "double",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Reduction in overall uncertainty levels"
+          },
+          {
+            "name": "SymbolResolutionImprovement",
+            "type": "double",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Improvement in symbol resolution rates"
+          },
+          {
+            "name": "DependencyMappingEnhancement",
+            "type": "double",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Enhancement in dependency mapping accuracy"
+          },
+          {
+            "name": "OverallImprovementScore",
+            "type": "double",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Overall improvement score combining all indicators"
+          },
+          {
+            "name": "LearningCurveProgression",
+            "type": "double",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Learning curve progression indicator"
+          },
+          {
+            "name": "AdaptationSpeed",
+            "type": "double",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Adaptation speed measurement"
+          },
+          {
+            "name": "PredictionAccuracy",
+            "type": "double",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Prediction accuracy based on learned patterns"
+          }
+        ],
+        "fields": [],
+        "summary": "Represents improvement indicators for an analysis run",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      },
+      {
+        "name": "LearningCurve",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [],
+        "properties": [
+          {
+            "name": "InitialConfidence",
+            "type": "double",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Initial confidence level before learning"
+          },
+          {
+            "name": "FinalConfidence",
+            "type": "double",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Final confidence level after learning"
+          },
+          {
+            "name": "LearningRate",
+            "type": "double",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Rate of confidence improvement over time"
+          },
+          {
+            "name": "Stability",
+            "type": "double",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Stability of learned patterns across runs"
+          },
+          {
+            "name": "IsPositiveProgression",
+            "type": "bool",
+            "modifiers": "public",
+            "has_getter": false,
+            "has_setter": false,
+            "summary": "Whether learning curve shows positive progression"
+          },
+          {
+            "name": "ConfidenceImprovement",
+            "type": "double",
+            "modifiers": "public",
+            "has_getter": false,
+            "has_setter": false,
+            "summary": "Confidence improvement amount"
+          },
+          {
+            "name": "LearningEffectiveness",
+            "type": "double",
+            "modifiers": "public",
+            "has_getter": false,
+            "has_setter": false,
+            "summary": "Learning effectiveness percentage"
+          }
+        ],
+        "fields": [],
+        "summary": "Represents the learning curve for adaptive reasoning",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      },
+      {
+        "name": "ImprovementTrackingCollection",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [
+          {
+            "name": "IsOverallImprovementTargetMet",
+            "return_type": "bool",
+            "parameters": [],
+            "modifiers": "public",
+            "summary": "Whether overall improvement meets target criteria",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 1
+          },
+          {
+            "name": "IsOverallDriftPreventionTargetMet",
+            "return_type": "bool",
+            "parameters": [],
+            "modifiers": "public",
+            "summary": "Whether overall drift prevention meets target criteria",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 1
+          },
+          {
+            "name": "IsOverallValidationSuccessTargetMet",
+            "return_type": "bool",
+            "parameters": [],
+            "modifiers": "public",
+            "summary": "Whether overall validation success meets target criteria",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 1
+          }
+        ],
+        "properties": [
+          {
+            "name": "RunComparisons",
+            "type": "List<RunComparison>",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Collection of all run comparisons"
+          },
+          {
+            "name": "OverallTrend",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Overall improvement trend analysis"
+          },
+          {
+            "name": "AverageConfidenceTransitionRate",
+            "type": "double",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Average confidence transition rate across all runs"
+          },
+          {
+            "name": "AverageDriftPreventionScore",
+            "type": "double",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Average drift prevention score across all runs"
+          },
+          {
+            "name": "AverageValidationSuccessRate",
+            "type": "double",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Average validation success rate across all runs"
+          },
+          {
+            "name": "TotalRuns",
+            "type": "int",
+            "modifiers": "public",
+            "has_getter": false,
+            "has_setter": false,
+            "summary": "Total number of runs analyzed"
+          },
+          {
+            "name": "LatestRun",
+            "type": "RunComparison",
+            "modifiers": "public",
+            "has_getter": false,
+            "has_setter": false,
+            "summary": "Latest run comparison"
+          },
+          {
+            "name": "PreviousRun",
+            "type": "RunComparison",
+            "modifiers": "public",
+            "has_getter": false,
+            "has_setter": false,
+            "summary": "Previous run comparison"
+          },
+          {
+            "name": "LatestImprovementRate",
+            "type": "double",
+            "modifiers": "public",
+            "has_getter": false,
+            "has_setter": false,
+            "summary": "Improvement rate between latest and previous runs"
+          }
+        ],
+        "fields": [],
+        "summary": "Collection of improvement tracking metrics",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      }
+    ],
+    "dependencies": [
+      {
+        "namespace": "System",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.Collections.Generic",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      }
+    ],
+    "lines_of_code": 340,
+    "analysis_timestamp": "2025-10-31T19:00:22.6680974Z"
+  },
+  {
+    "file_path": "src\\models\\InvariantValidationModel.cs",
+    "namespace": "StructuralIntelligence.Models",
+    "classes": [
+      {
+        "name": "InvariantValidationModel",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [],
+        "properties": [
+          {
+            "name": "OrphanNodeCheck",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Status of orphan node validation (PASS/FAIL)"
+          },
+          {
+            "name": "AcyclicLayerCheck",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Status of acyclic layer validation (PASS/FAIL)"
+          },
+          {
+            "name": "SymbolIdConsistencyCheck",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Status of symbol ID consistency validation (PASS/FAIL)"
+          },
+          {
+            "name": "ValidationHistory",
+            "type": "List<ValidationHistoryEntry>",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Historical record of all validation results"
+          },
+          {
+            "name": "LastValidationTimestamp",
+            "type": "DateTime",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Timestamp of most recent validation"
+          },
+          {
+            "name": "ValidationLatency",
+            "type": "double",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Time taken for last validation cycle ("
+          },
+          {
+            "name": "InvariantFailureCount",
+            "type": "int",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Count of invariant validation failures"
+          },
+          {
+            "name": "OverallValidationStatus",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Overall validation status (PASS/FAIL)"
+          },
+          {
+            "name": "HaltOnFailure",
+            "type": "bool",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Whether processing should halt immediately when invariants fail"
+          },
+          {
+            "name": "MaxValidationTimeSeconds",
+            "type": "double",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Maximum allowed validation time before timeout ("
+          },
+          {
+            "name": "ValidationRules",
+            "type": "List<ValidationRule>",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "List of validation rules that must pass continuously"
+          },
+          {
+            "name": "ValidationState",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Current validation state (Running, Paused, Stopped, Completed)"
+          },
+          {
+            "name": "AllInvariantsPass",
+            "type": "bool",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Whether all invariants = PASS during processing"
+          }
+        ],
+        "fields": [],
+        "summary": "Represents continuous invariant validation during processing to ensure structural model integrity",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      },
+      {
+        "name": "ValidationHistoryEntry",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [],
+        "properties": [
+          {
+            "name": "Timestamp",
+            "type": "DateTime",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Timestamp of validation"
+          },
+          {
+            "name": "ValidationType",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Type of validation performed (orphan nodes, acyclic layers, symbol IDs)"
+          },
+          {
+            "name": "Status",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Result of validation (PASS/FAIL)"
+          },
+          {
+            "name": "LatencyMs",
+            "type": "double",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Time taken for this validation in milliseconds"
+          },
+          {
+            "name": "Details",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Additional details about the validation"
+          },
+          {
+            "name": "CausedHalt",
+            "type": "bool",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Whether this validation caused processing to halt"
+          },
+          {
+            "name": "ElementId",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Identifier of the code element being validated"
+          },
+          {
+            "name": "FilePath",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "File path where validation occurred"
+          },
+          {
+            "name": "LineNumber",
+            "type": "int",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Line number where validation occurred"
+          }
+        ],
+        "fields": [],
+        "summary": "Represents a single validation history entry",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      },
+      {
+        "name": "ValidationRule",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [],
+        "properties": [
+          {
+            "name": "RuleId",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Unique identifier for this validation rule"
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Name of the validation rule"
+          },
+          {
+            "name": "Description",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Description of what this rule validates"
+          },
+          {
+            "name": "IsEnabled",
+            "type": "bool",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Whether this rule is currently enabled"
+          },
+          {
+            "name": "Priority",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Priority level of this validation rule (High, Medium, Low)"
+          },
+          {
+            "name": "RequiresImmediateHalt",
+            "type": "bool",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Whether this rule requires immediate processing halt on failure"
+          },
+          {
+            "name": "MaxExecutionTimeSeconds",
+            "type": "double",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Maximum allowed time for this validation rule ("
+          },
+          {
+            "name": "LastResult",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Last validation result for this rule"
+          },
+          {
+            "name": "LastValidated",
+            "type": "DateTime",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Timestamp of last validation for this rule"
+          },
+          {
+            "name": "PassCount",
+            "type": "int",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Number of times this rule has passed validation"
+          },
+          {
+            "name": "FailCount",
+            "type": "int",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Number of times this rule has failed validation"
+          },
+          {
+            "name": "AverageValidationTimeMs",
+            "type": "double",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Average validation time for this rule"
+          }
+        ],
+        "fields": [],
+        "summary": "Represents a validation rule that must be continuously checked",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      },
+      {
+        "name": "InvariantValidationResults",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [],
+        "properties": [
+          {
+            "name": "Rules",
+            "type": "List<ValidationRule>",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Collection of all validation rules and their current status"
+          },
+          {
+            "name": "Status",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Overall validation status (PASS/FAIL)"
+          },
+          {
+            "name": "TotalRules",
+            "type": "int",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Total number of validation rules"
+          },
+          {
+            "name": "PassingRules",
+            "type": "int",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Number of passing validation rules"
+          },
+          {
+            "name": "FailingRules",
+            "type": "int",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Number of failing validation rules"
+          },
+          {
+            "name": "PassRate",
+            "type": "double",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Percentage of validation rules that are passing"
+          },
+          {
+            "name": "AverageValidationTimeMs",
+            "type": "double",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Average validation time across all rules"
+          },
+          {
+            "name": "MaxValidationTimeMs",
+            "type": "double",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Maximum validation time across all rules"
+          },
+          {
+            "name": "CriticalRulesPassing",
+            "type": "bool",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Whether all critical validation rules are passing"
+          },
+          {
+            "name": "FailedRules",
+            "type": "List<ValidationRule>",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "List of failed validation rules that require attention"
+          },
+          {
+            "name": "LastRun",
+            "type": "DateTime",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Timestamp of last validation run"
+          },
+          {
+            "name": "LastRunDurationMs",
+            "type": "double",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Duration of last validation run"
+          }
+        ],
+        "fields": [],
+        "summary": "Collection of invariant validation results",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      }
+    ],
+    "dependencies": [
+      {
+        "namespace": "System",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.Collections.Generic",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      }
+    ],
+    "lines_of_code": 260,
+    "analysis_timestamp": "2025-10-31T19:00:23.2769126Z"
+  },
+  {
+    "file_path": "src\\models\\MsBuildConfigurationIndex.cs",
+    "namespace": "StructuralIntelligence.Models",
+    "classes": [
+      {
+        "name": "MsBuildConfigurationIndex",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [],
+        "properties": [
+          {
+            "name": "ConfigurationName",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Name of the build configuration (Debug, Release, etc.)"
+          },
+          {
+            "name": "Projects",
+            "type": "List<ProjectInfo>",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "List of projects included in this configuration"
+          },
+          {
+            "name": "PreprocessorDefines",
+            "type": "Dictionary<string, string>",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Defines specific to this configuration"
+          },
+          {
+            "name": "IncludePatterns",
+            "type": "List<string>",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Patterns for project inclusion/exclusion"
+          },
+          {
+            "name": "InclusionRate",
+            "type": "double",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Percentage of projects successfully included"
+          },
+          {
+            "name": "LoadStatus",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Success/failure status of project loading"
+          },
+          {
+            "name": "Metadata",
+            "type": "Dictionary<string, object>",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Additional metadata about the configuration"
+          }
+        ],
+        "fields": [],
+        "summary": "Catalogs all build configurations and their project inclusion patterns",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      },
+      {
+        "name": "MsBuildConfigurationIndexCollection",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [
+          {
+            "name": "AddConfiguration",
+            "return_type": "void",
+            "parameters": [
+              {
+                "name": "configName",
+                "type": "string",
+                "has_default_value": false,
+                "default_value": null
+              },
+              {
+                "name": "index",
+                "type": "MsBuildConfigurationIndex",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "public",
+            "summary": "",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 1
+          },
+          {
+            "name": "GetConfiguration",
+            "return_type": "MsBuildConfigurationIndex",
+            "parameters": [
+              {
+                "name": "configName",
+                "type": "string",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "public",
+            "summary": "",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 2
+          },
+          {
+            "name": "GetAllConfigurations",
+            "return_type": "List<MsBuildConfigurationIndex>",
+            "parameters": [],
+            "modifiers": "public",
+            "summary": "",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 1
+          },
+          {
+            "name": "UpdateTotalProjects",
+            "return_type": "void",
+            "parameters": [],
+            "modifiers": "private",
+            "summary": "",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 2
+          },
+          {
+            "name": "UpdateAverageInclusionRate",
+            "return_type": "void",
+            "parameters": [],
+            "modifiers": "private",
+            "summary": "",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 3
+          },
+          {
+            "name": "IsInclusionTargetMet",
+            "return_type": "bool",
+            "parameters": [],
+            "modifiers": "public",
+            "summary": "",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 1
+          }
+        ],
+        "properties": [
+          {
+            "name": "Configurations",
+            "type": "Dictionary<string, MsBuildConfigurationIndex>",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "AllConfigurationNames",
+            "type": "List<string>",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "TotalConfigurations",
+            "type": "int",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "AverageInclusionRate",
+            "type": "double",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "TotalProjects",
+            "type": "int",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          }
+        ],
+        "fields": [],
+        "summary": "Index for tracking all MSBuild configurations in the solution",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      },
+      {
+        "name": "ConfigurationAnalyzer",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [
+          {
+            "name": "GetProjectConfigurationMapping",
+            "return_type": "Dictionary<string, List<string>>",
+            "parameters": [
+              {
+                "name": "collection",
+                "type": "MsBuildConfigurationIndexCollection",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "public static",
+            "summary": "",
+            "is_async": false,
+            "is_static": true,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 5
+          },
+          {
+            "name": "GetProjectsInAllConfigurations",
+            "return_type": "List<string>",
+            "parameters": [
+              {
+                "name": "collection",
+                "type": "MsBuildConfigurationIndexCollection",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "public static",
+            "summary": "",
+            "is_async": false,
+            "is_static": true,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 6
+          }
+        ],
+        "properties": [],
+        "fields": [],
+        "summary": "Helper class for configuration analysis",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      }
+    ],
+    "dependencies": [
+      {
+        "namespace": "System",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.Collections.Generic",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      }
+    ],
+    "lines_of_code": 160,
+    "analysis_timestamp": "2025-10-31T19:00:23.8301993Z"
+  },
+  {
+    "file_path": "src\\models\\PreprocessorSymbolRegistry.cs",
+    "namespace": "StructuralIntelligence.Models",
+    "classes": [
+      {
+        "name": "PreprocessorSymbolRegistry",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [],
+        "properties": [
+          {
+            "name": "SymbolName",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Name of the preprocessor symbol"
+          },
+          {
+            "name": "SymbolValue",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Value of the symbol (true/false or defined/undefined)"
+          },
+          {
+            "name": "SourceFile",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "File where the symbol is defined"
+          },
+          {
+            "name": "AffectedCodeBlocks",
+            "type": "List<CodeBlockInfo>",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "List of code blocks affected by this symbol"
+          },
+          {
+            "name": "ConfigurationImpact",
+            "type": "List<string>",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Build configurations affected by this symbol"
+          },
+          {
+            "name": "InclusionRate",
+            "type": "double",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Percentage of conditional code paths included"
+          },
+          {
+            "name": "Metadata",
+            "type": "Dictionary<string, object>",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Additional metadata about the symbol"
+          }
+        ],
+        "fields": [],
+        "summary": "Tracks all conditional compilation symbols and their impact on code inclusion/exclusion",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      },
+      {
+        "name": "CodeBlockInfo",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [],
+        "properties": [
+          {
+            "name": "FilePath",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "StartLine",
+            "type": "int",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "EndLine",
+            "type": "int",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "Condition",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "CodeContent",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "IsIncluded",
+            "type": "bool",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "Configuration",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          }
+        ],
+        "fields": [],
+        "summary": "",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      },
+      {
+        "name": "PreprocessorSymbolRegistryCollection",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [
+          {
+            "name": "AddSymbolRegistry",
+            "return_type": "void",
+            "parameters": [
+              {
+                "name": "symbolName",
+                "type": "string",
+                "has_default_value": false,
+                "default_value": null
+              },
+              {
+                "name": "registry",
+                "type": "PreprocessorSymbolRegistry",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "public",
+            "summary": "",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 1
+          },
+          {
+            "name": "GetSymbolRegistry",
+            "return_type": "PreprocessorSymbolRegistry",
+            "parameters": [
+              {
+                "name": "symbolName",
+                "type": "string",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "public",
+            "summary": "",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 2
+          },
+          {
+            "name": "GetRegistriesForConfiguration",
+            "return_type": "List<PreprocessorSymbolRegistry>",
+            "parameters": [
+              {
+                "name": "configuration",
+                "type": "string",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "public",
+            "summary": "",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 3
+          },
+          {
+            "name": "UpdateAverageInclusionRate",
+            "return_type": "void",
+            "parameters": [],
+            "modifiers": "private",
+            "summary": "",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 3
+          },
+          {
+            "name": "IsInclusionTargetMet",
+            "return_type": "bool",
+            "parameters": [],
+            "modifiers": "public",
+            "summary": "",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 1
+          }
+        ],
+        "properties": [
+          {
+            "name": "Registries",
+            "type": "Dictionary<string, PreprocessorSymbolRegistry>",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "AllSymbolNames",
+            "type": "List<string>",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "TotalSymbols",
+            "type": "int",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "AverageInclusionRate",
+            "type": "double",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          }
+        ],
+        "fields": [],
+        "summary": "Registry for tracking all preprocessor symbols in the codebase",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      }
+    ],
+    "dependencies": [
+      {
+        "namespace": "System",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.Collections.Generic",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      }
+    ],
+    "lines_of_code": 110,
+    "analysis_timestamp": "2025-10-31T19:00:24.4591888Z"
+  },
+  {
+    "file_path": "src\\models\\SymbolResolutionMap.cs",
+    "namespace": "StructuralIntelligence.Models",
+    "classes": [
+      {
+        "name": "SymbolResolutionMap",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [],
+        "properties": [
+          {
+            "name": "SymbolId",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Unique identifier for each symbol"
+          },
+          {
+            "name": "DefinitionLocation",
+            "type": "LocationInfo",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "File path and line number of symbol definition"
+          },
+          {
+            "name": "UsageLocations",
+            "type": "List<LocationInfo>",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "List of all usage locations across codebase"
+          },
+          {
+            "name": "SymbolType",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Type of symbol (class, method, property, etc.)"
+          },
+          {
+            "name": "ResolutionRate",
+            "type": "double",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Percentage of successfully resolved symbols"
+          },
+          {
+            "name": "ParentSymbol",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Reference to parent symbol (namespace, class, etc.)"
+          },
+          {
+            "name": "Metadata",
+            "type": "Dictionary<string, object>",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": "Additional metadata about the symbol"
+          }
+        ],
+        "fields": [],
+        "summary": "Maps all identifiers to their definitions and usage locations across the entire codebase",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      },
+      {
+        "name": "LocationInfo",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [],
+        "properties": [
+          {
+            "name": "FilePath",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "LineNumber",
+            "type": "int",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "ColumnNumber",
+            "type": "int",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "StartPosition",
+            "type": "int",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "EndPosition",
+            "type": "int",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "Text",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          }
+        ],
+        "fields": [],
+        "summary": "",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      },
+      {
+        "name": "SymbolResolutionRegistry",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [
+          {
+            "name": "AddResolvedSymbol",
+            "return_type": "void",
+            "parameters": [
+              {
+                "name": "symbolId",
+                "type": "string",
+                "has_default_value": false,
+                "default_value": null
+              },
+              {
+                "name": "resolution",
+                "type": "SymbolResolutionMap",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "public",
+            "summary": "",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 1
+          },
+          {
+            "name": "AddUnresolvedSymbol",
+            "return_type": "void",
+            "parameters": [
+              {
+                "name": "symbolId",
+                "type": "string",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "public",
+            "summary": "",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 1
+          },
+          {
+            "name": "UpdateResolutionRate",
+            "return_type": "void",
+            "parameters": [],
+            "modifiers": "private",
+            "summary": "",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 2
+          },
+          {
+            "name": "IsResolutionTargetMet",
+            "return_type": "bool",
+            "parameters": [],
+            "modifiers": "public",
+            "summary": "",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 1
+          }
+        ],
+        "properties": [
+          {
+            "name": "ResolvedSymbols",
+            "type": "Dictionary<string, SymbolResolutionMap>",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "UnresolvedSymbols",
+            "type": "List<string>",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "TotalSymbols",
+            "type": "int",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "ResolvedCount",
+            "type": "int",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "OverallResolutionRate",
+            "type": "double",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          }
+        ],
+        "fields": [],
+        "summary": "Registry for tracking symbol resolution statistics",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      }
+    ],
+    "dependencies": [
+      {
+        "namespace": "System",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.Collections.Generic",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      }
+    ],
+    "lines_of_code": 91,
+    "analysis_timestamp": "2025-10-31T19:00:25.0092229Z"
+  },
+  {
+    "file_path": "src\\Program.cs",
+    "namespace": "StructuralIntelligence",
+    "classes": [
+      {
+        "name": "Program",
+        "modifiers": "",
+        "base_types": [],
+        "methods": [
+          {
+            "name": "Main",
+            "return_type": "Task<int>",
+            "parameters": [
+              {
+                "name": "args",
+                "type": "string[]",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "static async",
+            "summary": "",
+            "is_async": true,
+            "is_static": true,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 15
+          },
+          {
+            "name": "ShowHelp",
+            "return_type": "void",
+            "parameters": [],
+            "modifiers": "static",
+            "summary": "",
+            "is_async": false,
+            "is_static": true,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 1
+          },
+          {
+            "name": "AnalyzeSolution",
+            "return_type": "Task<int>",
+            "parameters": [
+              {
+                "name": "solutionPath",
+                "type": "string",
+                "has_default_value": false,
+                "default_value": null
+              },
+              {
+                "name": "outputPath",
+                "type": "string",
+                "has_default_value": false,
+                "default_value": null
+              },
+              {
+                "name": "configuration",
+                "type": "string",
+                "has_default_value": false,
+                "default_value": null
+              },
+              {
+                "name": "verbose",
+                "type": "bool",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "static async",
+            "summary": "",
+            "is_async": true,
+            "is_static": true,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 14
+          }
+        ],
+        "properties": [],
+        "fields": [],
+        "summary": "",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      }
+    ],
+    "dependencies": [
+      {
+        "namespace": "System",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.IO",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.Threading.Tasks",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "StructuralIntelligence.Services",
+        "type": "Internal",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "StructuralIntelligence.Models",
+        "type": "Internal",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.Text.Json",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      }
+    ],
+    "lines_of_code": 180,
+    "analysis_timestamp": "2025-10-31T19:00:25.6033767Z"
+  },
+  {
+    "file_path": "src\\services\\AdaptiveReasoningService.cs",
+    "namespace": "StructuralIntelligence.Services",
+    "classes": [
+      {
+        "name": "AdaptiveReasoningService",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [
+          {
+            "name": "AnalyzeSolutionAsync",
+            "return_type": "Task<ArchitectureModel>",
+            "parameters": [
+              {
+                "name": "solutionPath",
+                "type": "string",
+                "has_default_value": false,
+                "default_value": null
+              },
+              {
+                "name": "configuration",
+                "type": "string",
+                "has_default_value": true,
+                "default_value": "\"Debug\""
+              },
+              {
+                "name": "adaptiveReasoning",
+                "type": "bool",
+                "has_default_value": true,
+                "default_value": "true"
+              },
+              {
+                "name": "invariantValidation",
+                "type": "bool",
+                "has_default_value": true,
+                "default_value": "true"
+              },
+              {
+                "name": "uncertaintyThreshold",
+                "type": "double",
+                "has_default_value": true,
+                "default_value": "75.0"
+              },
+              {
+                "name": "maxIterationDepth",
+                "type": "int",
+                "has_default_value": true,
+                "default_value": "10"
+              }
+            ],
+            "modifiers": "public async",
+            "summary": "Analyze solution with adaptive reasoning and invariant validation",
+            "is_async": true,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 3
+          },
+          {
+            "name": "AnalyzeProjectAsync",
+            "return_type": "Task<ArchitectureModel>",
+            "parameters": [
+              {
+                "name": "projectInfo",
+                "type": "Models.ProjectInfo",
+                "has_default_value": false,
+                "default_value": null
+              },
+              {
+                "name": "configuration",
+                "type": "string",
+                "has_default_value": false,
+                "default_value": null
+              },
+              {
+                "name": "adaptiveReasoning",
+                "type": "bool",
+                "has_default_value": false,
+                "default_value": null
+              },
+              {
+                "name": "invariantValidation",
+                "type": "bool",
+                "has_default_value": false,
+                "default_value": null
+              },
+              {
+                "name": "uncertaintyThreshold",
+                "type": "double",
+                "has_default_value": false,
+                "default_value": null
+              },
+              {
+                "name": "maxIterationDepth",
+                "type": "int",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "private async",
+            "summary": "Analyze a single project with adaptive reasoning",
+            "is_async": true,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 5
+          },
+          {
+            "name": "CalculateAdaptiveIterationDepth",
+            "return_type": "int",
+            "parameters": [
+              {
+                "name": "uncertaintyScore",
+                "type": "double",
+                "has_default_value": false,
+                "default_value": null
+              },
+              {
+                "name": "threshold",
+                "type": "double",
+                "has_default_value": false,
+                "default_value": null
+              },
+              {
+                "name": "maxDepth",
+                "type": "int",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "private",
+            "summary": "Calculate adaptive iteration depth based on uncertainty score",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 2
+          },
+          {
+            "name": "ProcessProjectWithIterationDepthAsync",
+            "return_type": "Task<ArchitectureModel>",
+            "parameters": [
+              {
+                "name": "project",
+                "type": "Project",
+                "has_default_value": false,
+                "default_value": null
+              },
+              {
+                "name": "compilation",
+                "type": "Compilation",
+                "has_default_value": false,
+                "default_value": null
+              },
+              {
+                "name": "iterationDepth",
+                "type": "int",
+                "has_default_value": false,
+                "default_value": null
+              },
+              {
+                "name": "validateInvariants",
+                "type": "bool",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "private async",
+            "summary": "Process project with specific iteration depth",
+            "is_async": true,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 8
+          },
+          {
+            "name": "ProcessDocumentAtDepthAsync",
+            "return_type": "Task<ArchitectureModel>",
+            "parameters": [
+              {
+                "name": "document",
+                "type": "Document",
+                "has_default_value": false,
+                "default_value": null
+              },
+              {
+                "name": "semanticModel",
+                "type": "SemanticModel",
+                "has_default_value": false,
+                "default_value": null
+              },
+              {
+                "name": "depth",
+                "type": "int",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "private async",
+            "summary": "Process document at specific depth level",
+            "is_async": true,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 15
+          },
+          {
+            "name": "GetAccessibility",
+            "return_type": "string",
+            "parameters": [
+              {
+                "name": "accessibility",
+                "type": "Accessibility",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "private",
+            "summary": "Get string representation of accessibility",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 1
+          },
+          {
+            "name": "MergeArchitectureModels",
+            "return_type": "void",
+            "parameters": [
+              {
+                "name": "target",
+                "type": "ArchitectureModel",
+                "has_default_value": false,
+                "default_value": null
+              },
+              {
+                "name": "source",
+                "type": "ArchitectureModel",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "private",
+            "summary": "Merge two architecture models",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 17
+          },
+          {
+            "name": "UpdateArchitectureModelWithProjectAnalysis",
+            "return_type": "void",
+            "parameters": [
+              {
+                "name": "mainModel",
+                "type": "ArchitectureModel",
+                "has_default_value": false,
+                "default_value": null
+              },
+              {
+                "name": "projectModel",
+                "type": "ArchitectureModel",
+                "has_default_value": false,
+                "default_value": null
+              },
+              {
+                "name": "projectName",
+                "type": "string",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "private",
+            "summary": "Update main architecture model with project analysis results",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 1
+          },
+          {
+            "name": "AnalyzeProjectRelationships",
+            "return_type": "void",
+            "parameters": [
+              {
+                "name": "architectureModel",
+                "type": "ArchitectureModel",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "private",
+            "summary": "Analyze relationships between projects",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 11
+          },
+          {
+            "name": "ExtractProjectNameFromReference",
+            "return_type": "string",
+            "parameters": [
+              {
+                "name": "reference",
+                "type": "string",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "private",
+            "summary": "Extract project name from reference string",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 2
+          },
+          {
+            "name": "GetUncertaintyTracker",
+            "return_type": "UncertaintyTracker",
+            "parameters": [],
+            "modifiers": "public",
+            "summary": "Get the uncertainty tracker",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 1
+          },
+          {
+            "name": "GetInvariantValidator",
+            "return_type": "InvariantValidator",
+            "parameters": [],
+            "modifiers": "public",
+            "summary": "Get the invariant validator",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 1
+          },
+          {
+            "name": "GetReflexionMemory",
+            "return_type": "ReflexionMemory",
+            "parameters": [],
+            "modifiers": "public",
+            "summary": "Get the reflexion memory",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 1
+          },
+          {
+            "name": "GetImprovementTracker",
+            "return_type": "ImprovementTracker",
+            "parameters": [],
+            "modifiers": "public",
+            "summary": "Get the improvement tracker",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 1
+          },
+          {
+            "name": "IsSymbolResolutionTargetMet",
+            "return_type": "bool",
+            "parameters": [],
+            "modifiers": "public",
+            "summary": "Check if symbol resolution target is met (≥98%)",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 1
+          },
+          {
+            "name": "IsProjectLoadingTargetMet",
+            "return_type": "bool",
+            "parameters": [],
+            "modifiers": "public",
+            "summary": "Check if project loading target is met (100%)",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 1
+          }
+        ],
+        "properties": [],
+        "fields": [
+          {
+            "name": "_workspaceService",
+            "type": "MsBuildWorkspaceService",
+            "modifiers": "private readonly",
+            "is_readonly": true,
+            "is_const": false
+          },
+          {
+            "name": "_uncertaintyTracker",
+            "type": "UncertaintyTracker",
+            "modifiers": "private readonly",
+            "is_readonly": true,
+            "is_const": false
+          },
+          {
+            "name": "_invariantValidator",
+            "type": "InvariantValidator",
+            "modifiers": "private readonly",
+            "is_readonly": true,
+            "is_const": false
+          },
+          {
+            "name": "_reflexionMemory",
+            "type": "ReflexionMemory",
+            "modifiers": "private readonly",
+            "is_readonly": true,
+            "is_const": false
+          },
+          {
+            "name": "_improvementTracker",
+            "type": "ImprovementTracker",
+            "modifiers": "private readonly",
+            "is_readonly": true,
+            "is_const": false
+          }
+        ],
+        "summary": "Service for adaptive reasoning and intelligent graph iteration with local recursion and invariant checks",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      }
+    ],
+    "dependencies": [
+      {
+        "namespace": "System",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.Collections.Generic",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.Linq",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.Threading.Tasks",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "Microsoft.CodeAnalysis",
+        "type": "Microsoft",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "Microsoft.CodeAnalysis.CSharp.Syntax",
+        "type": "Microsoft",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "StructuralIntelligence.Models",
+        "type": "Internal",
+        "is_alias": false,
+        "alias_name": null
+      }
+    ],
+    "lines_of_code": 596,
+    "analysis_timestamp": "2025-10-31T19:00:26.2353985Z"
+  },
+  {
+    "file_path": "src\\services\\MsBuildWorkspaceService.cs",
+    "namespace": "StructuralIntelligence.Services",
+    "classes": [
+      {
+        "name": "MsBuildWorkspaceService",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [
+          {
+            "name": "LoadSolutionAsync",
+            "return_type": "Task<ArchitectureModel>",
+            "parameters": [
+              {
+                "name": "solutionPath",
+                "type": "string",
+                "has_default_value": false,
+                "default_value": null
+              },
+              {
+                "name": "configuration",
+                "type": "string",
+                "has_default_value": true,
+                "default_value": "\"Debug\""
+              }
+            ],
+            "modifiers": "public async",
+            "summary": "Load a solution file and all its projects",
+            "is_async": true,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 7
+          },
+          {
+            "name": "LoadProjectAsync",
+            "return_type": "Task<Models.ProjectInfo>",
+            "parameters": [
+              {
+                "name": "project",
+                "type": "Microsoft.CodeAnalysis.Project",
+                "has_default_value": false,
+                "default_value": null
+              },
+              {
+                "name": "configuration",
+                "type": "string",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "private async",
+            "summary": "Load a single project",
+            "is_async": true,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 6
+          },
+          {
+            "name": "LoadSolutionWithPropertiesAsync",
+            "return_type": "Task<ArchitectureModel>",
+            "parameters": [
+              {
+                "name": "solutionPath",
+                "type": "string",
+                "has_default_value": false,
+                "default_value": null
+              },
+              {
+                "name": "properties",
+                "type": "Dictionary<string, string>",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "public async",
+            "summary": "Load a solution with specific MSBuild properties",
+            "is_async": true,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 2
+          },
+          {
+            "name": "GetConfigurationIndexAsync",
+            "return_type": "Task<MsBuildConfigurationIndexCollection>",
+            "parameters": [
+              {
+                "name": "solutionPath",
+                "type": "string",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "public async",
+            "summary": "Get MSBuild configuration index for all loaded configurations",
+            "is_async": true,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 3
+          },
+          {
+            "name": "GetPreprocessorSymbolsAsync",
+            "return_type": "Task<Dictionary<string, string>>",
+            "parameters": [
+              {
+                "name": "solutionPath",
+                "type": "string",
+                "has_default_value": false,
+                "default_value": null
+              },
+              {
+                "name": "configuration",
+                "type": "string",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "public async",
+            "summary": "Get preprocessor symbols for a specific configuration",
+            "is_async": true,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 7
+          },
+          {
+            "name": "GetTargetFrameworkFromProjectFile",
+            "return_type": "Task<string>",
+            "parameters": [
+              {
+                "name": "projectFilePath",
+                "type": "string",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "private async",
+            "summary": "Get target framework from project file",
+            "is_async": true,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 10
+          },
+          {
+            "name": "Dispose",
+            "return_type": "void",
+            "parameters": [],
+            "modifiers": "public",
+            "summary": "Dispose of the workspace and clean up resources",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 1
+          },
+          {
+            "name": "IsLoadTargetMet",
+            "return_type": "bool",
+            "parameters": [],
+            "modifiers": "public",
+            "summary": "Check if the load success target is met (100% for project loading)",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 1
+          }
+        ],
+        "properties": [
+          {
+            "name": "Workspace",
+            "type": "MSBuildWorkspace",
+            "modifiers": "public",
+            "has_getter": false,
+            "has_setter": false,
+            "summary": ""
+          },
+          {
+            "name": "LoadedProjects",
+            "type": "Dictionary<string, Models.ProjectInfo>",
+            "modifiers": "public",
+            "has_getter": false,
+            "has_setter": false,
+            "summary": ""
+          },
+          {
+            "name": "LoadFailures",
+            "type": "List<string>",
+            "modifiers": "public",
+            "has_getter": false,
+            "has_setter": false,
+            "summary": ""
+          },
+          {
+            "name": "TotalProjectsLoaded",
+            "type": "int",
+            "modifiers": "public",
+            "has_getter": false,
+            "has_setter": false,
+            "summary": ""
+          },
+          {
+            "name": "TotalProjectsFailed",
+            "type": "int",
+            "modifiers": "public",
+            "has_getter": false,
+            "has_setter": false,
+            "summary": ""
+          },
+          {
+            "name": "LoadSuccessRate",
+            "type": "double",
+            "modifiers": "public",
+            "has_getter": false,
+            "has_setter": false,
+            "summary": ""
+          }
+        ],
+        "fields": [
+          {
+            "name": "_workspace",
+            "type": "MSBuildWorkspace",
+            "modifiers": "private",
+            "is_readonly": false,
+            "is_const": false
+          },
+          {
+            "name": "_loadedProjects",
+            "type": "Dictionary<string, Models.ProjectInfo>",
+            "modifiers": "private readonly",
+            "is_readonly": true,
+            "is_const": false
+          },
+          {
+            "name": "_loadFailures",
+            "type": "List<string>",
+            "modifiers": "private readonly",
+            "is_readonly": true,
+            "is_const": false
+          }
+        ],
+        "summary": "Service for loading and managing MSBuild workspaces for C# solution analysis",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      }
+    ],
+    "dependencies": [
+      {
+        "namespace": "System",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.Collections.Generic",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.IO",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.Threading.Tasks",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "Microsoft.CodeAnalysis",
+        "type": "Microsoft",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "Microsoft.CodeAnalysis.MSBuild",
+        "type": "Microsoft",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "StructuralIntelligence.Models",
+        "type": "Internal",
+        "is_alias": false,
+        "alias_name": null
+      }
+    ],
+    "lines_of_code": 316,
+    "analysis_timestamp": "2025-10-31T19:00:26.8009995Z"
+  },
+  {
+    "file_path": "src\\services\\StructuralAnalyzerService.cs",
+    "namespace": "StructuralIntelligence.Services",
+    "classes": [
+      {
+        "name": "StructuralAnalyzerService",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [
+          {
+            "name": "AnalyzeSolutionAsync",
+            "return_type": "Task<ArchitectureModel>",
+            "parameters": [
+              {
+                "name": "solutionPath",
+                "type": "string",
+                "has_default_value": false,
+                "default_value": null
+              },
+              {
+                "name": "configuration",
+                "type": "string",
+                "has_default_value": true,
+                "default_value": "\"Debug\""
+              }
+            ],
+            "modifiers": "public async",
+            "summary": "Analyze a solution and generate complete structural mapping",
+            "is_async": true,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 2
+          },
+          {
+            "name": "AnalyzeProjectAsync",
+            "return_type": "Task<ArchitectureModel>",
+            "parameters": [
+              {
+                "name": "projectInfo",
+                "type": "Models.ProjectInfo",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "private async",
+            "summary": "Analyze a single project for structural composition",
+            "is_async": true,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 14
+          },
+          {
+            "name": "ExtractClassInfo",
+            "return_type": "ClassInfo",
+            "parameters": [
+              {
+                "name": "typeSymbol",
+                "type": "Microsoft.CodeAnalysis.INamedTypeSymbol",
+                "has_default_value": false,
+                "default_value": null
+              },
+              {
+                "name": "filePath",
+                "type": "string",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "private",
+            "summary": "Extract class information from symbol",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 3
+          },
+          {
+            "name": "ExtractMethodInfo",
+            "return_type": "MethodInfo",
+            "parameters": [
+              {
+                "name": "methodSymbol",
+                "type": "Microsoft.CodeAnalysis.IMethodSymbol",
+                "has_default_value": false,
+                "default_value": null
+              },
+              {
+                "name": "declaringType",
+                "type": "string",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "private",
+            "summary": "Extract method information from symbol",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 4
+          },
+          {
+            "name": "ExtractPropertyInfo",
+            "return_type": "PropertyInfo",
+            "parameters": [
+              {
+                "name": "propertySymbol",
+                "type": "Microsoft.CodeAnalysis.IPropertySymbol",
+                "has_default_value": false,
+                "default_value": null
+              },
+              {
+                "name": "declaringType",
+                "type": "string",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "private",
+            "summary": "Extract property information from symbol",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 2
+          },
+          {
+            "name": "ExtractNamespaceInfoFromDocumentAsync",
+            "return_type": "Task<NamespaceInfo>",
+            "parameters": [
+              {
+                "name": "document",
+                "type": "Document",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "private async",
+            "summary": "Extract namespace information from document",
+            "is_async": true,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 6
+          },
+          {
+            "name": "GetAccessibility",
+            "return_type": "string",
+            "parameters": [
+              {
+                "name": "accessibility",
+                "type": "Accessibility",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "private",
+            "summary": "Get string representation of accessibility",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 1
+          },
+          {
+            "name": "MergeArchitectureModels",
+            "return_type": "void",
+            "parameters": [
+              {
+                "name": "target",
+                "type": "ArchitectureModel",
+                "has_default_value": false,
+                "default_value": null
+              },
+              {
+                "name": "source",
+                "type": "ArchitectureModel",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "private",
+            "summary": "Merge two architecture models",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 17
+          },
+          {
+            "name": "UpdateArchitectureModelWithProjectAnalysis",
+            "return_type": "void",
+            "parameters": [
+              {
+                "name": "mainModel",
+                "type": "ArchitectureModel",
+                "has_default_value": false,
+                "default_value": null
+              },
+              {
+                "name": "projectModel",
+                "type": "ArchitectureModel",
+                "has_default_value": false,
+                "default_value": null
+              },
+              {
+                "name": "projectName",
+                "type": "string",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "private",
+            "summary": "Update main architecture model with project analysis results",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 1
+          },
+          {
+            "name": "AnalyzeProjectRelationships",
+            "return_type": "void",
+            "parameters": [
+              {
+                "name": "architectureModel",
+                "type": "ArchitectureModel",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "private",
+            "summary": "Analyze relationships between projects",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 11
+          },
+          {
+            "name": "ExtractProjectNameFromReference",
+            "return_type": "string",
+            "parameters": [
+              {
+                "name": "reference",
+                "type": "string",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "private",
+            "summary": "Extract project name from reference string",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 2
+          },
+          {
+            "name": "GetSymbolRegistry",
+            "return_type": "SymbolResolutionRegistry",
+            "parameters": [],
+            "modifiers": "public",
+            "summary": "Get the symbol resolution registry",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 1
+          },
+          {
+            "name": "GetPreprocessorRegistry",
+            "return_type": "PreprocessorSymbolRegistryCollection",
+            "parameters": [],
+            "modifiers": "public",
+            "summary": "Get the preprocessor symbol registry",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 1
+          },
+          {
+            "name": "IsSymbolResolutionTargetMet",
+            "return_type": "bool",
+            "parameters": [],
+            "modifiers": "public",
+            "summary": "Check if symbol resolution target is met (≥98%)",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 1
+          },
+          {
+            "name": "IsProjectLoadingTargetMet",
+            "return_type": "bool",
+            "parameters": [],
+            "modifiers": "public",
+            "summary": "Check if project loading target is met (100%)",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 1
+          }
+        ],
+        "properties": [],
+        "fields": [
+          {
+            "name": "_workspaceService",
+            "type": "MsBuildWorkspaceService",
+            "modifiers": "private readonly",
+            "is_readonly": true,
+            "is_const": false
+          },
+          {
+            "name": "_symbolRegistry",
+            "type": "SymbolResolutionRegistry",
+            "modifiers": "private readonly",
+            "is_readonly": true,
+            "is_const": false
+          },
+          {
+            "name": "_preprocessorRegistry",
+            "type": "PreprocessorSymbolRegistryCollection",
+            "modifiers": "private readonly",
+            "is_readonly": true,
+            "is_const": false
+          }
+        ],
+        "summary": "Service for analyzing complete structural composition of C# codebase using Roslyn",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      }
+    ],
+    "dependencies": [
+      {
+        "namespace": "System",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.Collections.Generic",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.Linq",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.Threading.Tasks",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "Microsoft.CodeAnalysis",
+        "type": "Microsoft",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "StructuralIntelligence.Models",
+        "type": "Internal",
+        "is_alias": false,
+        "alias_name": null
+      }
+    ],
+    "lines_of_code": 559,
+    "analysis_timestamp": "2025-10-31T19:00:27.4475921Z"
+  }
+]
