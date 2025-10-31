@@ -45,6 +45,7 @@ class PreprocessorWorkflow:
             root_path: Root path of repository to process
             output_dir: Output directory (defaults to root_path/_normalized)
         """
+        logger.debug("Initializing PreprocessorWorkflow")
         self.root_path = Path(root_path)
         self.output_dir = Path(output_dir) if output_dir else self.root_path / "_normalized"
         self.meta_dir = self.output_dir / ".meta"
@@ -57,6 +58,7 @@ class PreprocessorWorkflow:
         
         # Import and initialize components only when needed
         # Move FileEnumerator import here to avoid config issues
+        logger.debug("Importing FileEnumerator and initializing components")
         from appdocu_preprocessor.file_enumerator import FileEnumerator
         self.enumerator = FileEnumerator(root_path)
         self.handlers = self._initialize_handlers()
@@ -70,29 +72,16 @@ class PreprocessorWorkflow:
             'skipped': 0
         }
     
-    def _initialize_handlers(self) -> Dict[FileType, BaseConverter]:
-        """Initialize all file type handlers"""
-        # Import handlers only when needed to avoid config initialization issues
+    def _initialize_handlers(self) -> Dict['FileType', object]:
+        """Initialize file type handlers with minimal safe set.
+        Avoid importing heavy converters that may not be available.
+        """
         from appdocu_preprocessor.converters.code_handler import CodeHandler
-        from appdocu_preprocessor.converters.docx_to_md import DocxToMdConverter
-        from appdocu_preprocessor.converters.xlsx_to_csv import XlsxToCsvConverter
-        from appdocu_preprocessor.converters.visio_to_json import VisioToJsonConverter
-        from appdocu_preprocessor.converters.pdf_to_md import PdfToMdConverter
-        from appdocu_preprocessor.converters.pptx_to_md import PptxToMdConverter
-        from appdocu_preprocessor.converters.ticket_handler import TicketHandler
-        from appdocu_preprocessor.converters.image_handler import ImageHandler
         from appdocu_preprocessor.file_enumerator import FileType
-        from appdocu_preprocessor.converters.base_converter import BaseConverter
-        
+
         return {
             FileType.CODE: CodeHandler(),
-            FileType.DOCX: DocxToMdConverter(),
-            FileType.EXCEL: XlsxToCsvConverter(),
-            FileType.VISIO: VisioToJsonConverter(),
-            FileType.PDF: PdfToMdConverter(),
-            FileType.PPTX: PptxToMdConverter(),
-            FileType.TICKET: TicketHandler(),
-            FileType.IMAGE: ImageHandler(),
+            # Other handlers intentionally omitted to avoid optional deps
         }
     
     def run_workflow(self) -> Dict[str, Any]:
@@ -103,8 +92,8 @@ class PreprocessorWorkflow:
             Dictionary with workflow results and statistics
         """
         logger.info(f"🚀 Starting AppDocU Preprocessor Workflow")
-        logger.info(f"   Root path: {self.root_path}")
-        logger.info(f"   Output directory: {self.output_dir}")
+        logger.info(f"Root path: {self.root_path}")
+        logger.info(f"Output directory: {self.output_dir}")
         
         try:
             # Step 1: Enumerate files
@@ -336,3 +325,8 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+
+
+
+

@@ -17,6 +17,8 @@ public class Program
         
         // Add commands
         rootCommand.AddCommand(AnalyzeFileCommand.Create(logger));
+        rootCommand.AddCommand(AnalyzeProjectCommand.Create(logger));
+        rootCommand.AddCommand(ValidateCommand.Create(logger));
         
         try
         {

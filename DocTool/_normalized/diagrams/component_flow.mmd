@@ -1,0 +1,52 @@
+flowchart LR
+  subgraph architecture.md
+    G530_0([architecture.md])
+  end
+  subgraph change-impact-map.md
+    G907_0([change-impact-map.md])
+  end
+  subgraph logic-and-workflows.md
+    G852_0([logic-and-workflows.md])
+  end
+  subgraph Program.cs
+    G869_0([Program.cs])
+  end
+  subgraph Analysis
+    G612_0([AstInspector.cs])
+    G612_1([DependencyResolver.cs])
+    G612_2([RoslynAnalyzer.cs])
+  end
+  subgraph Commands
+    G103_0([AnalyzeFileCommand.cs])
+    G103_1([AnalyzeProjectCommand.cs])
+    G103_2([ValidateCommand.cs])
+  end
+  subgraph Logging
+    G654_0([StructuredLogger.cs])
+  end
+  subgraph Models
+    G192_0([CodeArtifact.cs])
+  end
+  subgraph obj
+    G361_0([.NETCoreApp,Version=v8.0.AssemblyAttributes.cs])
+    G361_1([DocTool.AssemblyInfo.cs])
+    G361_2([DocTool.csproj.FileListAbsolute.txt])
+  end
+  subgraph Output
+    G44_0([ArtifactGenerator.cs])
+  end
+  subgraph _normalized
+    G81_0([prompt.md])
+  end
+  subgraph DocTool
+    G292_0([AstInspector.cs])
+    G292_1([DependencyResolver.cs])
+    G292_2([RoslynAnalyzer.cs])
+    G292_3([AnalyzeFileCommand.cs])
+    G292_4([AnalyzeProjectCommand.cs])
+    G292_5([ValidateCommand.cs])
+    G292_6([StructuredLogger.cs])
+    G292_7([CodeArtifact.cs])
+    G292_8([ArtifactGenerator.cs])
+    G292_9([Program.cs])
+  end

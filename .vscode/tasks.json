@@ -1,101 +1,209 @@
 {
   "version": "2.0.0",
+  "inputs": [
+    {
+      "id": "llmEndpoint",
+      "type": "promptString",
+      "description": "Enter LLM endpoint URL",
+      "default": "http://localhost:8000"
+    }
+  ],
   "tasks": [
     {
-      "label": "AppDocU: Run Pass 1",
+      "label": "Generate Documentation",
       "type": "shell",
       "command": "python",
-      "args": ["appdoc.py", "--pass", "1", "--target", "${workspaceFolder}"],
+      "args": [
+        "run_docs.py",
+        "--path",
+        ".",
+        "--output",
+        "./docs_output",
+        "--verbose"
+      ],
       "group": "build",
       "presentation": {
         "echo": true,
         "reveal": "always",
         "focus": false,
-        "panel": "shared",
-        "showReuseMessage": true,
-        "clear": false
+        "panel": "shared"
       },
       "problemMatcher": []
     },
     {
-      "label": "AppDocU: Run Pass 2",
+      "label": "Validate Quality Gates",
       "type": "shell",
       "command": "python",
-      "args": ["appdoc.py", "--pass", "2", "--target", "${workspaceFolder}"],
-      "group": "build",
+      "args": [
+        "run_docs.py",
+        "validate",
+        "--path",
+        "."
+      ],
+      "options": {
+        "env": {
+          "APPDOC_MIN_COVERAGE": "70",
+          "APPDOC_MAX_FAILURE": "10",
+          "APPDOC_REQUIRE_DIAGRAMS": "1"
+        }
+      },
+      "group": "test",
       "presentation": {
         "echo": true,
         "reveal": "always",
         "focus": false,
-        "panel": "shared",
-        "showReuseMessage": true,
-        "clear": false
+        "panel": "shared"
       },
       "problemMatcher": []
     },
     {
-      "label": "AppDocU: Run Pass 3",
+      "label": "Dry Run Test",
       "type": "shell",
       "command": "python",
-      "args": ["appdoc.py", "--pass", "3", "--target", "${workspaceFolder}"],
-      "group": "build",
+      "args": [
+        "run_docs.py",
+        "--path",
+        ".",
+        "--output",
+        "./test_output",
+        "--dry-run",
+        "--verbose"
+      ],
+      "group": "test",
       "presentation": {
         "echo": true,
         "reveal": "always",
         "focus": false,
-        "panel": "shared",
-        "showReuseMessage": true,
-        "clear": false
+        "panel": "shared"
       },
       "problemMatcher": []
     },
     {
-      "label": "AppDocU: Run Cognitive Audit",
+      "label": "Build C# Tool",
       "type": "shell",
-      "command": "python",
-      "args": ["appdoc.py", "--pass", "3", "--target", "${workspaceFolder}"],
+      "command": "dotnet",
+      "args": [
+        "build",
+        "DocTool/DocTool.csproj",
+        "-c",
+        "Release"
+      ],
       "group": "build",
       "presentation": {
         "echo": true,
         "reveal": "always",
         "focus": false,
-        "panel": "shared",
-        "showReuseMessage": true,
-        "clear": false
+        "panel": "shared"
       },
       "problemMatcher": []
     },
     {
-      "label": "AppDocU: Generate Diagrams",
+      "label": "Clean Output",
       "type": "shell",
-      "command": "python",
-      "args": ["appdoc.py", "--diagrams", "--target", "${workspaceFolder}"],
-      "group": "build",
+      "command": "rm",
+      "args": [
+        "-rf",
+        "docs_output",
+        "test_output"
+      ],
+      "group": "clean",
       "presentation": {
         "echo": true,
         "reveal": "always",
         "focus": false,
-        "panel": "shared",
-        "showReuseMessage": true,
-        "clear": false
+        "panel": "shared"
       },
       "problemMatcher": []
     },
     {
-      "label": "AppDocU: Run Full Documentation",
+      "label": "Open Copilot Context",
+      "type": "shell",
+      "command": "code",
+      "args": [
+        "_normalized/context/prompt.md",
+        "_normalized/.meta/behavior-graph.json",
+        "_normalized/.meta/system-integrations.json",
+        "_normalized/.meta/docx-evidence.json"
+      ],
+      "group": "none",
+      "presentation": {
+        "echo": true,
+        "panel": "shared",
+        "focus": false,
+        "reveal": "always"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Run Full Workflow",
       "type": "shell",
       "command": "python",
-      "args": ["appdoc.py", "--all", "--target", "${workspaceFolder}"],
+      "args": [
+        "run_docs.py",
+        "full",
+        "--path",
+        "."
+      ],
       "group": "build",
       "presentation": {
         "echo": true,
         "reveal": "always",
         "focus": false,
-        "panel": "shared",
-        "showReuseMessage": true,
-        "clear": false
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Run Full Workflow (LLM)",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "run_docs.py",
+        "full",
+        "--path",
+        ".",
+        "--output",
+        "./docs_output",
+        "--llm-endpoint",
+        "${input:llmEndpoint}",
+        "--llm"
+      ],
+      "options": {
+        "env": {
+          "APPDOC_MIN_COVERAGE": "70",
+          "APPDOC_MAX_FAILURE": "10",
+          "APPDOC_REQUIRE_DIAGRAMS": "1"
+        }
+      },
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Self Test (Repo)",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "run_docs.py",
+        "selftest",
+        "--path",
+        ".",
+        "--min-words",
+        "150"
+      ],
+      "group": "test",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
       },
       "problemMatcher": []
     }
- ]
+  ]
 }

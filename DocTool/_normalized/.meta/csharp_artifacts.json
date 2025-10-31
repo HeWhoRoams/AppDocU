@@ -1,0 +1,1535 @@
+[
+  {
+    "file_path": "DocTool\\Analysis\\AstInspector.cs",
+    "namespace": "DocTool.Analysis",
+    "classes": [
+      {
+        "name": "AstInspector",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [
+          {
+            "name": "ExtractClasses",
+            "return_type": "List<ClassInfo>",
+            "parameters": [
+              {
+                "name": "root",
+                "type": "SyntaxNode",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "public",
+            "summary": "",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 2
+          },
+          {
+            "name": "ExtractBaseTypes",
+            "return_type": "List<string>",
+            "parameters": [
+              {
+                "name": "classDecl",
+                "type": "ClassDeclarationSyntax",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "private",
+            "summary": "",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 2
+          },
+          {
+            "name": "ExtractMethods",
+            "return_type": "List<MethodInfo>",
+            "parameters": [
+              {
+                "name": "classDecl",
+                "type": "ClassDeclarationSyntax",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "private",
+            "summary": "",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 2
+          },
+          {
+            "name": "ExtractParameters",
+            "return_type": "List<ParameterInfo>",
+            "parameters": [
+              {
+                "name": "parameterList",
+                "type": "ParameterListSyntax",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "private",
+            "summary": "",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 1
+          },
+          {
+            "name": "ExtractProperties",
+            "return_type": "List<PropertyInfo>",
+            "parameters": [
+              {
+                "name": "classDecl",
+                "type": "ClassDeclarationSyntax",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "private",
+            "summary": "",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 2
+          },
+          {
+            "name": "ExtractFields",
+            "return_type": "List<FieldInfo>",
+            "parameters": [
+              {
+                "name": "classDecl",
+                "type": "ClassDeclarationSyntax",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "private",
+            "summary": "",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 3
+          },
+          {
+            "name": "ExtractXmlDocSummary",
+            "return_type": "string",
+            "parameters": [
+              {
+                "name": "node",
+                "type": "SyntaxNode",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "private",
+            "summary": "",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 4
+          },
+          {
+            "name": "CalculateCyclomaticComplexity",
+            "return_type": "int",
+            "parameters": [
+              {
+                "name": "methodDecl",
+                "type": "MethodDeclarationSyntax",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "private",
+            "summary": "",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 10
+          }
+        ],
+        "properties": [],
+        "fields": [
+          {
+            "name": "_logger",
+            "type": "ILogger",
+            "modifiers": "private readonly",
+            "is_readonly": true,
+            "is_const": false
+          }
+        ],
+        "summary": "",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      }
+    ],
+    "dependencies": [
+      {
+        "namespace": "System",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.Collections.Generic",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.Linq",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "Microsoft.CodeAnalysis",
+        "type": "Microsoft",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "Microsoft.CodeAnalysis.CSharp.Syntax",
+        "type": "Microsoft",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "Microsoft.Extensions.Logging",
+        "type": "Microsoft",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "DocTool.Models",
+        "type": "Internal",
+        "is_alias": false,
+        "alias_name": null
+      }
+    ],
+    "lines_of_code": 205,
+    "analysis_timestamp": "2025-10-31T17:15:25.0535049Z"
+  },
+  {
+    "file_path": "DocTool\\Analysis\\DependencyResolver.cs",
+    "namespace": "DocTool.Analysis",
+    "classes": [
+      {
+        "name": "DependencyResolver",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [
+          {
+            "name": "ExtractDependencies",
+            "return_type": "List<DependencyInfo>",
+            "parameters": [
+              {
+                "name": "root",
+                "type": "SyntaxNode",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "public",
+            "summary": "",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 3
+          },
+          {
+            "name": "ClassifyDependency",
+            "return_type": "string",
+            "parameters": [
+              {
+                "name": "namespaceName",
+                "type": "string",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "private",
+            "summary": "",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 5
+          },
+          {
+            "name": "IsKnownThirdParty",
+            "return_type": "bool",
+            "parameters": [
+              {
+                "name": "root",
+                "type": "string",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "private",
+            "summary": "",
+            "is_async": false,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 1
+          }
+        ],
+        "properties": [],
+        "fields": [
+          {
+            "name": "_logger",
+            "type": "ILogger",
+            "modifiers": "private readonly",
+            "is_readonly": true,
+            "is_const": false
+          }
+        ],
+        "summary": "",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      }
+    ],
+    "dependencies": [
+      {
+        "namespace": "System",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.Collections.Generic",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.Linq",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "Microsoft.CodeAnalysis",
+        "type": "Microsoft",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "Microsoft.CodeAnalysis.CSharp.Syntax",
+        "type": "Microsoft",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "Microsoft.Extensions.Logging",
+        "type": "Microsoft",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "DocTool.Models",
+        "type": "Internal",
+        "is_alias": false,
+        "alias_name": null
+      }
+    ],
+    "lines_of_code": 78,
+    "analysis_timestamp": "2025-10-31T17:15:25.8111472Z"
+  },
+  {
+    "file_path": "DocTool\\Analysis\\RoslynAnalyzer.cs",
+    "namespace": "DocTool.Analysis",
+    "classes": [
+      {
+        "name": "RoslynAnalyzer",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [
+          {
+            "name": "AnalyzeFileAsync",
+            "return_type": "Task<CodeArtifact>",
+            "parameters": [
+              {
+                "name": "filePath",
+                "type": "string",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "public async",
+            "summary": "",
+            "is_async": true,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 3
+          }
+        ],
+        "properties": [],
+        "fields": [
+          {
+            "name": "_logger",
+            "type": "ILogger",
+            "modifiers": "private readonly",
+            "is_readonly": true,
+            "is_const": false
+          },
+          {
+            "name": "_astInspector",
+            "type": "AstInspector",
+            "modifiers": "private readonly",
+            "is_readonly": true,
+            "is_const": false
+          },
+          {
+            "name": "_dependencyResolver",
+            "type": "DependencyResolver",
+            "modifiers": "private readonly",
+            "is_readonly": true,
+            "is_const": false
+          }
+        ],
+        "summary": "",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      }
+    ],
+    "dependencies": [
+      {
+        "namespace": "System",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.Collections.Generic",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.IO",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.Linq",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.Threading.Tasks",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "Microsoft.CodeAnalysis",
+        "type": "Microsoft",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "Microsoft.CodeAnalysis.CSharp",
+        "type": "Microsoft",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "Microsoft.CodeAnalysis.CSharp.Syntax",
+        "type": "Microsoft",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "Microsoft.Extensions.Logging",
+        "type": "Microsoft",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "DocTool.Models",
+        "type": "Internal",
+        "is_alias": false,
+        "alias_name": null
+      }
+    ],
+    "lines_of_code": 82,
+    "analysis_timestamp": "2025-10-31T17:15:26.575059Z"
+  },
+  {
+    "file_path": "DocTool\\Commands\\AnalyzeFileCommand.cs",
+    "namespace": "DocTool.Commands",
+    "classes": [
+      {
+        "name": "AnalyzeFileCommand",
+        "modifiers": "public static",
+        "base_types": [],
+        "methods": [
+          {
+            "name": "Create",
+            "return_type": "Command",
+            "parameters": [
+              {
+                "name": "logger",
+                "type": "ILogger",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "public static",
+            "summary": "",
+            "is_async": false,
+            "is_static": true,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 2
+          },
+          {
+            "name": "ExecuteAsync",
+            "return_type": "Task",
+            "parameters": [
+              {
+                "name": "file",
+                "type": "FileInfo",
+                "has_default_value": false,
+                "default_value": null
+              },
+              {
+                "name": "output",
+                "type": "FileInfo",
+                "has_default_value": false,
+                "default_value": null
+              },
+              {
+                "name": "logger",
+                "type": "ILogger",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "private static async",
+            "summary": "",
+            "is_async": true,
+            "is_static": true,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 2
+          }
+        ],
+        "properties": [],
+        "fields": [],
+        "summary": "",
+        "is_abstract": false,
+        "is_static": true,
+        "is_sealed": false
+      }
+    ],
+    "dependencies": [
+      {
+        "namespace": "System",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.CommandLine",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.IO",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.Text.Json",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.Threading.Tasks",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "DocTool.Analysis",
+        "type": "Internal",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "DocTool.Output",
+        "type": "Internal",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "Microsoft.Extensions.Logging",
+        "type": "Microsoft",
+        "is_alias": false,
+        "alias_name": null
+      }
+    ],
+    "lines_of_code": 82,
+    "analysis_timestamp": "2025-10-31T17:15:27.3216288Z"
+  },
+  {
+    "file_path": "DocTool\\Commands\\AnalyzeProjectCommand.cs",
+    "namespace": "DocTool.Commands",
+    "classes": [
+      {
+        "name": "AnalyzeProjectCommand",
+        "modifiers": "public static",
+        "base_types": [],
+        "methods": [
+          {
+            "name": "Create",
+            "return_type": "Command",
+            "parameters": [
+              {
+                "name": "logger",
+                "type": "ILogger",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "public static",
+            "summary": "",
+            "is_async": false,
+            "is_static": true,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 2
+          },
+          {
+            "name": "ExecuteAsync",
+            "return_type": "Task",
+            "parameters": [
+              {
+                "name": "project",
+                "type": "DirectoryInfo",
+                "has_default_value": false,
+                "default_value": null
+              },
+              {
+                "name": "output",
+                "type": "FileInfo",
+                "has_default_value": false,
+                "default_value": null
+              },
+              {
+                "name": "logger",
+                "type": "ILogger",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "private static async",
+            "summary": "",
+            "is_async": true,
+            "is_static": true,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 5
+          }
+        ],
+        "properties": [],
+        "fields": [],
+        "summary": "",
+        "is_abstract": false,
+        "is_static": true,
+        "is_sealed": false
+      }
+    ],
+    "dependencies": [
+      {
+        "namespace": "System",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.CommandLine",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.IO",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.Linq",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.Text.Json",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.Threading.Tasks",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "DocTool.Analysis",
+        "type": "Internal",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "DocTool.Output",
+        "type": "Internal",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "Microsoft.Extensions.Logging",
+        "type": "Microsoft",
+        "is_alias": false,
+        "alias_name": null
+      }
+    ],
+    "lines_of_code": 104,
+    "analysis_timestamp": "2025-10-31T17:15:28.0757579Z"
+  },
+  {
+    "file_path": "DocTool\\Commands\\ValidateCommand.cs",
+    "namespace": "DocTool.Commands",
+    "classes": [
+      {
+        "name": "ValidateCommand",
+        "modifiers": "public static",
+        "base_types": [],
+        "methods": [
+          {
+            "name": "Create",
+            "return_type": "Command",
+            "parameters": [
+              {
+                "name": "logger",
+                "type": "ILogger",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "public static",
+            "summary": "",
+            "is_async": false,
+            "is_static": true,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 2
+          },
+          {
+            "name": "ExecuteAsync",
+            "return_type": "Task",
+            "parameters": [
+              {
+                "name": "file",
+                "type": "FileInfo",
+                "has_default_value": false,
+                "default_value": null
+              },
+              {
+                "name": "logger",
+                "type": "ILogger",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "private static async",
+            "summary": "",
+            "is_async": true,
+            "is_static": true,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 4
+          }
+        ],
+        "properties": [],
+        "fields": [],
+        "summary": "",
+        "is_abstract": false,
+        "is_static": true,
+        "is_sealed": false
+      }
+    ],
+    "dependencies": [
+      {
+        "namespace": "System",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.CommandLine",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.IO",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.Linq",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.Threading.Tasks",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "Microsoft.CodeAnalysis.CSharp",
+        "type": "Microsoft",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "Microsoft.Extensions.Logging",
+        "type": "Microsoft",
+        "is_alias": false,
+        "alias_name": null
+      }
+    ],
+    "lines_of_code": 72,
+    "analysis_timestamp": "2025-10-31T17:15:28.8225539Z"
+  },
+  {
+    "file_path": "DocTool\\Logging\\StructuredLogger.cs",
+    "namespace": "DocTool.Logging",
+    "classes": [
+      {
+        "name": "StructuredLogger",
+        "modifiers": "public static",
+        "base_types": [],
+        "methods": [
+          {
+            "name": "Create",
+            "return_type": "ILogger",
+            "parameters": [],
+            "modifiers": "public static",
+            "summary": "",
+            "is_async": false,
+            "is_static": true,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 1
+          }
+        ],
+        "properties": [],
+        "fields": [],
+        "summary": "",
+        "is_abstract": false,
+        "is_static": true,
+        "is_sealed": false
+      }
+    ],
+    "dependencies": [
+      {
+        "namespace": "Microsoft.Extensions.Logging",
+        "type": "Microsoft",
+        "is_alias": false,
+        "alias_name": null
+      }
+    ],
+    "lines_of_code": 18,
+    "analysis_timestamp": "2025-10-31T17:15:29.3248645Z"
+  },
+  {
+    "file_path": "DocTool\\Models\\CodeArtifact.cs",
+    "namespace": "DocTool.Models",
+    "classes": [
+      {
+        "name": "CodeArtifact",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [],
+        "properties": [
+          {
+            "name": "FilePath",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "Namespace",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "Classes",
+            "type": "List<ClassInfo>",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "Dependencies",
+            "type": "List<DependencyInfo>",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "LinesOfCode",
+            "type": "int",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "AnalysisTimestamp",
+            "type": "DateTime",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          }
+        ],
+        "fields": [],
+        "summary": "",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      },
+      {
+        "name": "ClassInfo",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [],
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "Modifiers",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "BaseTypes",
+            "type": "List<string>",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "Methods",
+            "type": "List<MethodInfo>",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "Properties",
+            "type": "List<PropertyInfo>",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "Fields",
+            "type": "List<FieldInfo>",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "Summary",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "IsAbstract",
+            "type": "bool",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "IsStatic",
+            "type": "bool",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "IsSealed",
+            "type": "bool",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          }
+        ],
+        "fields": [],
+        "summary": "",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      },
+      {
+        "name": "MethodInfo",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [],
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "ReturnType",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "Parameters",
+            "type": "List<ParameterInfo>",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "Modifiers",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "Summary",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "IsAsync",
+            "type": "bool",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "IsStatic",
+            "type": "bool",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "IsVirtual",
+            "type": "bool",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "IsOverride",
+            "type": "bool",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "CyclomaticComplexity",
+            "type": "int",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          }
+        ],
+        "fields": [],
+        "summary": "",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      },
+      {
+        "name": "ParameterInfo",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [],
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "Type",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "HasDefaultValue",
+            "type": "bool",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "DefaultValue",
+            "type": "string?",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          }
+        ],
+        "fields": [],
+        "summary": "",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      },
+      {
+        "name": "PropertyInfo",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [],
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "Type",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "Modifiers",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "HasGetter",
+            "type": "bool",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "HasSetter",
+            "type": "bool",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "Summary",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          }
+        ],
+        "fields": [],
+        "summary": "",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      },
+      {
+        "name": "FieldInfo",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [],
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "Type",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "Modifiers",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "IsReadOnly",
+            "type": "bool",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "IsConst",
+            "type": "bool",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          }
+        ],
+        "fields": [],
+        "summary": "",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      },
+      {
+        "name": "DependencyInfo",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [],
+        "properties": [
+          {
+            "name": "Namespace",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "Type",
+            "type": "string",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "IsAlias",
+            "type": "bool",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          },
+          {
+            "name": "AliasName",
+            "type": "string?",
+            "modifiers": "public",
+            "has_getter": true,
+            "has_setter": true,
+            "summary": ""
+          }
+        ],
+        "fields": [],
+        "summary": "",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      }
+    ],
+    "dependencies": [
+      {
+        "namespace": "System",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.Collections.Generic",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.Text.Json.Serialization",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      }
+    ],
+    "lines_of_code": 162,
+    "analysis_timestamp": "2025-10-31T17:15:29.8461519Z"
+  },
+  {
+    "file_path": "DocTool\\Output\\ArtifactGenerator.cs",
+    "namespace": "DocTool.Output",
+    "classes": [
+      {
+        "name": "ArtifactGenerator",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [
+          {
+            "name": "WriteArtifactAsync",
+            "return_type": "Task",
+            "parameters": [
+              {
+                "name": "artifact",
+                "type": "CodeArtifact",
+                "has_default_value": false,
+                "default_value": null
+              },
+              {
+                "name": "outputPath",
+                "type": "string",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "public async",
+            "summary": "",
+            "is_async": true,
+            "is_static": false,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 2
+          }
+        ],
+        "properties": [],
+        "fields": [
+          {
+            "name": "_logger",
+            "type": "ILogger",
+            "modifiers": "private readonly",
+            "is_readonly": true,
+            "is_const": false
+          },
+          {
+            "name": "_jsonOptions",
+            "type": "JsonSerializerOptions",
+            "modifiers": "private readonly",
+            "is_readonly": true,
+            "is_const": false
+          }
+        ],
+        "summary": "",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      }
+    ],
+    "dependencies": [
+      {
+        "namespace": "System",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.IO",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.Text.Json",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.Threading.Tasks",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "Microsoft.Extensions.Logging",
+        "type": "Microsoft",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "DocTool.Models",
+        "type": "Internal",
+        "is_alias": false,
+        "alias_name": null
+      }
+    ],
+    "lines_of_code": 41,
+    "analysis_timestamp": "2025-10-31T17:15:30.3513564Z"
+  },
+  {
+    "file_path": "DocTool\\Program.cs",
+    "namespace": "DocTool",
+    "classes": [
+      {
+        "name": "Program",
+        "modifiers": "public",
+        "base_types": [],
+        "methods": [
+          {
+            "name": "Main",
+            "return_type": "Task<int>",
+            "parameters": [
+              {
+                "name": "args",
+                "type": "string[]",
+                "has_default_value": false,
+                "default_value": null
+              }
+            ],
+            "modifiers": "public static async",
+            "summary": "",
+            "is_async": true,
+            "is_static": true,
+            "is_virtual": false,
+            "is_override": false,
+            "cyclomatic_complexity": 2
+          }
+        ],
+        "properties": [],
+        "fields": [],
+        "summary": "",
+        "is_abstract": false,
+        "is_static": false,
+        "is_sealed": false
+      }
+    ],
+    "dependencies": [
+      {
+        "namespace": "System",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.CommandLine",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "System.Threading.Tasks",
+        "type": "Framework",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "DocTool.Commands",
+        "type": "Internal",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "DocTool.Logging",
+        "type": "Internal",
+        "is_alias": false,
+        "alias_name": null
+      },
+      {
+        "namespace": "Microsoft.Extensions.Logging",
+        "type": "Microsoft",
+        "is_alias": false,
+        "alias_name": null
+      }
+    ],
+    "lines_of_code": 34,
+    "analysis_timestamp": "2025-10-31T17:15:31.0810195Z"
+  }
+]

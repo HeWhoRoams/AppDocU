@@ -1,0 +1,1066 @@
+{
+  "generated_at": "2025-10-31T13:15:31.257343",
+  "nodes": [
+    {
+      "id": "e3b9a6",
+      "name": "architecture.md",
+      "path": "architecture.md",
+      "type": "file",
+      "size_kb": 1,
+      "status": "pending",
+      "extension": ".md"
+    },
+    {
+      "id": "1bb419",
+      "name": "change-impact-map.md",
+      "path": "change-impact-map.md",
+      "type": "file",
+      "size_kb": 0,
+      "status": "pending",
+      "extension": ".md"
+    },
+    {
+      "id": "f5eab1",
+      "name": "diagrams.md",
+      "path": "diagrams.md",
+      "type": "file",
+      "size_kb": 0,
+      "status": "pending",
+      "extension": ".md"
+    },
+    {
+      "id": "dcec20",
+      "name": "logic-and-workflows.md",
+      "path": "logic-and-workflows.md",
+      "type": "file",
+      "size_kb": 1,
+      "status": "pending",
+      "extension": ".md"
+    },
+    {
+      "id": "1d4a43",
+      "name": "Program.cs",
+      "path": "Program.cs",
+      "type": "file",
+      "size_kb": 0,
+      "status": "pending",
+      "extension": ".cs"
+    },
+    {
+      "id": "f1cab6",
+      "name": "AstInspector.cs",
+      "path": "Analysis\\AstInspector.cs",
+      "type": "file",
+      "size_kb": 7,
+      "status": "pending",
+      "extension": ".cs"
+    },
+    {
+      "id": "c19ccc",
+      "name": "DependencyResolver.cs",
+      "path": "Analysis\\DependencyResolver.cs",
+      "type": "file",
+      "size_kb": 2,
+      "status": "pending",
+      "extension": ".cs"
+    },
+    {
+      "id": "4cbb94",
+      "name": "RoslynAnalyzer.cs",
+      "path": "Analysis\\RoslynAnalyzer.cs",
+      "type": "file",
+      "size_kb": 2,
+      "status": "pending",
+      "extension": ".cs"
+    },
+    {
+      "id": "58f297",
+      "name": "AnalyzeFileCommand.cs",
+      "path": "Commands\\AnalyzeFileCommand.cs",
+      "type": "file",
+      "size_kb": 2,
+      "status": "pending",
+      "extension": ".cs"
+    },
+    {
+      "id": "86fb19",
+      "name": "AnalyzeProjectCommand.cs",
+      "path": "Commands\\AnalyzeProjectCommand.cs",
+      "type": "file",
+      "size_kb": 3,
+      "status": "pending",
+      "extension": ".cs"
+    },
+    {
+      "id": "ff24b6",
+      "name": "ValidateCommand.cs",
+      "path": "Commands\\ValidateCommand.cs",
+      "type": "file",
+      "size_kb": 2,
+      "status": "pending",
+      "extension": ".cs"
+    },
+    {
+      "id": "0bf4d6",
+      "name": "StructuredLogger.cs",
+      "path": "Logging\\StructuredLogger.cs",
+      "type": "file",
+      "size_kb": 0,
+      "status": "pending",
+      "extension": ".cs"
+    },
+    {
+      "id": "2bc37f",
+      "name": "CodeArtifact.cs",
+      "path": "Models\\CodeArtifact.cs",
+      "type": "file",
+      "size_kb": 4,
+      "status": "pending",
+      "extension": ".cs"
+    },
+    {
+      "id": "f7a5d9",
+      "name": ".NETCoreApp,Version=v8.0.AssemblyAttributes.cs",
+      "path": "obj\\Release\\net8.0\\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs",
+      "type": "file",
+      "size_kb": 0,
+      "status": "pending",
+      "extension": ".cs"
+    },
+    {
+      "id": "23db7c",
+      "name": "DocTool.AssemblyInfo.cs",
+      "path": "obj\\Release\\net8.0\\DocTool.AssemblyInfo.cs",
+      "type": "file",
+      "size_kb": 0,
+      "status": "pending",
+      "extension": ".cs"
+    },
+    {
+      "id": "f50b05",
+      "name": "DocTool.csproj.FileListAbsolute.txt",
+      "path": "obj\\Release\\net8.0\\DocTool.csproj.FileListAbsolute.txt",
+      "type": "file",
+      "size_kb": 8,
+      "status": "pending",
+      "extension": ".txt"
+    },
+    {
+      "id": "9d3d51",
+      "name": "ArtifactGenerator.cs",
+      "path": "Output\\ArtifactGenerator.cs",
+      "type": "file",
+      "size_kb": 1,
+      "status": "pending",
+      "extension": ".cs"
+    },
+    {
+      "id": "23313f",
+      "name": "prompt.md",
+      "path": "_normalized\\context\\prompt.md",
+      "type": "file",
+      "size_kb": 1,
+      "status": "pending",
+      "extension": ".md"
+    },
+    {
+      "id": "cs_18",
+      "name": "AstInspector.cs",
+      "path": "DocTool\\Analysis\\AstInspector.cs",
+      "type": "file",
+      "extension": ".cs",
+      "namespace": "DocTool.Analysis",
+      "lines_of_code": 205,
+      "classes": [
+        "AstInspector"
+      ],
+      "metrics": {
+        "loc": 205,
+        "class_count": 1,
+        "method_count": 8
+      }
+    },
+    {
+      "id": "cs_19",
+      "name": "DependencyResolver.cs",
+      "path": "DocTool\\Analysis\\DependencyResolver.cs",
+      "type": "file",
+      "extension": ".cs",
+      "namespace": "DocTool.Analysis",
+      "lines_of_code": 78,
+      "classes": [
+        "DependencyResolver"
+      ],
+      "metrics": {
+        "loc": 78,
+        "class_count": 1,
+        "method_count": 3
+      }
+    },
+    {
+      "id": "cs_20",
+      "name": "RoslynAnalyzer.cs",
+      "path": "DocTool\\Analysis\\RoslynAnalyzer.cs",
+      "type": "file",
+      "extension": ".cs",
+      "namespace": "DocTool.Analysis",
+      "lines_of_code": 82,
+      "classes": [
+        "RoslynAnalyzer"
+      ],
+      "metrics": {
+        "loc": 82,
+        "class_count": 1,
+        "method_count": 1
+      }
+    },
+    {
+      "id": "cs_21",
+      "name": "AnalyzeFileCommand.cs",
+      "path": "DocTool\\Commands\\AnalyzeFileCommand.cs",
+      "type": "file",
+      "extension": ".cs",
+      "namespace": "DocTool.Commands",
+      "lines_of_code": 82,
+      "classes": [
+        "AnalyzeFileCommand"
+      ],
+      "metrics": {
+        "loc": 82,
+        "class_count": 1,
+        "method_count": 2
+      }
+    },
+    {
+      "id": "cs_22",
+      "name": "AnalyzeProjectCommand.cs",
+      "path": "DocTool\\Commands\\AnalyzeProjectCommand.cs",
+      "type": "file",
+      "extension": ".cs",
+      "namespace": "DocTool.Commands",
+      "lines_of_code": 104,
+      "classes": [
+        "AnalyzeProjectCommand"
+      ],
+      "metrics": {
+        "loc": 104,
+        "class_count": 1,
+        "method_count": 2
+      }
+    },
+    {
+      "id": "cs_23",
+      "name": "ValidateCommand.cs",
+      "path": "DocTool\\Commands\\ValidateCommand.cs",
+      "type": "file",
+      "extension": ".cs",
+      "namespace": "DocTool.Commands",
+      "lines_of_code": 72,
+      "classes": [
+        "ValidateCommand"
+      ],
+      "metrics": {
+        "loc": 72,
+        "class_count": 1,
+        "method_count": 2
+      }
+    },
+    {
+      "id": "cs_24",
+      "name": "StructuredLogger.cs",
+      "path": "DocTool\\Logging\\StructuredLogger.cs",
+      "type": "file",
+      "extension": ".cs",
+      "namespace": "DocTool.Logging",
+      "lines_of_code": 18,
+      "classes": [
+        "StructuredLogger"
+      ],
+      "metrics": {
+        "loc": 18,
+        "class_count": 1,
+        "method_count": 1
+      }
+    },
+    {
+      "id": "cs_25",
+      "name": "CodeArtifact.cs",
+      "path": "DocTool\\Models\\CodeArtifact.cs",
+      "type": "file",
+      "extension": ".cs",
+      "namespace": "DocTool.Models",
+      "lines_of_code": 162,
+      "classes": [
+        "CodeArtifact",
+        "ClassInfo",
+        "MethodInfo",
+        "ParameterInfo",
+        "PropertyInfo",
+        "FieldInfo",
+        "DependencyInfo"
+      ],
+      "metrics": {
+        "loc": 162,
+        "class_count": 7,
+        "method_count": 0
+      }
+    },
+    {
+      "id": "cs_26",
+      "name": "ArtifactGenerator.cs",
+      "path": "DocTool\\Output\\ArtifactGenerator.cs",
+      "type": "file",
+      "extension": ".cs",
+      "namespace": "DocTool.Output",
+      "lines_of_code": 41,
+      "classes": [
+        "ArtifactGenerator"
+      ],
+      "metrics": {
+        "loc": 41,
+        "class_count": 1,
+        "method_count": 1
+      }
+    },
+    {
+      "id": "cs_27",
+      "name": "Program.cs",
+      "path": "DocTool\\Program.cs",
+      "type": "file",
+      "extension": ".cs",
+      "namespace": "DocTool",
+      "lines_of_code": 34,
+      "classes": [
+        "Program"
+      ],
+      "metrics": {
+        "loc": 34,
+        "class_count": 1,
+        "method_count": 1
+      }
+    },
+    {
+      "id": "ticket_28",
+      "name": "DocTool.deps.json",
+      "path": "bin\\Release\\net8.0\\DocTool.deps.json",
+      "type": "ticket",
+      "extension": ".json",
+      "size_kb": 29
+    },
+    {
+      "id": "ticket_29",
+      "name": "DocTool.runtimeconfig.json",
+      "path": "bin\\Release\\net8.0\\DocTool.runtimeconfig.json",
+      "type": "ticket",
+      "extension": ".json",
+      "size_kb": 0
+    },
+    {
+      "id": "ticket_30",
+      "name": "DocTool.csproj.nuget.dgspec.json",
+      "path": "obj\\DocTool.csproj.nuget.dgspec.json",
+      "type": "ticket",
+      "extension": ".json",
+      "size_kb": 3
+    },
+    {
+      "id": "ticket_31",
+      "name": "project.assets.json",
+      "path": "obj\\project.assets.json",
+      "type": "ticket",
+      "extension": ".json",
+      "size_kb": 148
+    },
+    {
+      "id": "ticket_32",
+      "name": "DocTool.sourcelink.json",
+      "path": "obj\\Release\\net8.0\\DocTool.sourcelink.json",
+      "type": "ticket",
+      "extension": ".json",
+      "size_kb": 0
+    },
+    {
+      "id": "ticket_33",
+      "name": "summary.json",
+      "path": "_normalized\\context\\summary.json",
+      "type": "ticket",
+      "extension": ".json",
+      "size_kb": 1
+    },
+    {
+      "id": "doc_34",
+      "name": "component_flow.png",
+      "path": "_normalized\\diagrams\\component_flow.png",
+      "type": "document",
+      "doc_type": "image",
+      "extension": ".png",
+      "size_kb": 139
+    },
+    {
+      "id": "doc_35",
+      "name": "component_flow.svg",
+      "path": "_normalized\\diagrams\\component_flow.svg",
+      "type": "document",
+      "doc_type": "image",
+      "extension": ".svg",
+      "size_kb": 27
+    },
+    {
+      "id": "doc_36",
+      "name": "data_flow.png",
+      "path": "_normalized\\diagrams\\data_flow.png",
+      "type": "document",
+      "doc_type": "image",
+      "extension": ".png",
+      "size_kb": 183
+    },
+    {
+      "id": "doc_37",
+      "name": "data_flow.svg",
+      "path": "_normalized\\diagrams\\data_flow.svg",
+      "type": "document",
+      "doc_type": "image",
+      "extension": ".svg",
+      "size_kb": 65
+    },
+    {
+      "id": "doc_38",
+      "name": "dependency_graph.png",
+      "path": "_normalized\\diagrams\\dependency_graph.png",
+      "type": "document",
+      "doc_type": "image",
+      "extension": ".png",
+      "size_kb": 598
+    },
+    {
+      "id": "doc_39",
+      "name": "dependency_graph.svg",
+      "path": "_normalized\\diagrams\\dependency_graph.svg",
+      "type": "document",
+      "doc_type": "image",
+      "extension": ".svg",
+      "size_kb": 96
+    },
+    {
+      "id": "doc_40",
+      "name": "system_context.png",
+      "path": "_normalized\\diagrams\\system_context.png",
+      "type": "document",
+      "doc_type": "image",
+      "extension": ".png",
+      "size_kb": 126
+    },
+    {
+      "id": "doc_41",
+      "name": "system_context.svg",
+      "path": "_normalized\\diagrams\\system_context.svg",
+      "type": "document",
+      "doc_type": "image",
+      "extension": ".svg",
+      "size_kb": 30
+    }
+  ],
+  "edges": [
+    {
+      "from": "DocTool\\Analysis\\AstInspector.cs",
+      "to_namespace": "System",
+      "type": "uses"
+    },
+    {
+      "from": "DocTool\\Analysis\\AstInspector.cs",
+      "to_namespace": "System.Collections.Generic",
+      "type": "uses"
+    },
+    {
+      "from": "DocTool\\Analysis\\AstInspector.cs",
+      "to_namespace": "System.Linq",
+      "type": "uses"
+    },
+    {
+      "from": "DocTool\\Analysis\\AstInspector.cs",
+      "to_namespace": "Microsoft.CodeAnalysis",
+      "type": "uses"
+    },
+    {
+      "from": "DocTool\\Analysis\\AstInspector.cs",
+      "to_namespace": "Microsoft.CodeAnalysis.CSharp.Syntax",
+      "type": "uses"
+    },
+    {
+      "from": "DocTool\\Analysis\\AstInspector.cs",
+      "to_namespace": "Microsoft.Extensions.Logging",
+      "type": "uses"
+    },
+    {
+      "from": "DocTool\\Analysis\\AstInspector.cs",
+      "to_namespace": "DocTool.Models",
+      "type": "uses"
+    },
+    {
+      "from": "DocTool\\Analysis\\DependencyResolver.cs",
+      "to_namespace": "System",
+      "type": "uses"
+    },
+    {
+      "from": "DocTool\\Analysis\\DependencyResolver.cs",
+      "to_namespace": "System.Collections.Generic",
+      "type": "uses"
+    },
+    {
+      "from": "DocTool\\Analysis\\DependencyResolver.cs",
+      "to_namespace": "System.Linq",
+      "type": "uses"
+    },
+    {
+      "from": "DocTool\\Analysis\\DependencyResolver.cs",
+      "to_namespace": "Microsoft.CodeAnalysis",
+      "type": "uses"
+    },
+    {
+      "from": "DocTool\\Analysis\\DependencyResolver.cs",
+      "to_namespace": "Microsoft.CodeAnalysis.CSharp.Syntax",
+      "type": "uses"
+    },
+    {
+      "from": "DocTool\\Analysis\\DependencyResolver.cs",
+      "to_namespace": "Microsoft.Extensions.Logging",
+      "type": "uses"
+    },
+    {
+      "from": "DocTool\\Analysis\\DependencyResolver.cs",
+      "to_namespace": "DocTool.Models",
+      "type": "uses"
+    },
+    {
+      "from": "DocTool\\Analysis\\RoslynAnalyzer.cs",
+      "to_namespace": "System",
+      "type": "uses"
+    },
+    {
+      "from": "DocTool\\Analysis\\RoslynAnalyzer.cs",
+      "to_namespace": "System.Collections.Generic",
+      "type": "uses"
+    },
+    {
+      "from": "DocTool\\Analysis\\RoslynAnalyzer.cs",
+      "to_namespace": "System.IO",
+      "type": "uses"
+    },
+    {
+      "from": "DocTool\\Analysis\\RoslynAnalyzer.cs",
+      "to_namespace": "System.Linq",
+      "type": "uses"
+    },
+    {
+      "from": "DocTool\\Analysis\\RoslynAnalyzer.cs",
+      "to_namespace": "System.Threading.Tasks",
+      "type": "uses"
+    },
+    {
+      "from": "DocTool\\Analysis\\RoslynAnalyzer.cs",
+      "to_namespace": "Microsoft.CodeAnalysis",
+      "type": "uses"
+    },
+    {
+      "from": "DocTool\\Analysis\\RoslynAnalyzer.cs",
+      "to_namespace": "Microsoft.CodeAnalysis.CSharp",
+      "type": "uses"
+    },
+    {
+      "from": "DocTool\\Analysis\\RoslynAnalyzer.cs",
+      "to_namespace": "Microsoft.CodeAnalysis.CSharp.Syntax",
+      "type": "uses"
+    },
+    {
+      "from": "DocTool\\Analysis\\RoslynAnalyzer.cs",
+      "to_namespace": "Microsoft.Extensions.Logging",
+      "type": "uses"
+    },
+    {
+      "from": "DocTool\\Analysis\\RoslynAnalyzer.cs",
+      "to_namespace": "DocTool.Models",
+      "type": "uses"
+    },
+    {
+      "from": "DocTool\\Commands\\AnalyzeFileCommand.cs",
+      "to_namespace": "System",
+      "type": "uses"
+    },
+    {
+      "from": "DocTool\\Commands\\AnalyzeFileCommand.cs",
+      "to_namespace": "System.CommandLine",
+      "type": "uses"
+    },
+    {
+      "from": "DocTool\\Commands\\AnalyzeFileCommand.cs",
+      "to_namespace": "System.IO",
+      "type": "uses"
+    },
+    {
+      "from": "DocTool\\Commands\\AnalyzeFileCommand.cs",
+      "to_namespace": "System.Text.Json",
+      "type": "uses"
+    },
+    {
+      "from": "DocTool\\Commands\\AnalyzeFileCommand.cs",
+      "to_namespace": "System.Threading.Tasks",
+      "type": "uses"
+    },
+    {
+      "from": "DocTool\\Commands\\AnalyzeFileCommand.cs",
+      "to_namespace": "DocTool.Analysis",
+      "type": "uses"
+    },
+    {
+      "from": "DocTool\\Commands\\AnalyzeFileCommand.cs",
+      "to_namespace": "DocTool.Output",
+      "type": "uses"
+    },
+    {
+      "from": "DocTool\\Commands\\AnalyzeFileCommand.cs",
+      "to_namespace": "Microsoft.Extensions.Logging",
+      "type": "uses"
+    },
+    {
+      "from": "DocTool\\Commands\\AnalyzeProjectCommand.cs",
+      "to_namespace": "System",
+      "type": "uses"
+    },
+    {
+      "from": "DocTool\\Commands\\AnalyzeProjectCommand.cs",
+      "to_namespace": "System.CommandLine",
+      "type": "uses"
+    },
+    {
+      "from": "DocTool\\Commands\\AnalyzeProjectCommand.cs",
+      "to_namespace": "System.IO",
+      "type": "uses"
+    },
+    {
+      "from": "DocTool\\Commands\\AnalyzeProjectCommand.cs",
+      "to_namespace": "System.Linq",
+      "type": "uses"
+    },
+    {
+      "from": "DocTool\\Commands\\AnalyzeProjectCommand.cs",
+      "to_namespace": "System.Text.Json",
+      "type": "uses"
+    },
+    {
+      "from": "DocTool\\Commands\\AnalyzeProjectCommand.cs",
+      "to_namespace": "System.Threading.Tasks",
+      "type": "uses"
+    },
+    {
+      "from": "DocTool\\Commands\\AnalyzeProjectCommand.cs",
+      "to_namespace": "DocTool.Analysis",
+      "type": "uses"
+    },
+    {
+      "from": "DocTool\\Commands\\AnalyzeProjectCommand.cs",
+      "to_namespace": "DocTool.Output",
+      "type": "uses"
+    },
+    {
+      "from": "DocTool\\Commands\\AnalyzeProjectCommand.cs",
+      "to_namespace": "Microsoft.Extensions.Logging",
+      "type": "uses"
+    },
+    {
+      "from": "DocTool\\Commands\\ValidateCommand.cs",
+      "to_namespace": "System",
+      "type": "uses"
+    },
+    {
+      "from": "DocTool\\Commands\\ValidateCommand.cs",
+      "to_namespace": "System.CommandLine",
+      "type": "uses"
+    },
+    {
+      "from": "DocTool\\Commands\\ValidateCommand.cs",
+      "to_namespace": "System.IO",
+      "type": "uses"
+    },
+    {
+      "from": "DocTool\\Commands\\ValidateCommand.cs",
+      "to_namespace": "System.Linq",
+      "type": "uses"
+    },
+    {
+      "from": "DocTool\\Commands\\ValidateCommand.cs",
+      "to_namespace": "System.Threading.Tasks",
+      "type": "uses"
+    },
+    {
+      "from": "DocTool\\Commands\\ValidateCommand.cs",
+      "to_namespace": "Microsoft.CodeAnalysis.CSharp",
+      "type": "uses"
+    },
+    {
+      "from": "DocTool\\Commands\\ValidateCommand.cs",
+      "to_namespace": "Microsoft.Extensions.Logging",
+      "type": "uses"
+    },
+    {
+      "from": "DocTool\\Logging\\StructuredLogger.cs",
+      "to_namespace": "Microsoft.Extensions.Logging",
+      "type": "uses"
+    },
+    {
+      "from": "DocTool\\Models\\CodeArtifact.cs",
+      "to_namespace": "System",
+      "type": "uses"
+    },
+    {
+      "from": "DocTool\\Models\\CodeArtifact.cs",
+      "to_namespace": "System.Collections.Generic",
+      "type": "uses"
+    },
+    {
+      "from": "DocTool\\Models\\CodeArtifact.cs",
+      "to_namespace": "System.Text.Json.Serialization",
+      "type": "uses"
+    },
+    {
+      "from": "DocTool\\Output\\ArtifactGenerator.cs",
+      "to_namespace": "System",
+      "type": "uses"
+    },
+    {
+      "from": "DocTool\\Output\\ArtifactGenerator.cs",
+      "to_namespace": "System.IO",
+      "type": "uses"
+    },
+    {
+      "from": "DocTool\\Output\\ArtifactGenerator.cs",
+      "to_namespace": "System.Text.Json",
+      "type": "uses"
+    },
+    {
+      "from": "DocTool\\Output\\ArtifactGenerator.cs",
+      "to_namespace": "System.Threading.Tasks",
+      "type": "uses"
+    },
+    {
+      "from": "DocTool\\Output\\ArtifactGenerator.cs",
+      "to_namespace": "Microsoft.Extensions.Logging",
+      "type": "uses"
+    },
+    {
+      "from": "DocTool\\Output\\ArtifactGenerator.cs",
+      "to_namespace": "DocTool.Models",
+      "type": "uses"
+    },
+    {
+      "from": "DocTool\\Program.cs",
+      "to_namespace": "System",
+      "type": "uses"
+    },
+    {
+      "from": "DocTool\\Program.cs",
+      "to_namespace": "System.CommandLine",
+      "type": "uses"
+    },
+    {
+      "from": "DocTool\\Program.cs",
+      "to_namespace": "System.Threading.Tasks",
+      "type": "uses"
+    },
+    {
+      "from": "DocTool\\Program.cs",
+      "to_namespace": "DocTool.Commands",
+      "type": "uses"
+    },
+    {
+      "from": "DocTool\\Program.cs",
+      "to_namespace": "DocTool.Logging",
+      "type": "uses"
+    },
+    {
+      "from": "DocTool\\Program.cs",
+      "to_namespace": "Microsoft.Extensions.Logging",
+      "type": "uses"
+    }
+  ],
+  "components": {
+    "architecture.md": {
+      "id": "e3b9a6",
+      "name": "architecture.md",
+      "path": "architecture.md",
+      "type": "file",
+      "size_kb": 1,
+      "status": "pending",
+      "extension": ".md"
+    },
+    "change-impact-map.md": {
+      "id": "1bb419",
+      "name": "change-impact-map.md",
+      "path": "change-impact-map.md",
+      "type": "file",
+      "size_kb": 0,
+      "status": "pending",
+      "extension": ".md"
+    },
+    "diagrams.md": {
+      "id": "f5eab1",
+      "name": "diagrams.md",
+      "path": "diagrams.md",
+      "type": "file",
+      "size_kb": 0,
+      "status": "pending",
+      "extension": ".md"
+    },
+    "logic-and-workflows.md": {
+      "id": "dcec20",
+      "name": "logic-and-workflows.md",
+      "path": "logic-and-workflows.md",
+      "type": "file",
+      "size_kb": 1,
+      "status": "pending",
+      "extension": ".md"
+    },
+    "Program.cs": {
+      "id": "1d4a43",
+      "name": "Program.cs",
+      "path": "Program.cs",
+      "type": "file",
+      "size_kb": 0,
+      "status": "pending",
+      "extension": ".cs"
+    },
+    "Analysis\\AstInspector.cs": {
+      "id": "f1cab6",
+      "name": "AstInspector.cs",
+      "path": "Analysis\\AstInspector.cs",
+      "type": "file",
+      "size_kb": 7,
+      "status": "pending",
+      "extension": ".cs"
+    },
+    "Analysis\\DependencyResolver.cs": {
+      "id": "c19ccc",
+      "name": "DependencyResolver.cs",
+      "path": "Analysis\\DependencyResolver.cs",
+      "type": "file",
+      "size_kb": 2,
+      "status": "pending",
+      "extension": ".cs"
+    },
+    "Analysis\\RoslynAnalyzer.cs": {
+      "id": "4cbb94",
+      "name": "RoslynAnalyzer.cs",
+      "path": "Analysis\\RoslynAnalyzer.cs",
+      "type": "file",
+      "size_kb": 2,
+      "status": "pending",
+      "extension": ".cs"
+    },
+    "Commands\\AnalyzeFileCommand.cs": {
+      "id": "58f297",
+      "name": "AnalyzeFileCommand.cs",
+      "path": "Commands\\AnalyzeFileCommand.cs",
+      "type": "file",
+      "size_kb": 2,
+      "status": "pending",
+      "extension": ".cs"
+    },
+    "Commands\\AnalyzeProjectCommand.cs": {
+      "id": "86fb19",
+      "name": "AnalyzeProjectCommand.cs",
+      "path": "Commands\\AnalyzeProjectCommand.cs",
+      "type": "file",
+      "size_kb": 3,
+      "status": "pending",
+      "extension": ".cs"
+    },
+    "Commands\\ValidateCommand.cs": {
+      "id": "ff24b6",
+      "name": "ValidateCommand.cs",
+      "path": "Commands\\ValidateCommand.cs",
+      "type": "file",
+      "size_kb": 2,
+      "status": "pending",
+      "extension": ".cs"
+    },
+    "Logging\\StructuredLogger.cs": {
+      "id": "0bf4d6",
+      "name": "StructuredLogger.cs",
+      "path": "Logging\\StructuredLogger.cs",
+      "type": "file",
+      "size_kb": 0,
+      "status": "pending",
+      "extension": ".cs"
+    },
+    "Models\\CodeArtifact.cs": {
+      "id": "2bc37f",
+      "name": "CodeArtifact.cs",
+      "path": "Models\\CodeArtifact.cs",
+      "type": "file",
+      "size_kb": 4,
+      "status": "pending",
+      "extension": ".cs"
+    },
+    "obj\\Release\\net8.0\\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs": {
+      "id": "f7a5d9",
+      "name": ".NETCoreApp,Version=v8.0.AssemblyAttributes.cs",
+      "path": "obj\\Release\\net8.0\\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs",
+      "type": "file",
+      "size_kb": 0,
+      "status": "pending",
+      "extension": ".cs"
+    },
+    "obj\\Release\\net8.0\\DocTool.AssemblyInfo.cs": {
+      "id": "23db7c",
+      "name": "DocTool.AssemblyInfo.cs",
+      "path": "obj\\Release\\net8.0\\DocTool.AssemblyInfo.cs",
+      "type": "file",
+      "size_kb": 0,
+      "status": "pending",
+      "extension": ".cs"
+    },
+    "obj\\Release\\net8.0\\DocTool.csproj.FileListAbsolute.txt": {
+      "id": "f50b05",
+      "name": "DocTool.csproj.FileListAbsolute.txt",
+      "path": "obj\\Release\\net8.0\\DocTool.csproj.FileListAbsolute.txt",
+      "type": "file",
+      "size_kb": 8,
+      "status": "pending",
+      "extension": ".txt"
+    },
+    "Output\\ArtifactGenerator.cs": {
+      "id": "9d3d51",
+      "name": "ArtifactGenerator.cs",
+      "path": "Output\\ArtifactGenerator.cs",
+      "type": "file",
+      "size_kb": 1,
+      "status": "pending",
+      "extension": ".cs"
+    },
+    "_normalized\\context\\prompt.md": {
+      "id": "23313f",
+      "name": "prompt.md",
+      "path": "_normalized\\context\\prompt.md",
+      "type": "file",
+      "size_kb": 1,
+      "status": "pending",
+      "extension": ".md"
+    }
+  },
+  "entry_points": [
+    "obj\\Release\\net8.0\\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs"
+  ],
+  "data_flows": [],
+  "code_files_analyzed": 18,
+  "statistics": {
+    "total_nodes": 18,
+    "total_components": 18,
+    "entry_points_count": 1,
+    "csharp_files": 10,
+    "document_files": 8,
+    "ticket_files": 6
+  },
+  "evidence": {
+    "documents": [
+      {
+        "path": "_normalized\\diagrams\\component_flow.png",
+        "type": "image",
+        "size_kb": 139,
+        "last_modified": "2025-10-31T12:50:59.151905",
+        "status": "pending"
+      },
+      {
+        "path": "_normalized\\diagrams\\component_flow.svg",
+        "type": "image",
+        "size_kb": 27,
+        "last_modified": "2025-10-31T12:51:01.545685",
+        "status": "pending"
+      },
+      {
+        "path": "_normalized\\diagrams\\data_flow.png",
+        "type": "image",
+        "size_kb": 183,
+        "last_modified": "2025-10-31T12:51:04.710643",
+        "status": "pending"
+      },
+      {
+        "path": "_normalized\\diagrams\\data_flow.svg",
+        "type": "image",
+        "size_kb": 65,
+        "last_modified": "2025-10-31T12:38:39.119193",
+        "status": "pending"
+      },
+      {
+        "path": "_normalized\\diagrams\\dependency_graph.png",
+        "type": "image",
+        "size_kb": 598,
+        "last_modified": "2025-10-31T12:38:24.786218",
+        "status": "pending"
+      },
+      {
+        "path": "_normalized\\diagrams\\dependency_graph.svg",
+        "type": "image",
+        "size_kb": 96,
+        "last_modified": "2025-10-31T12:50:54.900644",
+        "status": "pending"
+      },
+      {
+        "path": "_normalized\\diagrams\\system_context.png",
+        "type": "image",
+        "size_kb": 126,
+        "last_modified": "2025-10-31T12:50:48.813685",
+        "status": "pending"
+      },
+      {
+        "path": "_normalized\\diagrams\\system_context.svg",
+        "type": "image",
+        "size_kb": 30,
+        "last_modified": "2025-10-31T12:50:50.560107",
+        "status": "pending"
+      }
+    ],
+    "tickets": [
+      {
+        "path": "bin\\Release\\net8.0\\DocTool.deps.json",
+        "type": "ticket",
+        "size_kb": 29,
+        "last_modified": "2025-10-30T16:09:30.282357",
+        "status": "pending"
+      },
+      {
+        "path": "bin\\Release\\net8.0\\DocTool.runtimeconfig.json",
+        "type": "ticket",
+        "size_kb": 0,
+        "last_modified": "2025-10-30T16:09:30.321213",
+        "status": "pending"
+      },
+      {
+        "path": "obj\\DocTool.csproj.nuget.dgspec.json",
+        "type": "ticket",
+        "size_kb": 3,
+        "last_modified": "2025-10-30T16:05:28.595815",
+        "status": "pending"
+      },
+      {
+        "path": "obj\\project.assets.json",
+        "type": "ticket",
+        "size_kb": 148,
+        "last_modified": "2025-10-30T16:05:28.568164",
+        "status": "pending"
+      },
+      {
+        "path": "obj\\Release\\net8.0\\DocTool.sourcelink.json",
+        "type": "ticket",
+        "size_kb": 0,
+        "last_modified": "2025-10-30T16:23:26.313215",
+        "status": "pending"
+      },
+      {
+        "path": "_normalized\\context\\summary.json",
+        "type": "ticket",
+        "size_kb": 1,
+        "last_modified": "2025-10-31T13:10:18.401182",
+        "status": "pending"
+      }
+    ]
+  }
+}

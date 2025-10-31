@@ -243,3 +243,4 @@ class ConversionResult:
     def build(self) -> Dict[str, Any]:
         """Build and return the final result"""
         return self.result
+

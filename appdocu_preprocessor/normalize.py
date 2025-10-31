@@ -361,7 +361,7 @@ class DocumentNormalizer:
         
         # Print summary
         logger.info(f"✅ Completed {successful} conversions, {failed} failed, {skipped} skipped")
-        logger.info(f"📊 Conversion coverage: {self.get_conversion_coverage():.1f}%")
+        logger.info(f"Conversion coverage: {self.get_conversion_coverage():.1f}%")
         
         
     def create_file_manifest(self):
@@ -573,3 +573,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+

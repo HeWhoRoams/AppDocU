@@ -1,7 +1,24 @@
 # AppDocU
-# AppDocU Preprocessor
 
-A comprehensive document preprocessor that converts various binary document formats to text/structured representations for AI analysis and documentation generation.
+End‑to‑end codebase documentation workflow: local discovery, enrichment, diagrams, packaging, and quality gates — with optional full document preprocessing and a VSCode/Copilot bridge.
+
+This repository includes:
+- A Python orchestrator that scans source code (Python/JS/TS/C#), builds a behavior graph, extracts system integrations, and generates docs/diagrams.
+- A C# Roslyn analyzer (DocTool) for deep C# semantics.
+- An optional preprocessor that converts binary docs (DOCX/PDF/PPTX/Visio/etc.) to text for analysis (full mode).
+
+## Current Features
+
+- Discovery (Pass 1): file enumeration, per‑language static parsing (Python/JS/TS), C# Roslyn analysis, behavior‑graph.json, system‑integrations.json
+- Enrichment (Pass 2): generates architecture.md, logic-and-workflows.md, change-impact-map.md, diagrams.md; Copilot handoff `_normalized/context/prompt.md`
+- Cognitive audit (Pass 3): optional pass for higher‑level checks (non‑blocking)
+- Diagrams: Mermaid sources (`.mmd`) with rendering via `mmdc` (preferred) or Kroki fallback; noise filters and retry/backoff
+- Packaging: `docs_runs/YYYYMMDD-HHMMSS/` snapshot with `manifest.json` + `index.md`
+- Quality gates: coverage/failure/diagrams/doc‑sections with readable + JSON reports
+- Entity registry: additive reruns, version/provenance tracking, deprecation markers appended to docs
+- Self‑test: runs the workflow and verifies outputs are non‑trivial
+- VSCode tasks: one‑click Full Workflow, Validate Gates, Self Test, Copilot Context
+- CI: pytest unit/integration suite and coverage on Python 3.10–3.12
 
 ## Features
 
@@ -23,7 +40,7 @@ A comprehensive document preprocessor that converts various binary document form
 ## Installation
 
 ```bash
-pip install -r appdocu_preprocessor/requirements.txt
+pip install -r requirements.txt
 ```
 
 ## Usage
@@ -166,6 +183,87 @@ python appdoc.py --target /path/to/your/codebase --output /custom/output/dir
 # Run with verbose logging
 python appdoc.py --target /path/to/your/codebase --verbose
 ```
+
+## Quick Start (5 minutes)
+
+```bash
+# 1) Ensure Python 3.10+ is installed; optional: build C# tool for richer C# analysis
+pip install -r requirements.txt
+# dotnet build DocTool/DocTool.csproj -c Release   # optional
+
+# 2) Run the full pipeline against this repo (no LLM by default)
+python run_docs.py full --path .
+
+# 3) Review outputs
+# - Docs: architecture.md, logic-and-workflows.md, change-impact-map.md, diagrams.md
+# - Diagrams: _normalized/diagrams/*.mmd (+ .svg/.png if rendered)
+# - Meta: _normalized/.meta/behavior-graph.json, system-integrations.json
+# - Package: docs_runs/YYYYMMDD-HHMMSS/ (manifest.json, index.md)
+
+# 4) Optional: run self-test (sanity checks for non-trivial content)
+python run_docs.py selftest --path . --min-words 150
+```
+
+VSCode one-click tasks
+- Run Task → "Run Full Workflow"
+- Run Task → "Validate Quality Gates"
+- Run Task → "Self Test (Repo)"
+
+Iterative loop (optional)
+```bash
+python run_docs.py iterate --path . --no-llm
+```
+
+Validate quality gates (standalone)
+```bash
+python run_docs.py validate --path . --min-coverage 70 --max-failure 10 --require-diagrams
+# or use env: APPDOC_MIN_COVERAGE, APPDOC_MAX_FAILURE, APPDOC_REQUIRE_DIAGRAMS
+```
+
+Packaging (standalone)
+```bash
+python run_docs.py package --path .
+```
+
+Preprocessing modes
+- Default is safe minimal enumeration; enable full converters when supported:
+  - CLI: `appdoc.py --target . --preprocess full`
+  - Env: `APPDOC_PREPROCESS=full`
+
+Privacy & diagram rendering
+- Offline preferred: install Mermaid CLI (`mmdc`) in PATH for .svg/.png rendering
+- Online fallback: Kroki (`KROKI_URL=https://kroki.io`), with retry/backoff and `.err` diagnostics
+- Filters & limits to keep diagrams readable:
+  - `APPDOC_MMD_MAX_NODES`, `APPDOC_MMD_MAX_EDGES`
+  - `APPDOC_DEP_INCLUDE_PREFIXES` (comma-separated path prefixes)
+  - `APPDOC_DEP_ONLY_FILE_TARGETS=1`, `APPDOC_DEP_ONLY_CODE_NODES=1`
+
+Entity Registry (additive reruns)
+- Tracks files and symbols across runs: `_normalized/.meta/entity_registry.json`
+- Marks missing entities as deprecated (docs not deleted)
+- Appends "Deprecated Entities" to architecture.md and logic-and-workflows.md
+
+Quality gates
+- Evaluates coverage, failure rate, diagrams presence, and doc sections
+- Reports: `_normalized/.meta/validation_report.(json|md)` (or inside latest `docs_runs/.../` when packaging)
+
+Self-test (non-garbage check)
+- Runs the full pipeline and asserts minimum doc words, diagram presence, and meta health
+- Reports: `_normalized/.meta/selftest_report.(json|md)`
+
+Scripts
+- PowerShell: `scripts/run_full.ps1`
+- Bash: `scripts/run_full.sh`
+
+Centralized configuration
+- Create `appdoc.config.json` at repo root (see `appdoc.config.example.json`) or a `.env`
+- Precedence: CLI > env (.env) > appdoc.config.json > defaults
+- Common knobs in config:
+  - `preprocess_mode`: `minimal` | `full`
+  - Gates: `min_coverage_pct`, `max_failure_rate_pct`, `require_diagrams`
+  - Diagrams: `mmd_max_nodes`, `mmd_max_edges`, `dep_include_prefixes`, `dep_only_file_targets`, `dep_only_code_nodes`, `kroki_url`
+  - Registry: `symbol_registry`
+  - LLM: `llm_endpoint`
 
 ## User Goals → Which Prompt to Run
 

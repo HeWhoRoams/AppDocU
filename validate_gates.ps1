@@ -6,7 +6,10 @@ param(
     [string]$ConfigPath = "config.json",
     [string]$OutputPath = "validation_report.txt",
     [switch]$Verbose = $false,
-    [switch]$FailFast = $false
+    [switch]$FailFast = $false,
+    [double]$MinCoverage = 70,
+    [double]$MaxFailure = 10,
+    [bool]$RequireDiagrams = $true
 )
 
 # Enable strict mode
@@ -153,6 +156,40 @@ function Test-DocumentationQualityGate {
     return $passed
 }
 
+# Invoke AppDocU Python quality gates (run_docs.py validate)
+function Invoke-AppDocValidate {
+    param(
+        [string]$RepoPath = ".",
+        [double]$MinCoverage = 70,
+        [double]$MaxFailure = 10,
+        [bool]$RequireDiagrams = $true
+    )
+
+    Write-VerboseOutput "Invoking AppDocU quality gates via run_docs.py validate"
+    $env:APPDOC_MIN_COVERAGE = [string]$MinCoverage
+    $env:APPDOC_MAX_FAILURE = [string]$MaxFailure
+    $env:APPDOC_REQUIRE_DIAGRAMS = if ($RequireDiagrams) { "1" } else { "0" }
+    $python = "python"
+    $args = @("run_docs.py", "validate", "--path", $RepoPath)
+    try {
+        $proc = Start-Process -FilePath $python -ArgumentList $args -Wait -PassThru -NoNewWindow -ErrorAction Stop
+        $code = $proc.ExitCode
+    } catch {
+        Write-ValidationResult -GateName "AppDocU Quality Gates" -Passed $false -Message "Failed to execute run_docs.py validate" -Details $_.Exception.Message
+        return $false
+    }
+    if ($code -eq 0) {
+        Write-ValidationResult -GateName "AppDocU Quality Gates" -Passed $true -Message "Validation passed" -Details "coverage>=$MinCoverage, failure<=$MaxFailure, diagrams=$RequireDiagrams"
+        return $true
+    } elseif ($code -eq 2) {
+        Write-ValidationResult -GateName "AppDocU Quality Gates" -Passed $false -Message "Validation failed (thresholds not met)" -Details "coverage>=$MinCoverage, failure<=$MaxFailure, diagrams=$RequireDiagrams"
+        return $false
+    } else {
+        Write-ValidationResult -GateName "AppDocU Quality Gates" -Passed $false -Message "Validation error (exit code $code)" -Details "Check _normalized/.meta/validation_report.md"
+        return $false
+    }
+}
+
 # Main validation workflow
 function Start-GateValidation {
     Write-Host "Starting Gate Validation Process..." -ForegroundColor Yellow
@@ -224,6 +261,11 @@ function Start-GateValidation {
         Write-ValidationResult -GateName "Template Validation" -Passed $false -Message "No template files found in appdoc.templates"
         $overallPassed = $false
     }
+
+    # Gate 7: AppDocU Quality Gates (Python)
+    Write-Host "`nGate 7: AppDocU Quality Gates" -ForegroundColor Magenta
+    $appdocPassed = Invoke-AppDocValidate -RepoPath "." -MinCoverage $MinCoverage -MaxFailure $MaxFailure -RequireDiagrams $RequireDiagrams
+    $overallPassed = $overallPassed -and $appdocPassed
 
     # Final Summary
     Write-Host "`n" * 2 -NoNewline

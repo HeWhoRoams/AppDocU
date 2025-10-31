@@ -1,0 +1,14 @@
+{
+  "preprocess_mode": "minimal",
+  "min_coverage_pct": 70.0,
+  "max_failure_rate_pct": 10.0,
+  "require_diagrams": true,
+  "mmd_max_nodes": 60,
+  "mmd_max_edges": 120,
+  "dep_include_prefixes": "",
+  "dep_only_file_targets": false,
+  "dep_only_code_nodes": false,
+  "kroki_url": "https://kroki.io",
+  "symbol_registry": true,
+  "llm_endpoint": null
+}

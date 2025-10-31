@@ -1,0 +1,92 @@
+graph TD
+  N0[architecture.md]
+  N1[change-impact-map.md]
+  N2[logic-and-workflows.md]
+  N3[Program.cs]
+  N4[AstInspector.cs]
+  N5[DependencyResolver.cs]
+  N6[RoslynAnalyzer.cs]
+  N7[AnalyzeFileCommand.cs]
+  N8[AnalyzeProjectCommand.cs]
+  N9[ValidateCommand.cs]
+  N10[StructuredLogger.cs]
+  N11[CodeArtifact.cs]
+  N12[.NETCoreApp,Version=v8.0.AssemblyAttributes.cs]
+  N13[DocTool.AssemblyInfo.cs]
+  N14[DocTool.csproj.FileListAbsolute.txt]
+  N15[ArtifactGenerator.cs]
+  N16[prompt.md]
+  N17[AstInspector.cs]
+  N18[DependencyResolver.cs]
+  N19[RoslynAnalyzer.cs]
+  N20[AnalyzeFileCommand.cs]
+  N21[AnalyzeProjectCommand.cs]
+  N22[ValidateCommand.cs]
+  N23[StructuredLogger.cs]
+  N24[CodeArtifact.cs]
+  N25[ArtifactGenerator.cs]
+  N26[Program.cs]
+  N17 --> T27((System))
+  N17 --> T28((System.Collections.Generic))
+  N17 --> T29((System.Linq))
+  N17 --> T30((Microsoft.CodeAnalysis))
+  N17 --> T31((Microsoft.CodeAnalysis.CSharp.Syntax))
+  N17 --> T32((Microsoft.Extensions.Logging))
+  N17 --> T33((DocTool.Models))
+  N18 --> T34((System))
+  N18 --> T35((System.Collections.Generic))
+  N18 --> T36((System.Linq))
+  N18 --> T37((Microsoft.CodeAnalysis))
+  N18 --> T38((Microsoft.CodeAnalysis.CSharp.Syntax))
+  N18 --> T39((Microsoft.Extensions.Logging))
+  N18 --> T40((DocTool.Models))
+  N19 --> T41((System))
+  N19 --> T42((System.Collections.Generic))
+  N19 --> T43((System.IO))
+  N19 --> T44((System.Linq))
+  N19 --> T45((System.Threading.Tasks))
+  N19 --> T46((Microsoft.CodeAnalysis))
+  N19 --> T47((Microsoft.CodeAnalysis.CSharp))
+  N19 --> T48((Microsoft.CodeAnalysis.CSharp.Syntax))
+  N19 --> T49((Microsoft.Extensions.Logging))
+  N19 --> T50((DocTool.Models))
+  N20 --> T51((System))
+  N20 --> T52((System.CommandLine))
+  N20 --> T53((System.IO))
+  N20 --> T54((System.Text.Json))
+  N20 --> T55((System.Threading.Tasks))
+  N20 --> T56((DocTool.Analysis))
+  N20 --> T57((DocTool.Output))
+  N20 --> T58((Microsoft.Extensions.Logging))
+  N21 --> T59((System))
+  N21 --> T60((System.CommandLine))
+  N21 --> T61((System.IO))
+  N21 --> T62((System.Linq))
+  N21 --> T63((System.Text.Json))
+  N21 --> T64((System.Threading.Tasks))
+  N21 --> T65((DocTool.Analysis))
+  N21 --> T66((DocTool.Output))
+  N21 --> T67((Microsoft.Extensions.Logging))
+  N22 --> T68((System))
+  N22 --> T69((System.CommandLine))
+  N22 --> T70((System.IO))
+  N22 --> T71((System.Linq))
+  N22 --> T72((System.Threading.Tasks))
+  N22 --> T73((Microsoft.CodeAnalysis.CSharp))
+  N22 --> T74((Microsoft.Extensions.Logging))
+  N23 --> T75((Microsoft.Extensions.Logging))
+  N24 --> T76((System))
+  N24 --> T77((System.Collections.Generic))
+  N24 --> T78((System.Text.Json.Serialization))
+  N25 --> T79((System))
+  N25 --> T80((System.IO))
+  N25 --> T81((System.Text.Json))
+  N25 --> T82((System.Threading.Tasks))
+  N25 --> T83((Microsoft.Extensions.Logging))
+  N25 --> T84((DocTool.Models))
+  N26 --> T85((System))
+  N26 --> T86((System.CommandLine))
+  N26 --> T87((System.Threading.Tasks))
+  N26 --> T88((DocTool.Commands))
+  N26 --> T89((DocTool.Logging))
+  N26 --> T90((Microsoft.Extensions.Logging))
